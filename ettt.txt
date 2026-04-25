@@ -1,0 +1,41 @@
+{
+	"autoopen": false,
+	"collab": {
+		"jinxscript": {
+			"autostop": false,
+			"enabled": true
+		}
+	},
+	"easy_money": {
+		"acknowledge": true,
+		"allow_300k_loop": true,
+		"autodeposit": false,
+		"delay": {
+			"_100k": 0.333,
+			"_180k": 0.333,
+			"_300k": 1,
+			"_50k": 0.333,
+			"_5k": 1.5,
+			"_680k": 0.333
+		},
+		"dummy_prevention": true
+	},
+	"instant_finish": {
+		"agency": 1,
+		"apartment": 0,
+		"auto_shop": 1,
+		"cayo_perico": 1,
+		"diamond_casino": 0,
+		"doomsday": 1
+	},
+	"language": "EN",
+	"logging": 2,
+	"register_as_boss": {
+		"autoregister": false,
+		"type": 0
+	},
+	"unlock_all_poi": {
+		"cayo_perico": true,
+		"diamond_casino": true
+	}
+}

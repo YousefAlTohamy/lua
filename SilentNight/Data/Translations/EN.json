@@ -1,0 +1,2694 @@
+{
+	"1000340906": {
+		"desc": "Resets all preparations. Also, redraws the planning boards.",
+		"name": "Reset Preps"
+	},
+	"1011547772": {
+		"desc": "Select the desired compound arts amount.",
+		"list": [
+			"Empty",
+			"Full",
+			"1",
+			"2",
+			"3",
+			"4",
+			"5",
+			"6"
+		],
+		"name": "Arts Amount"
+	},
+	"101269549": {
+		"desc": "Select the desired doomsday act.",
+		"list": [
+			"Data Breaches",
+			"Bogdan Problem",
+			"Doomsday Scenario"
+		],
+		"name": "Act"
+	},
+	"101578860": {
+		"desc": "Select the desired robbery type for slot 1.",
+		"list": [
+			"Cargo Ship",
+			"Gangbanger",
+			"Duggan",
+			"Podium",
+			"McTony"
+		],
+		"name": "Robbery"
+	},
+	"1024541640": {
+		"desc": "Copies the presets folder path to the clipboard.",
+		"name": "Copy Folder Path"
+	},
+	"1030521049": {
+		"desc": "Teleports you to the Weed Shop's entrance.",
+		"name": "Teleport to Entrance"
+	},
+	"1032759381": {
+		"desc": "Select the desired date to modify.",
+		"list": [
+			"Unselected",
+			"Character Created",
+			"Last Time Played",
+			"Last Ranked Up"
+		],
+		"name": "Date"
+	},
+	"1040890675": {
+		"desc": "Select the desired loadout.",
+		"list": [
+			"Micro SMG (S)",
+			"Mac. Pistol (S)"
+		],
+		"name": "Loadout"
+	},
+	"1051622668": {
+		"desc": "Teleports you to the Bail Office's computer.",
+		"name": "Teleport to Computer"
+	},
+	"1054635001": {
+		"desc": "ATTENTION: cannot be used with «2.55mil Payout».\nRemoves fencing fee and Pavel's cut.",
+		"name": "Remove Crew Cuts"
+	},
+	"1060386517": {
+		"desc": "Loads the selected preset, but doesn't complete preparations.",
+		"name": "Load"
+	},
+	"1066312623": {
+		"desc": "Select the desired money amount.",
+		"name": "Money Amount"
+	},
+	"1080952131": {
+		"desc": "Select the cut for Player 1.",
+		"name": "Player 1"
+	},
+	"1084875014": {
+		"desc": "CAUTION: might be unsafe, bans reported in the past.\nApplies the maximum price for your crates.",
+		"name": "Maximize Price"
+	},
+	"1096110910": {
+		"desc": "Maximizes the crates amount, but not buying them.",
+		"name": "Max"
+	},
+	"1096346974": {
+		"desc": "Changes the delay between each supply of cargo. Lowering this might fasten the supplier, but can cause instability on some systems.",
+		"name": "Delay"
+	},
+	"1114004650": {
+		"desc": "Skips the heist's cooldowns. Doesn't skip the cooldown between transactions (20 min).",
+		"name": "Kill Cooldowns"
+	},
+	"114433588": {
+		"desc": "ATTENTION: disable only if cuts aren't being applied.\nForces the cuts to change on everyone's screen by emulating user inputs.",
+		"name": "Auto"
+	},
+	"114603010": {
+		"desc": "Triggers production of your stock.",
+		"name": "Trigger Production"
+	},
+	"1155897953": {
+		"desc": "Select the desired private dances amount.",
+		"name": "Private Dances"
+	},
+	"1156293136": {
+		"desc": "Select the desired hacker.",
+		"list": [
+			"Rickie Lukens",
+			"Yohan Blair",
+			"Christian Feltz",
+			"Page Harris",
+			"Avi Schwartz."
+		],
+		"name": "Hacker"
+	},
+	"1173776403": {
+		"desc": "Collects money from your Bail Office safe.",
+		"name": "Collect Safe"
+	},
+	"1189091929": {
+		"desc": "CAUTION: might be unsafe, bans reported in the past.\nApplies the maximum price for your stock.",
+		"name": "Maximize Price"
+	},
+	"1193493510": {
+		"desc": "JinxScript might help speed up some processes.",
+		"name": "JinxScript"
+	},
+	"1228653345": {
+		"desc": "Tries to skip the heist to the next checkpoint.",
+		"name": "Skip Checkpoint"
+	},
+	"1229902339": {
+		"desc": "Select the desired cargo limit at which the deeper supplier should stop. Set to 0 to use the default.",
+		"name": "Limit"
+	},
+	"1230378092": {
+		"desc": "Unbricks your safe if it shows a dollar sign with $0 inside. Use inside your Nightclub.",
+		"name": "Unbrick"
+	},
+	"1242829781": {
+		"desc": "Skips the fingerprint hacking process.",
+		"name": "Bypass Fingerprint Hack"
+	},
+	"1252615255": {
+		"desc": "Enable the cut for Player 1.",
+		"name": ""
+	},
+	"1256153318": {
+		"desc": "Teleports you to the Hangar's entrance.",
+		"name": "Teleport to Entrance"
+	},
+	"1265969184": {
+		"desc": "Gets some crates for your Crate Warehouses.",
+		"name": "Get Crates"
+	},
+	"1267880468": {
+		"desc": "Select the desired money amount.",
+		"name": "Money Amount"
+	},
+	"127434808": {
+		"desc": "Reads the entered stat value.",
+		"name": "Read"
+	},
+	"127484505": {
+		"desc": "Input your packed stat here.",
+		"name": "22050"
+	},
+	"1280418696": {
+		"desc": "Select the desired earnings.",
+		"name": "Earnings"
+	},
+	"1289027688": {
+		"desc": "Skips the mission's setup cooldown. Doesn't skip the cooldown between transactions (20 mins).",
+		"name": "Kill Cooldown"
+	},
+	"1311289145": {
+		"desc": "Teleports you to the Agency's computer.",
+		"name": "Teleport to Computer"
+	},
+	"1312406213": {
+		"desc": "Teleports you to the Bunker's laptop.",
+		"name": "Teleport to Laptop"
+	},
+	"1315532837": {
+		"desc": "Teleports you to the Tour Company's laptop.",
+		"name": "Teleport to Laptop"
+	},
+	"1318418255": {
+		"desc": "Select the desired preset.",
+		"list": [
+			""
+		],
+		"name": "File"
+	},
+	"1322179976": {
+		"desc": "ATTENTION: for advanced users.\nWrites the selected value to the entered packed stat.",
+		"name": "Write"
+	},
+	"1322923995": {
+		"desc": "Refreshes the Hangar stats to the current ones.",
+		"name": "Refresh"
+	},
+	"1330386503": {
+		"desc": "Copies the translations folder path to the clipboard.",
+		"name": "Copy Folder Path"
+	},
+	"1331339394": {
+		"desc": "Teleports you to the the Apartment's entrance.",
+		"name": "Teleport to Entrance"
+	},
+	"1337622796": {
+		"desc": "Enable the cut for Player 1.",
+		"name": ""
+	},
+	"1343903868": {
+		"desc": "Makes your Tour Company's heat high.",
+		"name": "Max"
+	},
+	"1361922109": {
+		"desc": "Reverts the previous value you've written to the entered global.",
+		"name": "Revert"
+	},
+	"1370836675": {
+		"desc": "Select the desired vehicle modification for slot 3.",
+		"list": [
+			"Version 1",
+			"Version 2",
+			"Version 3",
+			"Version 4",
+			"Version 5"
+		],
+		"name": "Modification"
+	},
+	"1371398912": {
+		"desc": "Select the desired sales made.",
+		"name": "Sell Made"
+	},
+	"1377817985": {
+		"desc": "ATTENTION: cannot be undone.\nRemoves the selected preset.",
+		"name": "Remove"
+	},
+	"1379667667": {
+		"desc": "Copies the config folder path to the clipboard.",
+		"name": "Copy Folder Path"
+	},
+	"1385021115": {
+		"desc": "CAUTION: might be unsafe, bans reported in the past.\nToggles the 180k dollars loop. Has a cooldown.",
+		"name": "180k Loop"
+	},
+	"139416079": {
+		"desc": "Copies your Cherax user ID to your clipboard.",
+		"name": "Copy Cherax User ID"
+	},
+	"1398874466": {
+		"desc": "Enables Guzman Flies features in Flash Operations tab.",
+		"name": "Guzman Flies"
+	},
+	"140163330": {
+		"desc": "Refreshes the Crate Warehouse stats to the current ones.",
+		"name": "Refresh"
+	},
+	"1406126576": {
+		"desc": "Select the desired time minutes.",
+		"name": "Minutes"
+	},
+	"1410953785": {
+		"desc": "Finishes the air cargo sell mission instantly. Use after you can see the minimap.",
+		"name": "Instant Air Cargo Sell"
+	},
+	"1426025698": {
+		"desc": "Select the desired «Earned» stat.",
+		"list": [
+			"Unselected",
+			"Total",
+			"Jobs",
+			"Selling Vehicles",
+			"Betting",
+			"Good Sport",
+			"Picked Up"
+		],
+		"name": "Earned"
+	},
+	"1428485744": {
+		"desc": "Select whether you can keep the vehicle for slot 3.",
+		"list": [
+			"Can't Claim",
+			"Can Claim"
+		],
+		"name": "Status"
+	},
+	"1432884331": {
+		"desc": "Skips the hacking process of The Pacific Standard Job heist.",
+		"name": "Bypass Pacific Hack"
+	},
+	"1437558430": {
+		"desc": "Withdraws all money from your bank.",
+		"name": "Withdraw All"
+	},
+	"1456656135": {
+		"desc": "Automatically calculates maximum payout cuts.",
+		"name": "3mil Payout"
+	},
+	"1473112550": {
+		"desc": "Finishes the heist instantly. Use after you can see the minimap.",
+		"name": "Instant Finish"
+	},
+	"1476692217": {
+		"desc": "Select the desired buy made.",
+		"name": "Buy Made"
+	},
+	"1485750886": {
+		"desc": "Opens the Bunker's laptop screen.",
+		"name": "Open Laptop"
+	},
+	"1486707659": {
+		"desc": "ATTENTION: cannot be unused with «3.6mil Payout».\nRemoves crew cuts and Lester's cut.",
+		"name": "Remove Crew Cuts"
+	},
+	"1506365606": {
+		"desc": "Refreshes the list of stats files.",
+		"name": "Refresh"
+	},
+	"1510362533": {
+		"desc": "Decides whether you want to apply new sell missions or not.",
+		"name": "Don't Apply Sell"
+	},
+	"1546347439": {
+		"desc": "Select the desired vehicle modification for slot 2.",
+		"list": [
+			"Version 1",
+			"Version 2",
+			"Version 3",
+			"Version 4",
+			"Version 5"
+		],
+		"name": "Modification"
+	},
+	"1552222305": {
+		"desc": "Select the desired time hours.",
+		"name": "Hours"
+	},
+	"155995771": {
+		"desc": "Collects money from your Arcade safe.",
+		"name": "Collect Safe"
+	},
+	"1560786087": {
+		"desc": "Select the desired payout.",
+		"name": "Payout"
+	},
+	"1569921642": {
+		"desc": "Select the desired buy undertaken.",
+		"name": "Buy Undertaken"
+	},
+	"1570806271": {
+		"desc": "Withdraws the selected money amount from your bank.",
+		"name": "Withdraw"
+	},
+	"157473743": {
+		"desc": "Old: slower, works for all players, saves the preps, doesn't work for preps.\nNew: faster, works for most players, resets the preps, works for preps.",
+		"list": [
+			"Old",
+			"New"
+		],
+		"name": "Apartment"
+	},
+	"1576167539": {
+		"desc": "Applies all changes for the slot 1. Also, reloads the planning screen. Use before you start the preparation.",
+		"name": "Apply Changes"
+	},
+	"1576754405": {
+		"desc": "Applies the selected private dances and sexual acts amounts.",
+		"name": "Apply Dances & Acts"
+	},
+	"1584000461": {
+		"desc": "Disables the xp gain for sell missions.",
+		"name": "No XP Gain"
+	},
+	"1590092642": {
+		"desc": "Enable this during double rewards week.",
+		"name": "Double Rewards Week"
+	},
+	"160270988": {
+		"desc": "Makes the slot 3 «Available». Also, reloads the planning screen.",
+		"name": "Make Available"
+	},
+	"160762128": {
+		"desc": "Resets the launch settings for the current heist.",
+		"name": "Reset"
+	},
+	"1627862446": {
+		"desc": "CAUTION: might be unsafe, bans reported in the past.\nToggles the 680k dollars loop. Has a cooldown.",
+		"name": "680k Loop"
+	},
+	"1638363421": {
+		"desc": "Select the desired coke value.",
+		"name": "Coke Value"
+	},
+	"1639294880": {
+		"desc": "Reloads the planning screen.",
+		"name": "Reload Screen"
+	},
+	"1640146845": {
+		"desc": "Input your script here.",
+		"name": "fm_mission_controller"
+	},
+	"1640980312": {
+		"desc": "Select the desired Tour Company's heat level.",
+		"name": "Heat Percentage"
+	},
+	"1661452298": {
+		"desc": "Copies the presets folder path to the clipboard.",
+		"name": "Copy Folder Path"
+	},
+	"1663086412": {
+		"desc": "Forces the heist to become active through the error.",
+		"name": "Force Through Error"
+	},
+	"1667208742": {
+		"desc": "Decides whether you want to apply new sell missions or not.",
+		"name": "Don't Apply Sell"
+	},
+	"1668208289": {
+		"desc": "Teleports you to the McKenzie Field Hangar's entrance.",
+		"name": "Teleport to Entrance"
+	},
+	"168688770": {
+		"desc": "Fills your Hangar stock repeatedly.",
+		"name": "Turkish Supplier"
+	},
+	"170996380": {
+		"desc": "Enable the cut for Player 4.",
+		"name": ""
+	},
+	"1711109084": {
+		"desc": "Skips the heist's setup cooldown after you have played solo. Doesn't skip the cooldown between transactions (20 mins). Go offline and online after using.",
+		"name": "Kill Cooldown (after solo)"
+	},
+	"1736785320": {
+		"desc": "ATTENTION: might be unsafe, if overused.\nForces the ball to land on Black 13. Use after there is no time for betting.",
+		"name": "Land On Black 13"
+	},
+	"1757188373": {
+		"desc": "Teleports you to the Bunker's entrance.",
+		"name": "Teleport to Entrance"
+	},
+	"1764567261": {
+		"desc": "Locks the heat of your Car Wash on the current level.",
+		"name": "Lock"
+	},
+	"1788520634": {
+		"desc": "CAUTION: enables features that had caused bans in the past.",
+		"name": "YOLO Mode"
+	},
+	"1791623706": {
+		"desc": "Skips the mission's setup cooldown. Doesn't skip the cooldown between transactions (20 mins).",
+		"name": "Kill Cooldown"
+	},
+	"1805890371": {
+		"desc": "Enable the cut for Player 3.",
+		"name": ""
+	},
+	"1809761145": {
+		"desc": "Teleports you to the McKenzie Field Hangar's laptop.",
+		"name": "Teleport to Laptop"
+	},
+	"1820911931": {
+		"desc": "Decides whether you want to apply new sell missions or not.",
+		"name": "Don't Apply Sell"
+	},
+	"1829658243": {
+		"desc": "Select the cut for Player 2.",
+		"name": "Player 2"
+	},
+	"1833223294": {
+		"desc": "ATTENTION: works only if you've set the «Act» through the script.\nAutomatically calculates maximum payout cuts.",
+		"name": "2.55mil Payout"
+	},
+	"1839929716": {
+		"desc": "Select the desired buy undertaken.",
+		"name": "Buy Undertaken"
+	},
+	"1841907361": {
+		"desc": "Copies JinxScript Discord server invite link to your clipboard.",
+		"name": "Discord"
+	},
+	"1864779173": {
+		"desc": "Input your value here.",
+		"name": "7777"
+	},
+	"1884731716": {
+		"desc": "Skips the hacking process of The Data Breaches heist.",
+		"name": "Bypass Data Breaches Hack"
+	},
+	"1888659592": {
+		"desc": "Skips the cutting process.",
+		"name": "Bypass Drainage Pipe Cut"
+	},
+	"1897469949": {
+		"desc": "Deposits the selected money amount to your bank.",
+		"name": "Deposit"
+	},
+	"1921903896": {
+		"desc": "Decides whether you want to apply new earnings or not.",
+		"name": "Don't Apply Earnings"
+	},
+	"1944093271": {
+		"desc": "Leaves from GTA Online.",
+		"name": "Go Offline"
+	},
+	"1951345930": {
+		"desc": "Allows launching the current heist alone.",
+		"name": "Solo Launch"
+	},
+	"1959272889": {
+		"desc": "ATTENTION: might be unsafe, if overused.\nCollects money from your Nightclub safe. Use inside your Nightclub.",
+		"name": "Collect"
+	},
+	"1965855091": {
+		"desc": "Select the desired island target amount.",
+		"list": [
+			"Empty",
+			"Full",
+			"1",
+			"2",
+			"3",
+			"4",
+			"5",
+			"6",
+			"7",
+			"8",
+			"9",
+			"10",
+			"11",
+			"12",
+			"13",
+			"14",
+			"15",
+			"16",
+			"17",
+			"18",
+			"19",
+			"20",
+			"21",
+			"22",
+			"23"
+		],
+		"name": "Isl. Amount"
+	},
+	"1972048685": {
+		"desc": "Applies the selected cut for yourself.",
+		"name": "Apply Cut"
+	},
+	"1981383502": {
+		"desc": "Input the desired preset name.",
+		"name": "QuickPreset"
+	},
+	"1984344559": {
+		"desc": "Select the desired translation.",
+		"name": "Language"
+	},
+	"1986871866": {
+		"desc": "Maximizes the payout, but doesn't apply it.",
+		"name": "Max"
+	},
+	"198930721": {
+		"desc": "ATTENTION: for advanced users.\nWrites the selected value to the entered local.",
+		"name": "Write"
+	},
+	"1990872693": {
+		"desc": "Teleports you to the Auto Shop's entrance.",
+		"name": "Teleport to Entrance"
+	},
+	"1992928735": {
+		"desc": "Enable the cut for Player 3.",
+		"name": ""
+	},
+	"2008107625": {
+		"desc": "Skips almost all cooldowns.",
+		"name": "Kill Cooldowns"
+	},
+	"2022526714": {
+		"desc": "Select the desired primary target.",
+		"list": [
+			"Sinsimito Tequil.",
+			"Ruby Necklace",
+			"Bearer Bonds",
+			"Pink Diamond",
+			"Madrazo Files",
+			"Panther Statue"
+		],
+		"name": "Target"
+	},
+	"2032418534": {
+		"desc": "Select the desired crates amount to buy.",
+		"name": "Crates Amount"
+	},
+	"2035430584": {
+		"desc": "Allows launching the current heist alone.",
+		"name": "Solo Launch"
+	},
+	"2037454268": {
+		"desc": "Waits till the transaction is completed before doing the next one. Disabling this might fasten the supplier, but can cause instability on some systems.",
+		"name": "Validate Transactions"
+	},
+	"2039909835": {
+		"desc": "Enable the cut for Player 1.",
+		"name": ""
+	},
+	"2042184502": {
+		"desc": "Locks the heat of your Weed Shop on the current level.",
+		"name": "Lock"
+	},
+	"2044617240": {
+		"desc": "Select the desired sales undertaken.",
+		"name": "Sell Undertaken"
+	},
+	"2046292580": {
+		"desc": "Saves the current heist preset to the file.",
+		"name": "Save"
+	},
+	"2049294741": {
+		"desc": "Applies the selected days, hours, minutes, and seconds to the selected time.",
+		"name": "Apply Time"
+	},
+	"2060481718": {
+		"desc": "Forces the slots to always lose.",
+		"name": "Lose Slots"
+	},
+	"2061976072": {
+		"desc": "Select whether you can keep the vehicle for slot 2.",
+		"list": [
+			"Can't Claim",
+			"Can Claim"
+		],
+		"name": "Status"
+	},
+	"2072670506": {
+		"desc": "Select the desired arts value.",
+		"name": "Arts Value"
+	},
+	"2076079230": {
+		"desc": "Refreshes the list of the businesses.",
+		"name": "Refresh"
+	},
+	"2077356258": {
+		"desc": "Applies all changes.",
+		"name": "Apply All Changes"
+	},
+	"2080611883": {
+		"desc": "Reads the entered global value.",
+		"name": "Read"
+	},
+	"2082491870": {
+		"desc": "Input your stat here.",
+		"name": "MPX_KILLS"
+	},
+	"2083568774": {
+		"desc": "Teleports you to the Nightclub's computer.",
+		"name": "Teleport to Computer"
+	},
+	"2095656872": {
+		"desc": "Makes the heat of all businesses high.",
+		"name": "Max"
+	},
+	"2103883133": {
+		"desc": "Enable the cut for Player 1.",
+		"name": ""
+	},
+	"2128263919": {
+		"desc": "Applies all changes. Also, reloads the planning screen. Use before you start the preparation.",
+		"name": "Apply All Changes"
+	},
+	"2147295840": {
+		"desc": "Enable the cut for Player 3.",
+		"name": ""
+	},
+	"2151908821": {
+		"desc": "Skips the drilling process of The Fleeca Job.",
+		"name": "Bypass Fleeca Drill"
+	},
+	"2162084054": {
+		"desc": "Teleports you to The Cluckin' Bell Farm Raid mission.",
+		"name": "Teleport to Mission"
+	},
+	"2163122935": {
+		"desc": "Applies the selected cuts for players.",
+		"name": "Apply Cuts"
+	},
+	"2163476312": {
+		"desc": "Select the desired time seconds.",
+		"name": "Seconds"
+	},
+	"2168692153": {
+		"desc": "Select the desired guards strength.",
+		"list": [
+			"Elite",
+			"Pro",
+			"Unit",
+			"Rookie"
+		],
+		"name": "Guards"
+	},
+	"2178999057": {
+		"desc": "Reloads the planning screen.",
+		"name": "Reload Screen"
+	},
+	"2186314073": {
+		"desc": "Select the desired sales undertaken.",
+		"name": "Sell Undertaken"
+	},
+	"2192261764": {
+		"desc": "Loads the selected preset.",
+		"name": "Load"
+	},
+	"2197190804": {
+		"desc": "Set a custom cargo type for the Pocket Dimension supplier. The default type is Animal Materials.",
+		"name": "Custom Type"
+	},
+	"2197417274": {
+		"desc": "Set a custom cargo limit for the Pocket Dimension supplier. The default limit is unlimited.",
+		"name": "Custom Limit"
+	},
+	"2204307854": {
+		"desc": "ATTENTION: for advanced users.\nAllows you to change the value of secondary targets.",
+		"name": "Advanced"
+	},
+	"2204416952": {
+		"desc": "Reads the entered local value.",
+		"name": "Read"
+	},
+	"2208465692": {
+		"desc": "Allows setuping the heist for free.",
+		"name": "Free Setup"
+	},
+	"221454653": {
+		"desc": "Select the desired cargo type for the deeper supplier to source. Set to Animal Materials to use the default.",
+		"list": [
+			"Animal Materials",
+			"Art n Antiques",
+			"Chemicals",
+			"Counterfeit Goods",
+			"Jewelry n Gems",
+			"Medical Supplies",
+			"Narcotics",
+			"Tabacco n Alcohol"
+		],
+		"name": "Type"
+	},
+	"2221480043": {
+		"desc": "CAUTION: might be unsafe, bans reported in the past.\nApplies the maximum price for goods. Don't sell «All Goods».",
+		"name": "Maximize Price"
+	},
+	"2221973789": {
+		"desc": "Changes the delay between transactions. Try to increase if you get transaction errors.",
+		"name": "180k Loop"
+	},
+	"2225495636": {
+		"desc": "Makes your Car Wash's heat low.",
+		"name": "Min"
+	},
+	"2232642869": {
+		"desc": "Select the desired overall heat level.",
+		"name": "Heat Percentage"
+	},
+	"2243031576": {
+		"desc": "Finishes the buy mission instantly. Use after you can see the minimap.",
+		"name": "Instant Buy"
+	},
+	"2267523165": {
+		"desc": "Teleports you to the Arcade's entrance.",
+		"name": "Teleport to Entrance"
+	},
+	"2277377128": {
+		"desc": "Redraws the planning board.",
+		"name": "Redraw Board"
+	},
+	"2298551551": {
+		"desc": "Select the desired vehicle type for slot 2.",
+		"list": [
+			"LM87",
+			"Cinquemila",
+			"Autarch",
+			"Tigon",
+			"Champion",
+			"10F",
+			"SM722",
+			"Omnis e-GT",
+			"Growler",
+			"Deity",
+			"Itali RSX",
+			"Coquette D10",
+			"Jubilee",
+			"Astron",
+			"Comet S2 Cabr.",
+			"Torero",
+			"Cheetah Classic",
+			"Turismo Classic",
+			"Infernus Classic",
+			"Stafford",
+			"GT500",
+			"Viseris",
+			"Mamba",
+			"Coquette Black.",
+			"Stinger GT",
+			"Z-Type",
+			"Broadway",
+			"Vigero ZX",
+			"Buffalo STX",
+			"Ruston",
+			"Gauntl. Hellfire",
+			"Dominator GTT",
+			"Roosevelt Valor",
+			"Swinger",
+			"Stirling GT",
+			"Omnis",
+			"Tropos Rallye",
+			"Jugular",
+			"Patriot Mil-Spec",
+			"Toros",
+			"Caracara 4x4",
+			"Sentinel Classic",
+			"Weevil",
+			"Blista Kanjo",
+			"Eudora",
+			"Kamacho",
+			"Hellion",
+			"Ellie",
+			"Hermes",
+			"Hustler",
+			"Turismo Om.",
+			"Buffalo EVX",
+			"Itali GTO St.",
+			"Virtue",
+			"Ignus",
+			"Zentorno",
+			"Neon",
+			"Furia",
+			"Zorrusso",
+			"Thrax",
+			"Vagner",
+			"Panthere",
+			"Itali GTO",
+			"S80RR",
+			"Tyrant",
+			"Entity MT",
+			"Torero XO",
+			"Neo",
+			"Corsita",
+			"Paragon R",
+			"Franken Stange",
+			"Comet Safari",
+			"FR36",
+			"Hotring Everon",
+			"Komoda",
+			"Tailgater S",
+			"Jester Classic",
+			"Jester RR",
+			"Euros",
+			"ZR350",
+			"Cypher",
+			"Dominator ASP",
+			"Baller ST-D",
+			"Casco",
+			"Drift Yosemite",
+			"Everon",
+			"Penumbra FF",
+			"V-STR",
+			"Dominator GT",
+			"Schlagen GT",
+			"Cavalcade XL",
+			"Clique",
+			"Boor",
+			"Sugoi",
+			"Greenwood",
+			"Brigham",
+			"Issi Rally",
+			"Seminole Fr.",
+			"Kanjo SJ",
+			"Previon"
+		],
+		"name": "Vehicle"
+	},
+	"2304007839": {
+		"desc": "Select the desired Weed Shop's heat level.",
+		"name": "Heat Percentage"
+	},
+	"2312274498": {
+		"desc": "ATTENTION: might be unsafe, if overused.\nForces the ball to land on Red 16. Use after there is no time for betting.",
+		"name": "Land On Red 16"
+	},
+	"231525412": {
+		"desc": "Select the desired cash value.",
+		"name": "Cash Value"
+	},
+	"2328339245": {
+		"desc": "Select the desired sell value for the vehicle in slot 1.",
+		"name": "Sell Value Slot 1"
+	},
+	"2332515146": {
+		"desc": "ATTENTION: might be unsafe, if used for more chips.\nBypasses the casino limits.",
+		"name": "Bypass Casino Limits"
+	},
+	"2334324819": {
+		"desc": "Skips the hacking process of The Fleeca Job heist.",
+		"name": "Bypass Fleeca Hack"
+	},
+	"2342270126": {
+		"desc": "Applies the selected kills & deaths amounts.",
+		"name": "Apply K/D"
+	},
+	"2351080349": {
+		"desc": "Exports the current translation to the file.",
+		"name": "Export"
+	},
+	"2354914231": {
+		"desc": "Select the desired vehicle type for slot 3.",
+		"list": [
+			"LM87",
+			"Cinquemila",
+			"Autarch",
+			"Tigon",
+			"Champion",
+			"10F",
+			"SM722",
+			"Omnis e-GT",
+			"Growler",
+			"Deity",
+			"Itali RSX",
+			"Coquette D10",
+			"Jubilee",
+			"Astron",
+			"Comet S2 Cabr.",
+			"Torero",
+			"Cheetah Classic",
+			"Turismo Classic",
+			"Infernus Classic",
+			"Stafford",
+			"GT500",
+			"Viseris",
+			"Mamba",
+			"Coquette Black.",
+			"Stinger GT",
+			"Z-Type",
+			"Broadway",
+			"Vigero ZX",
+			"Buffalo STX",
+			"Ruston",
+			"Gauntl. Hellfire",
+			"Dominator GTT",
+			"Roosevelt Valor",
+			"Swinger",
+			"Stirling GT",
+			"Omnis",
+			"Tropos Rallye",
+			"Jugular",
+			"Patriot Mil-Spec",
+			"Toros",
+			"Caracara 4x4",
+			"Sentinel Classic",
+			"Weevil",
+			"Blista Kanjo",
+			"Eudora",
+			"Kamacho",
+			"Hellion",
+			"Ellie",
+			"Hermes",
+			"Hustler",
+			"Turismo Om.",
+			"Buffalo EVX",
+			"Itali GTO St.",
+			"Virtue",
+			"Ignus",
+			"Zentorno",
+			"Neon",
+			"Furia",
+			"Zorrusso",
+			"Thrax",
+			"Vagner",
+			"Panthere",
+			"Itali GTO",
+			"S80RR",
+			"Tyrant",
+			"Entity MT",
+			"Torero XO",
+			"Neo",
+			"Corsita",
+			"Paragon R",
+			"Franken Stange",
+			"Comet Safari",
+			"FR36",
+			"Hotring Everon",
+			"Komoda",
+			"Tailgater S",
+			"Jester Classic",
+			"Jester RR",
+			"Euros",
+			"ZR350",
+			"Cypher",
+			"Dominator ASP",
+			"Baller ST-D",
+			"Casco",
+			"Drift Yosemite",
+			"Everon",
+			"Penumbra FF",
+			"V-STR",
+			"Dominator GT",
+			"Schlagen GT",
+			"Cavalcade XL",
+			"Clique",
+			"Boor",
+			"Sugoi",
+			"Greenwood",
+			"Brigham",
+			"Issi Rally",
+			"Seminole Fr.",
+			"Kanjo SJ",
+			"Previon"
+		],
+		"name": "Vehicle"
+	},
+	"235591959": {
+		"desc": "Select the desired sales made.",
+		"name": "Sell Made"
+	},
+	"2365767353": {
+		"desc": "Changes the delay between transactions. Try to increase if you get transaction errors.",
+		"name": "680k Loop"
+	},
+	"2379407372": {
+		"desc": "Refreshes the list of presets.",
+		"name": "Refresh"
+	},
+	"240166284": {
+		"desc": "Input your global here.",
+		"name": "262145 + 9415"
+	},
+	"240461493": {
+		"desc": "Refreshes the list of presets.",
+		"name": "Refresh"
+	},
+	"240612036": {
+		"desc": "Skips the heist's setup cooldown. Doesn't skip the cooldown between transactions (20 mins).",
+		"name": "Kill Cooldown"
+	},
+	"2416159315": {
+		"desc": "Finishes the sell mission instantly. Use after you can see the minimap.",
+		"name": "Instant Sell"
+	},
+	"2418482567": {
+		"desc": "Select the desired gold value.",
+		"name": "Gold Value"
+	},
+	"2419343351": {
+		"desc": "Resets all preparations. Also, redraws the planning board.",
+		"name": "Reset Preps"
+	},
+	"2429624980": {
+		"desc": "Select the desired sales made.",
+		"name": "Sell Made"
+	},
+	"2448227709": {
+		"desc": "Select the desired time days.",
+		"name": "Days"
+	},
+	"2448785176": {
+		"desc": "Enable the cut for Player 2.",
+		"name": ""
+	},
+	"2464066992": {
+		"desc": "Input the desired preset name.",
+		"name": "QuickPreset"
+	},
+	"2467712932": {
+		"desc": "Loads the selected translation.",
+		"name": "Load"
+	},
+	"2482846": {
+		"desc": "Teleports you to the Car Wash's entrance.",
+		"name": "Teleport to Entrance"
+	},
+	"2485736979": {
+		"desc": "Tries to skip the current cutscene.",
+		"name": "Skip Cutscene"
+	},
+	"2487557746": {
+		"desc": "ATTENTION: works only for you, even if not the host.\nAllows you to get 12 millions bonus on hard difficulty. Enable before starting the heist. Has a cooldown.",
+		"name": "12mil Bonus"
+	},
+	"2488243421": {
+		"desc": "Select the desired island target.",
+		"list": [
+			"None",
+			"Cash",
+			"Weed",
+			"Coke",
+			"Gold"
+		],
+		"name": "Isl. Target"
+	},
+	"2488373461": {
+		"desc": "Reads the entered packed stat value.",
+		"name": "Read"
+	},
+	"2500521082": {
+		"desc": "Applies all changes and completes all preparations.",
+		"name": "Apply & Complete Preps"
+	},
+	"2505594466": {
+		"desc": "ATTENTION: might be unsafe, if overused.\nFills your Nightclub safe with money.",
+		"name": "Fill"
+	},
+	"2506703232": {
+		"desc": "Enables Agency features in Flash Operations tab.",
+		"name": "Agency"
+	},
+	"2513968232": {
+		"desc": "Select the desired stage.",
+		"list": [
+			"Slush Fund",
+			"Break. n Enter.",
+			"Conceal. Weap.",
+			"Hit n Run",
+			"Disorgan. Crime",
+			"Scene of Crime"
+		],
+		"name": "Stage"
+	},
+	"2516806009": {
+		"desc": "Select the desired compound target.",
+		"list": [
+			"None",
+			"Cash",
+			"Weed",
+			"Coke",
+			"Gold"
+		],
+		"name": "Com. Target"
+	},
+	"2521826945": {
+		"desc": "Select the cut for Player 1.",
+		"name": "Player 1"
+	},
+	"2524338462": {
+		"desc": "Old: slower, works for all players, saves the preps, doesn't work for «Act III«.\nNew: faster, works for most players, resets the preps, does work for «Act III».",
+		"list": [
+			"Old",
+			"New"
+		],
+		"name": "Doomsday"
+	},
+	"2525720329": {
+		"desc": "Enables Auto Shop features in Flash Operations tab.",
+		"name": "Auto Shop"
+	},
+	"2533417139": {
+		"desc": "Select one of the ready-made presets.",
+		"list": [
+			"All - 0%",
+			"All - 25%",
+			"All - 85%",
+			"All - 100%"
+		],
+		"name": "Presets"
+	},
+	"2545389708": {
+		"desc": "Forces everyone to be «Ready».",
+		"name": "Force Ready"
+	},
+	"2557164955": {
+		"desc": "Teleports you to the Bail Office's entrance.",
+		"name": "Teleport to Entrance"
+	},
+	"2563077354": {
+		"desc": "Generates the example stats file.",
+		"name": "Generate Example File"
+	},
+	"2565982049": {
+		"desc": "Resets the values to default.",
+		"name": "Default"
+	},
+	"2572173807": {
+		"desc": "Skips the setup mission for your Arcade. Change the session to apply.",
+		"name": "Skip Setup"
+	},
+	"2572724340": {
+		"desc": "Teleports you to the Garment Factory's computer.",
+		"name": "Teleport to Computer"
+	},
+	"2574067323": {
+		"desc": "Input your value here.",
+		"name": "4"
+	},
+	"2575018969": {
+		"desc": "ATTENTION: the transaction limit is 2.1mil.\nSelect the desired salvage value multiplier.",
+		"name": "Salvage Value Multiplier"
+	},
+	"2587089290": {
+		"desc": "Controls the duration of timeouts in seconds for certain features that require waiting for something to happen in the game. Increasing this might help with features that aren't working properly on some systems.",
+		"name": "Timeout Duration"
+	},
+	"2594014886": {
+		"desc": "Makes your Weed Shop's heat high.",
+		"name": "Max"
+	},
+	"259524944": {
+		"desc": "Select the desired story character.",
+		"list": [
+			"Michael",
+			"Franklin",
+			"Trevor"
+		],
+		"name": "Character"
+	},
+	"2597501148": {
+		"desc": "Unloads the Silent Night script.",
+		"name": "Unload Silent Night"
+	},
+	"2618021157": {
+		"desc": "Skips almost all cooldowns.",
+		"name": "Kill Cooldowns"
+	},
+	"2618884339": {
+		"desc": "Select one of the ready-made presets.",
+		"list": [
+			"All - 0%",
+			"All - 25%",
+			"All - 85%",
+			"All - 100%"
+		],
+		"name": "Presets"
+	},
+	"263192006": {
+		"desc": "Input the desired preset name.",
+		"name": "QuickPreset"
+	},
+	"2645491689": {
+		"desc": "Finishes the sell mission instantly. Use after you can see the minimap.",
+		"name": "Instant Sell"
+	},
+	"2656347400": {
+		"desc": "Select the desired time to modify.",
+		"list": [
+			"Unselected",
+			"In GTA Online",
+			"As Character"
+		],
+		"name": "Time"
+	},
+	"2667943039": {
+		"desc": "ATTENTION: cannot be undone.\nRemoves the selected stats file.",
+		"name": "Remove"
+	},
+	"2676065916": {
+		"desc": "ATTENTION: cannot be undone.\nRemoves the selected preset.",
+		"name": "Remove"
+	},
+	"2683314187": {
+		"desc": "Select the desired loadout.",
+		"list": [
+			"Aggressor",
+			"Conspirator",
+			"Crackshot",
+			"Saboteur",
+			"Marksman"
+		],
+		"name": "Loadout"
+	},
+	"2693594764": {
+		"desc": "Teleports you to the Weed Shop's laptop.",
+		"name": "Teleport to Laptop"
+	},
+	"2707634808": {
+		"desc": "Copies the presets folder path to the clipboard.",
+		"name": "Copy Folder Path"
+	},
+	"2710747800": {
+		"desc": "Makes the slot 1 «Available». Also, reloads the planning screen.",
+		"name": "Make Available"
+	},
+	"2713395945": {
+		"desc": "Locks the popularity of your Nightclub on the current level.",
+		"name": "Lock"
+	},
+	"2715718918": {
+		"desc": "Applies all changes and completes all preparations.",
+		"name": "Apply & Complete Preps"
+	},
+	"2716160360": {
+		"desc": "Select the desired sell value for the vehicle in slot 2.",
+		"name": "Sell Value Slot 2"
+	},
+	"271707445": {
+		"desc": "Changes the delay between transactions. Try to increase if you get transaction errors.",
+		"name": "300k Loop"
+	},
+	"2732699719": {
+		"desc": "Skips almost all cooldowns.",
+		"name": "Kill Cooldowns"
+	},
+	"2743544516": {
+		"desc": "Select the desired prize.",
+		"list": [
+			"Clothing 1",
+			"Clothing 2",
+			"Clothing 3",
+			"2,500 RP",
+			"5,000 RP",
+			"7,500 RP",
+			"10,000 RP",
+			"15,000 RP",
+			"$20,000",
+			"$30,000",
+			"$40,000",
+			"$50,000",
+			"10,000 Chips",
+			"15,000 Chips",
+			"20,000 Chips",
+			"25,000 Chips",
+			"Discount",
+			"Mystery",
+			"Vehicle"
+		],
+		"name": "Prize"
+	},
+	"2744764130": {
+		"desc": "ATTENTION: if solo, apply near the planning board. If not solo, apply after you've selected «Buyer».\nApplies the selected cuts for players.",
+		"name": "Apply Cuts"
+	},
+	"275113730": {
+		"desc": "Select the desired deaths amount.",
+		"name": "Deaths"
+	},
+	"2762387623": {
+		"desc": "Select the cut for Player 3.",
+		"name": "Player 3"
+	},
+	"2777757200": {
+		"desc": "Teleports you to the Facility's entrance.",
+		"name": "Teleport to Entrance"
+	},
+	"2777934685": {
+		"desc": "Applies all changes and completes all preparations.",
+		"name": "Apply & Complete Preps"
+	},
+	"2786536850": {
+		"desc": "ATTENTION: the transaction limit is 2.55mil.\nIncreases the size of the bag.",
+		"name": "Woman's Bag"
+	},
+	"2801118403": {
+		"desc": "Enable the cut for Player 4.",
+		"name": ""
+	},
+	"2818326565": {
+		"desc": "Resets all preparations.",
+		"name": "Reset Preps"
+	},
+	"2822848356": {
+		"desc": "Select the desired kills amount.",
+		"name": "Kills"
+	},
+	"2823304211": {
+		"desc": "Resets the launch settings for the current heist.",
+		"name": "Reset"
+	},
+	"2825469519": {
+		"desc": "Reverts the previous value you've written to the entered local.",
+		"name": "Revert"
+	},
+	"2838535834": {
+		"desc": "Select whether you can keep the vehicle for slot 1.",
+		"list": [
+			"Can't Claim",
+			"Can Claim"
+		],
+		"name": "Status"
+	},
+	"2876780757": {
+		"desc": "Select the cut for Player 3.",
+		"name": "Player 3"
+	},
+	"2896293565": {
+		"desc": "Finishes the heist instantly. Use after you can see the minimap.",
+		"name": "Instant Finish"
+	},
+	"2941976963": {
+		"desc": "ATTENTION: use once per day.\nGives the selected prize instantly.",
+		"name": "Give Prize"
+	},
+	"2951944810": {
+		"desc": "Applies the selected acquire chips limit.",
+		"name": "Apply Acquire Limit"
+	},
+	"2960602626": {
+		"desc": "Select the desired sales made.",
+		"name": "Sell Made"
+	},
+	"2970536526": {
+		"desc": "Teleports you to the Car Wash's laptop.",
+		"name": "Teleport to Laptop"
+	},
+	"2989287619": {
+		"desc": "Select the cut for Player 4.",
+		"name": "Player 4"
+	},
+	"3005532137": {
+		"desc": "Select the desired date day.",
+		"name": "Day"
+	},
+	"3014144915": {
+		"desc": "Makes your Car Wash's heat high.",
+		"name": "Max"
+	},
+	"3021731285": {
+		"desc": "Select the desired sell value for the vehicle in slot 3.",
+		"name": "Sell Value Slot 3"
+	},
+	"3022502274": {
+		"desc": "Select the desired Nightclub's popularity level.",
+		"name": "Percentage"
+	},
+	"3044961988": {
+		"desc": "Teleports you to the closest Crate Warehouse's entrance.",
+		"name": "Teleport to Warehouse"
+	},
+	"3049663406": {
+		"desc": "CAUTION: might be unsafe, bans reported in the past.\nToggles the 50k dollars loop.",
+		"name": "50k Loop"
+	},
+	"3053294413": {
+		"desc": "Automatically stops JinxScript after using it in collab's features.",
+		"name": "Auto-Stop JinxScript"
+	},
+	"3066648808": {
+		"desc": "Input the desired preset name.",
+		"name": "QuickPreset"
+	},
+	"3074900844": {
+		"desc": "Allows claiming the vehicles for free.",
+		"name": "Free Claim"
+	},
+	"3084319402": {
+		"desc": "Select the desired vehicle type for slot 1.",
+		"list": [
+			"LM87",
+			"Cinquemila",
+			"Autarch",
+			"Tigon",
+			"Champion",
+			"10F",
+			"SM722",
+			"Omnis e-GT",
+			"Growler",
+			"Deity",
+			"Itali RSX",
+			"Coquette D10",
+			"Jubilee",
+			"Astron",
+			"Comet S2 Cabr.",
+			"Torero",
+			"Cheetah Classic",
+			"Turismo Classic",
+			"Infernus Classic",
+			"Stafford",
+			"GT500",
+			"Viseris",
+			"Mamba",
+			"Coquette Black.",
+			"Stinger GT",
+			"Z-Type",
+			"Broadway",
+			"Vigero ZX",
+			"Buffalo STX",
+			"Ruston",
+			"Gauntl. Hellfire",
+			"Dominator GTT",
+			"Roosevelt Valor",
+			"Swinger",
+			"Stirling GT",
+			"Omnis",
+			"Tropos Rallye",
+			"Jugular",
+			"Patriot Mil-Spec",
+			"Toros",
+			"Caracara 4x4",
+			"Sentinel Classic",
+			"Weevil",
+			"Blista Kanjo",
+			"Eudora",
+			"Kamacho",
+			"Hellion",
+			"Ellie",
+			"Hermes",
+			"Hustler",
+			"Turismo Om.",
+			"Buffalo EVX",
+			"Itali GTO St.",
+			"Virtue",
+			"Ignus",
+			"Zentorno",
+			"Neon",
+			"Furia",
+			"Zorrusso",
+			"Thrax",
+			"Vagner",
+			"Panthere",
+			"Itali GTO",
+			"S80RR",
+			"Tyrant",
+			"Entity MT",
+			"Torero XO",
+			"Neo",
+			"Corsita",
+			"Paragon R",
+			"Franken Stange",
+			"Comet Safari",
+			"FR36",
+			"Hotring Everon",
+			"Komoda",
+			"Tailgater S",
+			"Jester Classic",
+			"Jester RR",
+			"Euros",
+			"ZR350",
+			"Cypher",
+			"Dominator ASP",
+			"Baller ST-D",
+			"Casco",
+			"Drift Yosemite",
+			"Everon",
+			"Penumbra FF",
+			"V-STR",
+			"Dominator GT",
+			"Schlagen GT",
+			"Cavalcade XL",
+			"Clique",
+			"Boor",
+			"Sugoi",
+			"Greenwood",
+			"Brigham",
+			"Issi Rally",
+			"Seminole Fr.",
+			"Kanjo SJ",
+			"Previon"
+		],
+		"name": "Vehicle"
+	},
+	"3089531783": {
+		"desc": "Select the desired preset.",
+		"list": [
+			""
+		],
+		"name": "File"
+	},
+	"3089752576": {
+		"desc": "Resets all preparations. Also, reloads the planning screen.",
+		"name": "Reset Preps"
+	},
+	"3101643703": {
+		"desc": "Disables the xp gain for sell missions.",
+		"name": "No XP Gain"
+	},
+	"3102287656": {
+		"desc": "Controls how the cargo limit is applied.",
+		"list": [
+			"Stock",
+			"Value"
+		],
+		"name": ""
+	},
+	"3104975103": {
+		"desc": "ATTENTION: cannot be undone.\nRemoves the selected preset.",
+		"name": "Remove"
+	},
+	"3114164208": {
+		"desc": "Makes your Nightclub popular.",
+		"name": "Max"
+	},
+	"3119530028": {
+		"desc": "Enable the cut for Player 2.",
+		"name": ""
+	},
+	"3133099875": {
+		"desc": "Select the cut for Player 4.",
+		"name": "Player 4"
+	},
+	"3139688717": {
+		"desc": "Unlocks all jobs without playing every heist one by one. Change the session to apply.",
+		"name": "Unlock All Jobs"
+	},
+	"3156110164": {
+		"desc": "Disables auto refill of the crates after «Instant Sell».",
+		"name": "No CrateBack"
+	},
+	"3170455304": {
+		"desc": "Finishes the sell mission instantly. Use after you can see the minimap.",
+		"name": "Instant Sell"
+	},
+	"3195070825": {
+		"desc": "Enable the cut for Player 3.",
+		"name": ""
+	},
+	"320639522": {
+		"desc": "Finishes the heist instantly. Use after you can see the minimap.",
+		"name": "Instant Finish"
+	},
+	"3209867265": {
+		"desc": "Select the desired business.",
+		"list": [
+			"All",
+			"Cash Factory",
+			"Bunker"
+		],
+		"name": "Business"
+	},
+	"3226384691": {
+		"desc": "Automatically calculates maximum payout cuts.",
+		"name": "2.55mil Payout"
+	},
+	"3227932280": {
+		"desc": "Resets the launch settings for the current heist.",
+		"name": "Reset"
+	},
+	"3239045345": {
+		"desc": "Copies the presets folder path to the clipboard.",
+		"name": "Copy Folder Path"
+	},
+	"3245638831": {
+		"desc": "Forces everyone to be «Ready».",
+		"name": "Force Ready"
+	},
+	"3248053523": {
+		"desc": "Select the cut for Player 2.",
+		"name": "Player 2"
+	},
+	"3249552798": {
+		"desc": "Select the desired business.",
+		"list": [
+			"All",
+			"Arcade",
+			"Bail Office",
+			"Garment Fact.",
+			"Nightclub",
+			"Salvage Yard"
+		],
+		"name": "Business"
+	},
+	"3251394110": {
+		"desc": "Connects to GTA Online.",
+		"name": "Go Online"
+	},
+	"3253609703": {
+		"desc": "Select the desired masks.",
+		"list": [
+			"None",
+			"Geometric Set",
+			"Hunter Set",
+			"Oni Half Mask Set",
+			"Emoji Set",
+			"Ornate Skull Set",
+			"Lucky Fruit Set",
+			"Guerilla Set",
+			"Clown Set",
+			"Animal Set",
+			"Riot Set",
+			"Oni Full Mask Set",
+			"Hockey Set"
+		],
+		"name": "Masks"
+	},
+	"3256690552": {
+		"desc": "Collects money from your Garment Factory safe.",
+		"name": "Collect Safe"
+	},
+	"3263376510": {
+		"desc": "Refreshes the list of presets.",
+		"name": "Refresh"
+	},
+	"3265107631": {
+		"desc": "ATTENTION: cannot be undone.\nResets the config to default.",
+		"name": "Reset"
+	},
+	"3274342702": {
+		"desc": "Applies the selected payout. Use after you can see the minimap.",
+		"name": "Apply Payout"
+	},
+	"3278199503": {
+		"desc": "Select the desired money amount.",
+		"name": "Money Amount"
+	},
+	"3297097527": {
+		"desc": "Enable the cut for Player 4.",
+		"name": ""
+	},
+	"3299479693": {
+		"desc": "CAUTION: might be unsafe, bans reported in the past.\nForces the slots to give you the jackpot.",
+		"name": "Rig Slots"
+	},
+	"3313762784": {
+		"desc": "Saves the current heist preset to the file.",
+		"name": "Save"
+	},
+	"3320430974": {
+		"desc": "Old: slower, works for all players, saves the preps.\nNew: faster, works for most players, resets the preps.",
+		"list": [
+			"Old",
+			"New"
+		],
+		"name": "Cayo Perico"
+	},
+	"3323365913": {
+		"desc": "Select the cut for Player 1.",
+		"name": "Player 1"
+	},
+	"3338000098": {
+		"desc": "Select the cut for Player 4.",
+		"name": "Player 4"
+	},
+	"3347070306": {
+		"desc": "Allows you to play unavailable jobs temporarily.",
+		"name": "Play Unavailable Jobs"
+	},
+	"3348714234": {
+		"desc": "Teleports you to the Arcade's planning boards.",
+		"name": "Teleport to Boards"
+	},
+	"3364673440": {
+		"desc": "Select the desired Car Wash's heat level.",
+		"name": "Heat Percentage"
+	},
+	"3382912923": {
+		"desc": "Select the desired global type.",
+		"list": [
+			"int",
+			"float",
+			"bool"
+		],
+		"name": "Type"
+	},
+	"3406540126": {
+		"desc": "Skips the vault door drilling process.",
+		"name": "Bypass Vault Door Drill"
+	},
+	"3407190849": {
+		"desc": "Gets cargo for your Hangar.",
+		"name": "Get Cargo"
+	},
+	"3413223564": {
+		"desc": "Refreshes the Bunker stats to the current ones.",
+		"name": "Refresh"
+	},
+	"3421478780": {
+		"desc": "Applies the selected sell values for the vehicles. Also, reloads the planning screen. Use before you start the preparation.",
+		"name": "Apply Sell Values"
+	},
+	"3422591571": {
+		"desc": "«Apply & Complete Preps» will automatically unlock all points of interest.",
+		"name": "Diamond Casino"
+	},
+	"3447935937": {
+		"desc": "Fills your Bunker stock. Also, gets supplies for your Bunker repeatedly.",
+		"name": "Turkish Supplier"
+	},
+	"3452398371": {
+		"desc": "Applies the selected money amount to the selected story character.",
+		"name": "Apply Money Amount"
+	},
+	"3459105379": {
+		"desc": "Teleports you to the Nightclub's entrance.",
+		"name": "Teleport to Entrance"
+	},
+	"3463819628": {
+		"desc": "Select the desired organization type.",
+		"list": [
+			"SecuroServ CEO",
+			"Club President"
+		],
+		"name": "Type"
+	},
+	"3465536346": {
+		"desc": "Select the desired date month.",
+		"name": "Month"
+	},
+	"3471671557": {
+		"desc": "Select the desired gunman.",
+		"list": [
+			"Karl Abolaji",
+			"Charlie Reed",
+			"Patrick McRear.",
+			"Gustavo Mota",
+			"Chester McCoy"
+		],
+		"name": "Gunman"
+	},
+	"348460510": {
+		"desc": "Select the desired robbery type for slot 2.",
+		"list": [
+			"Cargo Ship",
+			"Gangbanger",
+			"Duggan",
+			"Podium",
+			"McTony"
+		],
+		"name": "Robbery"
+	},
+	"3489397178": {
+		"desc": "Teleports you to the Salvage Yard's entrance.",
+		"name": "Teleport to Entrance"
+	},
+	"3493717501": {
+		"desc": "Applies the selected cuts for players.",
+		"name": "Apply Cuts"
+	},
+	"3494409090": {
+		"desc": "Select the desired races losses amount.",
+		"name": "Losses"
+	},
+	"3495628202": {
+		"desc": "Reverts the previous value you've written to the entered stat.",
+		"name": "Revert"
+	},
+	"3506410561": {
+		"desc": "Select the cut for yourself.",
+		"name": "Self"
+	},
+	"3510187100": {
+		"desc": "Applies all changes.",
+		"name": "Apply All Changes"
+	},
+	"351358884": {
+		"desc": "Skips the hacking process of The Doomsday Scenario heist.",
+		"name": "Bypass Dooms. Scen. Hack"
+	},
+	"3520482444": {
+		"desc": "Completes all preparations. Also, reloads the planning screen.",
+		"name": "Complete Preps"
+	},
+	"3520722014": {
+		"desc": "RECOMMENDED: it's better to leave this enabled.\nAutomatically adjusts certain features to prevent issues when playing missions while the script is running and restores them upon script unload.",
+		"name": "Compatibility Mode"
+	},
+	"3528389542": {
+		"desc": "Makes the heat of all businesses low.",
+		"name": "Min"
+	},
+	"356557298": {
+		"desc": "Makes the slot 2 «Available». Also, reloads the planning screen.",
+		"name": "Make Available"
+	},
+	"3580546965": {
+		"desc": "Select the desired stage.",
+		"list": [
+			"Up n Running",
+			"Mogul",
+			"Intel",
+			"Iron Mule",
+			"Ammunation",
+			"Titan Job"
+		],
+		"name": "Stage"
+	},
+	"358895697": {
+		"desc": "Decides whether you want to apply new buy missions or not.",
+		"name": "Don't Apply Buy"
+	},
+	"359591534": {
+		"desc": "Deposits all money to your bank.",
+		"name": "Deposit All"
+	},
+	"3612648761": {
+		"desc": "Old: slower, works for all players, saves the preps.\nNew: faster, works for most players, resets the preps.",
+		"list": [
+			"Old",
+			"New"
+		],
+		"name": "Diam. Casino"
+	},
+	"3653001546": {
+		"desc": "Reloads the planning screen.",
+		"name": "Reload Screen"
+	},
+	"3660800905": {
+		"desc": "Copies the stats folder path to the clipboard.",
+		"name": "Copy Folder Path"
+	},
+	"3663110786": {
+		"desc": "Select the desired earnings.",
+		"name": "Earnings"
+	},
+	"3668064910": {
+		"desc": "Collects money from your Agency safe.",
+		"name": "Collect Safe"
+	},
+	"3671068759": {
+		"desc": "Select the desired packed stat type.",
+		"list": [
+			"int",
+			"bool"
+		],
+		"name": "Type"
+	},
+	"3675835553": {
+		"desc": "Select the desired preset.",
+		"list": [
+			""
+		],
+		"name": "File"
+	},
+	"3678740299": {
+		"desc": "Decides whether you want to apply new sell missions or not.",
+		"name": "Don't Apply Sell"
+	},
+	"3680350375": {
+		"desc": "Select the desired stat file.",
+		"list": [
+			""
+		],
+		"name": "File"
+	},
+	"3688494566": {
+		"desc": "Opens the Nightclub's computer screen.",
+		"name": "Open Computer"
+	},
+	"3688500623": {
+		"desc": "Starts filling your Hangar stock repeatedly.",
+		"name": "Start"
+	},
+	"3699168528": {
+		"desc": "Select the desired earnings.",
+		"name": "Earnings"
+	},
+	"3706450780": {
+		"desc": "Disabled: no logging.\nSilent: logs only.\nEnabled: logs & toasts.",
+		"list": [
+			"Disabled",
+			"Silent",
+			"Enabled"
+		],
+		"name": "Logging"
+	},
+	"3706892196": {
+		"desc": "Makes your Nightclub unpopular.",
+		"name": "Min"
+	},
+	"3708841168": {
+		"desc": "Teleports you to the Agency's mission.",
+		"name": "Teleport to Mission"
+	},
+	"370896690": {
+		"desc": "Select the desired keycards level.",
+		"list": [
+			"None",
+			"Level 1",
+			"Level 2"
+		],
+		"name": "Keycards"
+	},
+	"3709957655": {
+		"desc": "Collects money from your Car Wash safe.",
+		"name": "Collect Safe"
+	},
+	"3713590659": {
+		"desc": "Select the desired payout.",
+		"name": "Payout"
+	},
+	"3713723734": {
+		"desc": "Select the desired heist.",
+		"list": [
+			"The Fleeca Job",
+			"The Prison Break",
+			"The Humane Labs",
+			"Series A Funding",
+			"The Pacific Job"
+		],
+		"name": "Heist"
+	},
+	"3772045539": {
+		"desc": "ATTENTION: cannot be undone.\nRemoves the selected translation.",
+		"name": "Remove"
+	},
+	"3776445800": {
+		"desc": "Applies all changes and completes all preparations. Also, redraws the planning board.",
+		"name": "Apply & Complete Preps"
+	},
+	"3791248825": {
+		"desc": "«Apply & Complete Preps» will automatically unlock all points of interest.",
+		"name": "Cayo Perico"
+	},
+	"3792339226": {
+		"desc": "Select the desired local type.",
+		"list": [
+			"int",
+			"float"
+		],
+		"name": "Type"
+	},
+	"3806528891": {
+		"desc": "Skips the keypad hacking process.",
+		"name": "Bypass Keypad Hack"
+	},
+	"381573650": {
+		"desc": "Teleports you to the Auto Shop's planning board.",
+		"name": "Teleport to Board"
+	},
+	"3823862842": {
+		"desc": "Select the desired «Spent» stat.",
+		"list": [
+			"Unselected",
+			"Total",
+			"Weapons n Armor",
+			"Vehicles n Maint.",
+			"Style n Entert.",
+			"Property n Utils",
+			"Job n Ac. Ent. Fees",
+			"Betting",
+			"Contact Services",
+			"Healthcare n Bail",
+			"Dropped or Stolen"
+		],
+		"name": "Spent"
+	},
+	"382605626": {
+		"desc": "Select the desired races wins amount.",
+		"name": "Wins"
+	},
+	"3833377484": {
+		"desc": "Enables deeper cargo management for your Hangar.",
+		"name": "Pocket Dimension"
+	},
+	"383758887": {
+		"desc": "Select the cut for Player 3.",
+		"name": "Player 3"
+	},
+	"3850002753": {
+		"desc": "Forces everyone to be «Ready».",
+		"name": "Force Ready"
+	},
+	"3853195944": {
+		"desc": "Input your value here.",
+		"name": "100"
+	},
+	"3860494883": {
+		"desc": "Select one of the ready-made presets.",
+		"list": [
+			"All - 0%",
+			"All - 25%",
+			"All - 85%",
+			"All - 100%"
+		],
+		"name": "Presets"
+	},
+	"3868192146": {
+		"desc": "Old: slower, works for all players, saves the preps, doesn't work for «Studio Time».\nNew: faster, works for most players, resets the preps, does work for «Studio Time».",
+		"list": [
+			"Old",
+			"New"
+		],
+		"name": "Agency"
+	},
+	"3869565526": {
+		"desc": "Allows launching the current heist alone.",
+		"name": "Solo Launch"
+	},
+	"3876223347": {
+		"desc": "Select the desired vehicle modification for slot 1.",
+		"list": [
+			"Version 1",
+			"Version 2",
+			"Version 3",
+			"Version 4",
+			"Version 5"
+		],
+		"name": "Modification"
+	},
+	"3876278679": {
+		"desc": "Enable the cut for Player 2.",
+		"name": ""
+	},
+	"3880467802": {
+		"desc": "Enables Cluckin' Bell features in Flash Operations tab.",
+		"name": "Cluckin' Bell"
+	},
+	"3887624114": {
+		"desc": "Teleports you to the Hangar's laptop.",
+		"name": "Teleport to Laptop"
+	},
+	"3888759190": {
+		"desc": "Copies Discord server invite link to your clipboard.",
+		"name": "Copy Discord Invite Link"
+	},
+	"3906495008": {
+		"desc": "Applies the selected day, month, and year to the selected date.",
+		"name": "Apply Date"
+	},
+	"3907043974": {
+		"desc": "Decides whether you want to apply new buy missions or not.",
+		"name": "Don't Apply Buy"
+	},
+	"3909928810": {
+		"desc": "Gets supplies for your Bunker.",
+		"name": "Get Supplies"
+	},
+	"3916799379": {
+		"desc": "Skips the setup missions for your Nightclub. Change the session to apply.",
+		"name": "Skip Setups"
+	},
+	"3922980484": {
+		"desc": "ATTENTION: for advanced users.\nWrites the selected value to the entered global.",
+		"name": "Write"
+	},
+	"3929757643": {
+		"desc": "Resets all preparations. Also, reloads the planning screen.",
+		"name": "Reset Preps"
+	},
+	"393684502": {
+		"desc": "Finishes the heist instantly. Use after you can see the minimap.",
+		"name": "Instant Finish"
+	},
+	"3940360248": {
+		"desc": "Skips the heist's weekly cooldown. Also, reloads the planning screen.",
+		"name": "Skip Weekly Cooldown"
+	},
+	"3951189886": {
+		"desc": "ATTENTION: cannot be undone.\nRemoves the selected money amount from your character.",
+		"name": "Remove"
+	},
+	"3954568169": {
+		"desc": "ATTENTION: might cause issues during missions.\nAutomatically tries to register you as a boss while the script is running.",
+		"name": "Auto-Register"
+	},
+	"3958764033": {
+		"desc": "Redraws the planning board.",
+		"name": "Redraw Board"
+	},
+	"3973194813": {
+		"desc": "Resupplies the selected business.",
+		"name": "Resupply"
+	},
+	"3983120336": {
+		"desc": "Maximizes the payout, but doesn't apply it.",
+		"name": "Max"
+	},
+	"3985403827": {
+		"desc": "Select one of the ready-made presets.",
+		"list": [
+			"All - 0%",
+			"All - 25%",
+			"All - 85%",
+			"All - 100%"
+		],
+		"name": "Presets"
+	},
+	"399595784": {
+		"desc": "Allows to write the stats from the file.",
+		"name": "From File"
+	},
+	"4005701702": {
+		"desc": "Unbricks your computer after using features like «Unlock All Awards».",
+		"name": "Unbrick Computer"
+	},
+	"4007972871": {
+		"desc": "Select the cut for Player 2.",
+		"name": "Player 2"
+	},
+	"4012500915": {
+		"desc": "Refreshes the list of presets.",
+		"name": "Refresh"
+	},
+	"4014798087": {
+		"desc": "Automatically opens Lua Tab upon loading the script.",
+		"name": "Auto-Open Lua Tab"
+	},
+	"4021915228": {
+		"desc": "Automatically calculates maximum payout cuts.",
+		"name": "3.6mil Payout"
+	},
+	"4024136219": {
+		"desc": "Resets the launch settings for the current heist.",
+		"name": "Reset"
+	},
+	"4035196807": {
+		"desc": "Skips the cutting process.",
+		"name": "Bypass Plasma Cutter Cut"
+	},
+	"4038652907": {
+		"desc": "Fills your Crate Warehouse stock repeatedly.",
+		"name": "Turkish Supplier"
+	},
+	"4038702108": {
+		"desc": "Select the desired difficulty.",
+		"list": [
+			"Normal",
+			"Hard"
+		],
+		"name": "Difficulty"
+	},
+	"4049549011": {
+		"desc": "Finishes the heist instantly. Use after you can see the minimap.",
+		"name": "Instant Finish"
+	},
+	"4052358492": {
+		"desc": "Applies all changes and completes all preparations. Also, reloads the planning screen.",
+		"name": "Apply & Complete Preps"
+	},
+	"4058320430": {
+		"desc": "Loads the selected preset, but doesn't complete preparations.",
+		"name": "Load"
+	},
+	"406797125": {
+		"desc": "CAUTION: might be unsafe, bans reported in the past.\nApplies the maximum price for your cargo.",
+		"name": "Maximize Price"
+	},
+	"4075966147": {
+		"desc": "Locks the heat of your Tour Company on the current level.",
+		"name": "Lock"
+	},
+	"4080378491": {
+		"desc": "Refreshes the list of the businesses.",
+		"name": "Refresh"
+	},
+	"4084359033": {
+		"desc": "Skips the fingerprint hacking process.",
+		"name": "Bypass Fingerprint Hack"
+	},
+	"4085192730": {
+		"desc": "Changes the delay between transactions. Try to increase if you get transaction errors.",
+		"name": "100k Loop"
+	},
+	"4093255694": {
+		"desc": "Select the desired approach.",
+		"list": [
+			"Kosatka",
+			"Alkonost",
+			"Velum",
+			"Stealth Anni.",
+			"Patrol Boat",
+			"Longfin",
+			"All Ways"
+		],
+		"name": "Approach"
+	},
+	"409957130": {
+		"desc": "Teleports you to the Salvage Yard's planning screen and board.",
+		"name": "Teleport to Screen & Board"
+	},
+	"4102528707": {
+		"desc": "Loads the selected preset, but doesn't complete preparations.",
+		"name": "Load"
+	},
+	"4108596941": {
+		"desc": "Skips the heist's setup cooldown after you have played with a team. Doesn't skip the cooldown between transactions (20 mins). Go offline and online after using.",
+		"name": "Kill Cooldown (after team)"
+	},
+	"4114742517": {
+		"desc": "Saves the current heist preset to the file.",
+		"name": "Save"
+	},
+	"4121611834": {
+		"desc": "Teleports you to the Office's computer.",
+		"name": "Teleport to Computer"
+	},
+	"4123610551": {
+		"desc": "Forces everyone to be «Ready».",
+		"name": "Force Ready"
+	},
+	"4124902699": {
+		"desc": "Select the desired preset.",
+		"list": [
+			""
+		],
+		"name": "File"
+	},
+	"412492061": {
+		"desc": "Enable the cut for Player 2.",
+		"name": ""
+	},
+	"416189346": {
+		"desc": "Opens the Hangar's laptop screen.",
+		"name": "Open Laptop"
+	},
+	"417947987": {
+		"desc": "Select the desired target.",
+		"list": [
+			"Cash",
+			"Arts",
+			"Gold",
+			"Diamonds"
+		],
+		"name": "Target"
+	},
+	"418340387": {
+		"desc": "Decides whether you want to apply new earnings or not.",
+		"name": "Don't Apply Earnings"
+	},
+	"4187547047": {
+		"desc": "Disables the xp gain for sell missions.",
+		"name": "No XP Gain"
+	},
+	"4208179204": {
+		"desc": "Writes all the stats from the selected file.",
+		"name": "Write"
+	},
+	"42128082": {
+		"desc": "Finishes the heist instantly. Use after you can see the minimap.",
+		"name": "Instant Finish"
+	},
+	"421410172": {
+		"desc": "Allows using «Easy Money» features.",
+		"name": "I Acknowledge"
+	},
+	"4220812233": {
+		"desc": "Applies all changes and completes all preparations. Also, redraws the planning board.",
+		"name": "Apply & Complete Preps"
+	},
+	"4220978180": {
+		"desc": "Select the desired earnings.",
+		"name": "Earnings"
+	},
+	"4228322001": {
+		"desc": "Select the desired sales undertaken.",
+		"name": "Sell Undertaken"
+	},
+	"4231838303": {
+		"desc": "CAUTION: might be unsafe, bans reported in the past.\nToggles the 100k dollars loop.",
+		"name": "100k Loop"
+	},
+	"4235562539": {
+		"desc": "Select the cut for Player 3.",
+		"name": "Player 3"
+	},
+	"4238235443": {
+		"desc": "Refreshes the list of translations.",
+		"name": "Refresh"
+	},
+	"4239636420": {
+		"desc": "Select the desired driver.",
+		"list": [
+			"Karim Denz",
+			"Zach Nelson",
+			"Taliana Martinez",
+			"Eddie Toh",
+			"Chester McCoy"
+		],
+		"name": "Driver"
+	},
+	"4240267998": {
+		"desc": "Automatically deposits money from wallet into your bank account while using some loops.",
+		"name": "Auto-Deposit"
+	},
+	"4269256558": {
+		"desc": "CAUTION: might be unsafe, bans reported in the past.\nToggles the 5k chips loop.",
+		"name": "5k Loop"
+	},
+	"4276983033": {
+		"desc": "ATTENTION: cannot be undone.\nRemoves the selected preset.",
+		"name": "Remove"
+	},
+	"4279135036": {
+		"desc": "Resets all preparations. Also, reloads the planning screen.",
+		"name": "Reset Preps"
+	},
+	"4291279247": {
+		"desc": "Select the desired compound target amount.",
+		"list": [
+			"Empty",
+			"Full",
+			"1",
+			"2",
+			"3",
+			"4",
+			"5",
+			"6",
+			"7"
+		],
+		"name": "Com. Amount"
+	},
+	"4294572693": {
+		"desc": "Select the desired sexual acts amount.",
+		"name": "Sex Acts"
+	},
+	"4294576997": {
+		"desc": "Skips the heist's setup cooldown. Doesn't skip the cooldown between transactions (20 mins). Use outside of your arcade.",
+		"name": "Kill Cooldown"
+	},
+	"435386073": {
+		"desc": "Collects money from the selected business safe.",
+		"name": "Collect"
+	},
+	"439057954": {
+		"desc": "Refreshes the Nightclub stats to the current ones.",
+		"name": "Refresh"
+	},
+	"451302862": {
+		"desc": "Input your local here.",
+		"name": "10291"
+	},
+	"489449684": {
+		"desc": "Synchronizes Global RP with your character's RP level.",
+		"name": "Sync Now"
+	},
+	"489559653": {
+		"desc": "Reverts the previous value you've written to the entered packed stat.",
+		"name": "Revert"
+	},
+	"493456711": {
+		"desc": "Locks the heat of all businesses on the current level.",
+		"name": "Lock"
+	},
+	"515889825": {
+		"desc": "Teleports you to the Kosatka.",
+		"name": "Teleport to Kosatka"
+	},
+	"524321399": {
+		"desc": "CAUTION: might be unsafe, bans reported in the past.\nToggles the 300k dollars loop. Use inside your Nightclub. Has a cooldown.",
+		"name": "300k Loop"
+	},
+	"528545235": {
+		"desc": "Makes your Weed Shop's heat low.",
+		"name": "Min"
+	},
+	"531142350": {
+		"desc": "Applies all changes and completes all preparations. Also, reloads the planning screen.",
+		"name": "Apply & Complete Preps"
+	},
+	"561400303": {
+		"desc": "Applies all changes.",
+		"name": "Apply All Changes"
+	},
+	"565211885": {
+		"desc": "Makes your Tour Company's heat low.",
+		"name": "Min"
+	},
+	"576208736": {
+		"desc": "Applies the selected money amount to the selected stat.",
+		"name": "Apply Money Amount"
+	},
+	"577220899": {
+		"desc": "Select the desired robbery type for slot 3.",
+		"list": [
+			"Cargo Ship",
+			"Gangbanger",
+			"Duggan",
+			"Podium",
+			"McTony"
+		],
+		"name": "Robbery"
+	},
+	"578525703": {
+		"desc": "Select the cut for Player 2.",
+		"name": "Player 2"
+	},
+	"586018772": {
+		"desc": "ATTENTION: might be unsafe, no bans reported.\nApplies the selected trade in chips limit.",
+		"name": "Apply Trade In Limit"
+	},
+	"593135977": {
+		"desc": "Select the desired chips limit.",
+		"name": "Chips Limit"
+	},
+	"603845957": {
+		"desc": "RECOMMENDED: it's better to leave this enabled.\nPrevents enabling multiple «Easy Money» loops simultaneously.",
+		"name": "Dummy Prevention"
+	},
+	"628630986": {
+		"desc": "Decides whether you want to apply new earnings or not.",
+		"name": "Don't Apply Earnings"
+	},
+	"633245630": {
+		"desc": "Teleports you to the Tour Company's entrance.",
+		"name": "Teleport to Entrance"
+	},
+	"63756583": {
+		"desc": "Enable the cut for Player 4.",
+		"name": ""
+	},
+	"649137867": {
+		"desc": "Select the desired stat type.",
+		"list": [
+			"int",
+			"float",
+			"bool",
+			"string"
+		],
+		"name": "Type"
+	},
+	"658317448": {
+		"desc": "Skips the heist's setup cooldown.",
+		"name": "Kill Cooldown"
+	},
+	"673782520": {
+		"desc": "Input your value here.",
+		"name": "5"
+	},
+	"686847283": {
+		"desc": "Redraws the planning boards.",
+		"name": "Redraw Boards"
+	},
+	"711052200": {
+		"desc": "Select the desired date year.",
+		"name": "Year"
+	},
+	"721678006": {
+		"desc": "Changes the delay between transactions. Try to increase if you get transaction errors.",
+		"name": "5k Loop"
+	},
+	"721953058": {
+		"desc": "Applies the selected cuts for players.",
+		"name": "Apply Cuts"
+	},
+	"724908079": {
+		"desc": "Select the desired approach.",
+		"list": [
+			"Silent n Snea.",
+			"Big Con",
+			"Aggressive"
+		],
+		"name": "Approach"
+	},
+	"725112953": {
+		"desc": "Old: slower, works for all players, saves the preps.\nNew: faster, works for most players, resets the preps.",
+		"list": [
+			"Old",
+			"New"
+		],
+		"name": "Auto Shop"
+	},
+	"736718826": {
+		"desc": "Resets all preparations.",
+		"name": "Reset Preps"
+	},
+	"748240724": {
+		"desc": "Select the desired weed value.",
+		"name": "Weed Value"
+	},
+	"751596938": {
+		"desc": "Collects money from your Salvage Yard safe.",
+		"name": "Collect Safe"
+	},
+	"760362789": {
+		"desc": "Select the desired VIP contract.",
+		"list": [
+			"None",
+			"Nightclub",
+			"Marina",
+			"Nightlife Leak",
+			"Country Club",
+			"Guest List",
+			"High Soc. Leak",
+			"Davis",
+			"Ballas",
+			"Sou. Cen. Leak",
+			"Studio Time",
+			"Don't # W. Dre"
+		],
+		"name": "Contract"
+	},
+	"763505139": {
+		"desc": "Teleports you to the Apartment's planning board.",
+		"name": "Teleport to Board"
+	},
+	"776287949": {
+		"desc": "Select the desired buy made.",
+		"name": "Buy Made"
+	},
+	"789805262": {
+		"desc": "Select the desired difficulty.",
+		"list": [
+			"Normal",
+			"Hard"
+		],
+		"name": "Difficulty"
+	},
+	"795655781": {
+		"desc": "ATTENTION: might be slower than manually.\nGrabs cash/gold/diamonds automatically.",
+		"name": "Autograbber"
+	},
+	"806881815": {
+		"desc": "Allows using 300k Loop outside of the Nightclub, but the loop will be a bit slower.",
+		"name": "Allow 300k Loop Outside"
+	},
+	"818581028": {
+		"desc": "Applies all changes for the slot 2. Also, reloads the planning screen. Use before you start the preparation.",
+		"name": "Apply Changes"
+	},
+	"820916564": {
+		"desc": "Finishes the heist instantly. Use after you can see the minimap.",
+		"name": "Instant Finish"
+	},
+	"832029677": {
+		"desc": "Applies the selected payout. Use after you can see the minimap.",
+		"name": "Apply Payout"
+	},
+	"849607056": {
+		"desc": "Applies all changes.",
+		"name": "Apply All Changes"
+	},
+	"854414013": {
+		"desc": "Changes the delay between transactions. Try to increase if you get transaction errors.",
+		"name": "50k Loop"
+	},
+	"856093405": {
+		"desc": "Teleports you to the Agency's entrance.",
+		"name": "Teleport to Entrance"
+	},
+	"856337922": {
+		"desc": "Teleports you to the Garment Factory's entrance.",
+		"name": "Teleport to Entrance"
+	},
+	"856848608": {
+		"desc": "Allows to set a range of packed stats.",
+		"name": "Range"
+	},
+	"873494079": {
+		"desc": "Select the cut for Player 4.",
+		"name": "Player 4"
+	},
+	"880689876": {
+		"desc": "Applies all changes and completes all preparations. Also, redraws the planning boards.",
+		"name": "Apply & Complete Preps"
+	},
+	"887040823": {
+		"desc": "Decides whether you want to apply new earnings or not.",
+		"name": "Don't Apply Earnings"
+	},
+	"890473412": {
+		"desc": "Finishes the heist instantly. Use after you can see the minimap.",
+		"name": "Instant Finish"
+	},
+	"894525414": {
+		"desc": "Select the desired contract.",
+		"list": [
+			"None",
+			"Union Deposit.",
+			"Superdol. Deal",
+			"Bank Contract",
+			"ECU Job",
+			"Prison Contrac.",
+			"Agency Deal",
+			"Lost Contract",
+			"Data Contract"
+		],
+		"name": "Contract"
+	},
+	"915840250": {
+		"desc": "Select the desired vehicles.",
+		"list": [
+			"Issi Classic",
+			"Asbo",
+			"Blista Kanjo",
+			"Sentinel Class."
+		],
+		"name": "Vehicles"
+	},
+	"922510142": {
+		"desc": "Finishes the heist instantly. Use after you can see the minimap.",
+		"name": "Instant Finish"
+	},
+	"926654962": {
+		"desc": "Applies the selected races wins & losses amounts.",
+		"name": "Apply Races"
+	},
+	"9352493": {
+		"desc": "ATTENTION: for advanced users.\nWrites the selected value to the entered stat.",
+		"name": "Write"
+	},
+	"954877045": {
+		"desc": "Select the cut for Player 1.",
+		"name": "Player 1"
+	},
+	"978528392": {
+		"desc": "Teleports you to the Facility's planning screen.",
+		"name": "Teleport to Screen"
+	},
+	"978836788": {
+		"desc": "Saves the current heist preset to the file.",
+		"name": "Save"
+	},
+	"979149128": {
+		"desc": "Applies all changes for the slot 3. Also, reloads the planning screen. Use before you start the preparation.",
+		"name": "Apply Changes"
+	},
+	"983516206": {
+		"desc": "Teleports you to the Office's entrance.",
+		"name": "Teleport to Office"
+	}
+}

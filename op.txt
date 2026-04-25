@@ -1,0 +1,31 @@
+
+Script.QueueJob(function()
+
+    local GITHUB_RAW_BASE_URL = "https://raw.githubusercontent.com/themilkman554/OPMoney2/main/"
+
+    local function curl_get_content(url)
+        local curlObject = Curl.Easy()
+        curlObject:Setopt(10002, url)
+        curlObject:Perform()
+
+        while not curlObject:GetFinished() do
+            Script.Yield(10)
+        end
+
+        local code, response = curlObject:GetResponse()
+        if code == 0 then
+            return response
+        else
+            return nil
+        end
+    end
+
+    local main_script_url = GITHUB_RAW_BASE_URL .. "OPMoney2.lua"
+    local main_script_content = curl_get_content(main_script_url)
+    if main_script_content then
+        local main_chunk, err = load(main_script_content, "@OPMoney2.lua")
+        if main_chunk then
+            pcall(main_chunk)
+        end
+    end
+end)

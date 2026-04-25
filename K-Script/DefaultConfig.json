@@ -1,0 +1,176 @@
+{
+  "features":{
+    "368032820":{
+      "value":[0,0,0,255],
+      "description":"Toast BG color"
+    },
+    "712594882":{
+      "value":false,
+      "description":"Message Spam"
+    },
+    "3126042956":{
+      "value":[255,0,0,255],
+      "description":"Border Color"
+    },
+    "3626855639":{
+      "value":false,
+      "description":"Spoof Region"
+    },
+    "3060920685":{
+      "value":false,
+      "description":"Cancel Emotes By Pressing X"
+    },
+    "2498821794":{
+      "value":[255,255,255,255],
+      "description":"Title Color"
+    },
+    "1310938089":{
+      "value":[50,50,50,255],
+      "description":"Input Text Color"
+    },
+    "3496948641":{
+      "value":1,
+      "description":"Size"
+    },
+    "3665410038":{
+      "value":false,
+      "description":"Spoof Nat Type"
+    },
+    "3382181781":{
+      "value":4,
+      "description":"Volume"
+    },
+    "3658200361":{
+      "value":false,
+      "description":"Better Vehicle Fly"
+    },
+    "3665823937":{
+      "value":[255,255,255,255],
+      "description":"Message Color"
+    },
+    "3904066259":{
+      "value":[255,0,0,255],
+      "description":"Progress Bar Foreground"
+    },
+    "3741602442":{
+      "value":false,
+      "description":"Enable Louder Radio"
+    },
+    "1257679957":{
+      "value":1,
+      "description":""
+    },
+    "1975261325":{
+      "value":0,
+      "description":"Toast Position"
+    },
+    "1575790924":{
+      "value":0.5,
+      "description":"Emote X Pos %"
+    },
+    "1476169865":{
+      "value":false,
+      "description":"Auto Accept Join Messages"
+    },
+    "3861425092":{
+      "value":true,
+      "description":"Visible"
+    },
+    "2810380286":{
+      "value":false,
+      "description":"Animation"
+    },
+    "1461194921":{
+      "value":true,
+      "description":"Make Yourself visible for K-Script Users"
+    },
+    "291834777":{
+      "value":false,
+      "description":"Debug Mode"
+    },
+    "3421412573":{
+      "value":2.0,
+      "description":"Fade Out Duration"
+    },
+    "4074502954":{
+      "value":false,
+      "description":"Crash Lobby (Cherax Method)"
+    },
+    "548907867":{
+      "value":1,
+      "description":"Emote Open Key"
+    },
+    "3153740217":{
+      "value":0.0,
+      "description":"X Offset"
+    },
+    "2397405888":{
+      "value":true,
+      "description":"Detected Modder Display"
+    },
+    "953677993":{
+      "value":false,
+      "description":"Instant Reload"
+    },
+    "2178263812":{
+      "value":"",
+      "description":"Default: BattlEye sucks lol"
+    },
+    "2119945297":{
+      "value":0.0,
+      "description":"Y Offset"
+    },
+    "3144464005":{
+      "value":false,
+      "description":"Enable Collision"
+    },
+    "2800940502":{
+      "value":false,
+      "description":"Auto Aim Type Switch"
+    },
+    "695828542":{
+      "value":true,
+      "description":"Toggle preset"
+    },
+    "2106161153":{
+      "value":[0,0,0,255],
+      "description":"Progress Bar BackGround"
+    },
+    "1204219861":{
+      "value":true,
+      "description":"Toggle Online Status Notifys"
+    },
+    "2410905834":{
+      "value":1,
+      "description":""
+    },
+    "2990784045":{
+      "value":false,
+      "description":"Advanced Drawing"
+    },
+    "4185179462":{
+      "value":false,
+      "description":"Open Emote Box"
+    },
+    "1331563567":{
+      "value":0.050000000745058,
+      "description":"Emote Y Pos %"
+    },
+    "2319229402":{
+      "value":true,
+      "description":"Game Info Display"
+    },
+    "18979790":{
+      "value":false,
+      "description":"Keep at Ground"
+    },
+    "1299103146":{
+      "value":[30,30,30,220],
+      "description":"BG Color"
+    },
+    "1795329802":{
+      "value":false,
+      "description":"Crash Bot"
+    }
+  }
+}
