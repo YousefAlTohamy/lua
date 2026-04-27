@@ -114,7 +114,6 @@ function Natives.Invoke(returnType, hash)
 end
 
 --#endregion
-local logged650kLoop = false
 
 --#region eTunable
 
@@ -9403,6 +9402,7 @@ logged50kLoop           = false
 logged100kLoop          = false
 logged180kLoop          = false
 logged300kLoop          = false
+logged650kLoop          = false
 loggedAutoOpen          = true
 loggedJinxScript        = true
 loggedJinxScriptStop    = true
@@ -13951,6 +13951,7 @@ function Renderer.RenderListGUI()
             EasyMoneyTab:AddFeature(eFeature.Money.EasyMoney.Freeroam._50k)
             EasyMoneyTab:AddFeature(eFeature.Money.EasyMoney.Freeroam._100k)
             EasyMoneyTab:AddFeature(eFeature.Money.EasyMoney.Freeroam._180k)
+            EasyMoneyTab:AddFeature(eFeature.Money.EasyMoney.Freeroam._650k)
             EasyMoneyTab:AddFeature(eFeature.Money.EasyMoney.Property._300k)
 
             local EditSubTab = MiscTab:AddSubTab("Edit", "Edit")
@@ -14062,6 +14063,7 @@ function Renderer.RenderListGUI()
         EasyMoneySubTab:AddFeature(eFeature.Settings.EasyMoney.Delay._100k)
         EasyMoneySubTab:AddFeature(eFeature.Settings.EasyMoney.Delay._180k)
         EasyMoneySubTab:AddFeature(eFeature.Settings.EasyMoney.Delay._300k)
+        EasyMoneySubTab:AddFeature(eFeature.Settings.EasyMoney.Delay._650k)
     end
 end
 
