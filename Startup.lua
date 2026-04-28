@@ -7950,10 +7950,14 @@ eFeature = {
                     desc = "MIGHT BE UNSAFE. Toggles the 680k dollars loop.",
                     func = function(ftr, delay)
                         if ftr:IsToggled() then
+                            ScriptGlobal.SetInt(4537212 + 1, 1)
+                            ScriptGlobal.SetInt(4537212 + 2, 680000)
+                            ScriptGlobal.SetInt(4537212 + 3, 0x32353E5C)
+                            Script.Yield(10)
                             GTA.TriggerTransaction(0x32353E5C)
 
                             if not logged680kLoop then
-                                SilentLogger.LogInfo("[680k Loop] Transaction sent ツ")
+                                SilentLogger.LogInfo("[680k Loop] Parameters injected & Transaction triggered ツ")
                                 logged680kLoop = true
                             end
 
