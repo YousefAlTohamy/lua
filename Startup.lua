@@ -7943,24 +7943,24 @@ eFeature = {
                     end
                 },
 
-                _650k = {
-                    hash = J("SN_EasyMoney_650k"),
-                    name = "650k Loop",
+                _680k = {
+                    hash = J("SN_EasyMoney_680k"),
+                    name = "680k Loop",
                     type = eFeatureType.Toggle,
-                    desc = "MIGHT BE UNSAFE. Toggles the 650k dollars loop.",
+                    desc = "MIGHT BE UNSAFE. Toggles the 680k dollars loop.",
                     func = function(ftr, delay)
                         if ftr:IsToggled() then
-                            GTA.TriggerTransaction(0x15D39773) -- 0x15D39773
+                            GTA.TriggerTransaction(0x32353E5C)
 
-                            if not logged650kLoop then
-                                SilentLogger.LogInfo("[650k Loop (Easy Money)] 650k dollars loop should've been enabled ツ")
-                                logged650kLoop = true
+                            if not logged680kLoop then
+                                SilentLogger.LogInfo("[680k Loop] Transaction sent ツ")
+                                logged680kLoop = true
                             end
 
                             Script.Yield(math.floor(delay * 1000))
                         else
-                            SilentLogger.LogInfo("[650k Loop (Easy Money)] 650k dollars loop should've been disabled ツ")
-                            logged650kLoop = false
+                            SilentLogger.LogInfo("[680k Loop (Easy Money)] 680k dollars loop should've been disabled ツ")
+                            logged680kLoop = false
                         end
                     end
                 }
@@ -9145,17 +9145,17 @@ eFeature = {
                     end
                 },
 
-                _650k = {
-                    hash = J("SN_Settings_650k"),
-                    name = "650k Loop",
+                _680k = {
+                    hash = J("SN_Settings_680k"),
+                    name = "680k Loop",
                     type = eFeatureType.SliderFloat,
                     desc = "Changes the delay between transactions. Try to increase if you get transaction errors.",
                     lims = { 0.333, 5.0 },
                     func = function(ftr)
-                        CONFIG.easy_money.delay._650k = ftr:GetFloatValue()
+                        CONFIG.easy_money.delay._680k = ftr:GetFloatValue()
                         FileMgr.SaveConfig(CONFIG)
                         CONFIG = Json.DecodeFromFile(CONFIG_PATH)
-                        SilentLogger.LogInfo("[650k Loop (Settings)] Delay should've been changed ツ")
+                        SilentLogger.LogInfo("[680k Loop (Settings)] Delay should've been changed ツ")
                     end
                 },
 
@@ -9340,7 +9340,7 @@ easyLoops = {
     eFeature.Money.EasyMoney.Freeroam._100k,
     eFeature.Money.EasyMoney.Freeroam._180k,
     eFeature.Money.EasyMoney.Property._300k,
-    eFeature.Money.EasyMoney.Freeroam._650k
+    eFeature.Money.EasyMoney.Freeroam._680k
 }
 
 devStatsDefault = {
@@ -9376,7 +9376,7 @@ settingsEasyDelays = {
     eFeature.Settings.EasyMoney.Delay._100k,
     eFeature.Settings.EasyMoney.Delay._180k,
     eFeature.Settings.EasyMoney.Delay._300k,
-    eFeature.Settings.EasyMoney.Delay._650k
+    eFeature.Settings.EasyMoney.Delay._680k
 }
 
 loggedSoloLaunch        = false
@@ -9402,7 +9402,7 @@ logged50kLoop           = false
 logged100kLoop          = false
 logged180kLoop          = false
 logged300kLoop          = false
-logged650kLoop          = false
+logged680kLoop          = false
 loggedAutoOpen          = true
 loggedJinxScript        = true
 loggedJinxScriptStop    = true
@@ -9987,7 +9987,7 @@ function FileMgr.CreateConfig()
                     _100k = 0.333,
                     _180k = 0.333,
                     _300k = 1.0,
-                    _650k = 1.0
+                    _680k = 1.0
                 }
             }
         }
@@ -10022,7 +10022,7 @@ function FileMgr.EnsureConfigKeys()
     local required_instant = { "agency", "apartment", "auto_shop", "cayo_perico", "diamond_casino", "doomsday" }
     local required_unlock  = { "cayo_perico", "diamond_casino" }
     local required_easy    = { "dummy_prevention", "delay" }
-    local required_delay   = { "_5k", "_50k", "_100k", "_180k", "_300k", "_650k" }
+    local required_delay   = { "_5k", "_50k", "_100k", "_180k", "_300k", "_680k" }
 
     local function HasKeys(tbl, keys)
         if type(tbl) ~= "table" then return false end
@@ -12168,7 +12168,7 @@ delayKeys = {
     "_100k",
     "_180k",
     "_300k",
-    "_650k"
+    "_680k"
 }
 
 FeatureMgr.AddFeature(eFeature.Settings.Config.Open):Toggle(CONFIG.autoopen)
@@ -13263,7 +13263,7 @@ function Renderer.RenderMoneyTool()
                         ClickGUI.RenderFeature(eFeature.Money.EasyMoney.Freeroam._50k)
                         ClickGUI.RenderFeature(eFeature.Money.EasyMoney.Freeroam._100k)
                         ClickGUI.RenderFeature(eFeature.Money.EasyMoney.Freeroam._180k)
-                        ClickGUI.RenderFeature(eFeature.Money.EasyMoney.Freeroam._650k)
+                        ClickGUI.RenderFeature(eFeature.Money.EasyMoney.Freeroam._680k)
                         ClickGUI.EndCustomChildWindow()
                     end
 
@@ -13492,7 +13492,7 @@ function Renderer.RenderSettings()
                         ClickGUI.RenderFeature(eFeature.Settings.EasyMoney.Delay._100k)
                         ClickGUI.RenderFeature(eFeature.Settings.EasyMoney.Delay._180k)
                         ClickGUI.RenderFeature(eFeature.Settings.EasyMoney.Delay._300k)
-                        ClickGUI.RenderFeature(eFeature.Settings.EasyMoney.Delay._650k)
+                        ClickGUI.RenderFeature(eFeature.Settings.EasyMoney.Delay._680k)
                         ClickGUI.EndCustomChildWindow()
                     end
                     ImGui.EndColumns()
@@ -13948,7 +13948,7 @@ function Renderer.RenderListGUI()
             EasyMoneyTab:AddFeature(eFeature.Money.EasyMoney.Freeroam._50k)
             EasyMoneyTab:AddFeature(eFeature.Money.EasyMoney.Freeroam._100k)
             EasyMoneyTab:AddFeature(eFeature.Money.EasyMoney.Freeroam._180k)
-            EasyMoneyTab:AddFeature(eFeature.Money.EasyMoney.Freeroam._650k)
+            EasyMoneyTab:AddFeature(eFeature.Money.EasyMoney.Freeroam._680k)
             EasyMoneyTab:AddFeature(eFeature.Money.EasyMoney.Property._300k)
 
             local EditSubTab = MiscTab:AddSubTab("Edit", "Edit")
@@ -14060,7 +14060,7 @@ function Renderer.RenderListGUI()
         EasyMoneySubTab:AddFeature(eFeature.Settings.EasyMoney.Delay._100k)
         EasyMoneySubTab:AddFeature(eFeature.Settings.EasyMoney.Delay._180k)
         EasyMoneySubTab:AddFeature(eFeature.Settings.EasyMoney.Delay._300k)
-        EasyMoneySubTab:AddFeature(eFeature.Settings.EasyMoney.Delay._650k)
+        EasyMoneySubTab:AddFeature(eFeature.Settings.EasyMoney.Delay._680k)
     end
 end
 

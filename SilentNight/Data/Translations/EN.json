@@ -2691,6 +2691,6 @@
 		"desc": "Teleports you to the Office's entrance.",
 		"name": "Teleport to Office"
 	},
-	"2848294566": { "name": "650k Loop", "desc": "MIGHT BE UNSAFE. Toggles the 650k dollars loop." },
-	"4272571414": { "name": "650k Loop", "desc": "Changes the delay between transactions." }
+	"1533479130": { "name": "680k Loop", "desc": "MIGHT BE UNSAFE. Toggles the 680k dollars loop." },
+	"4124976450": { "name": "680k Loop", "desc": "Changes the delay between transactions." }
 }
