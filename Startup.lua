@@ -11375,13 +11375,10 @@ end)
 
 FeatureMgr.AddFeature(eFeature.Money.EasyMoney.Instant.Give30m)
 
-for i = 1, #easyLoops do
-    FeatureMgr.AddLoop(easyLoops[i], function(f)
-        local delay = FeatureMgr.GetFeature(settingsEasyDelays[i]):GetFloatValue()
-        easyLoops[i].func(f, delay)
-    end, function(f)
-        local delay = FeatureMgr.GetFeature(settingsEasyDelays[i]):GetFloatValue()
-        easyLoops[i].func(f, delay)
+for i, ftr in ipairs(easyLoops) do
+    FeatureMgr.AddLoop(ftr, function(f)
+        local delay = CONFIG.easy_money.delay[delayKeys[i]]
+        ftr.func(f, delay)
     end)
 end
 

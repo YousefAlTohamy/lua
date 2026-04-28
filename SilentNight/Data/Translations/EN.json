@@ -1,4 +1,4 @@
-﻿{
+{
 	"1000340906": {
 		"desc": "Resets all preparations. Also, redraws the planning boards.",
 		"name": "Reset Preps"
@@ -2691,12 +2691,6 @@
 		"desc": "Teleports you to the Office's entrance.",
 		"name": "Teleport to Office"
 	},
-	"2848294566": {
-		"desc": "MIGHT BE UNSAFE. Toggles the 650k dollars loop.",
-		"name": "650k Loop"
-	},
-	"4272571414": {
-		"desc": "Changes the delay between transactions. Try to increase if you get transaction errors.",
-		"name": "650k Loop"
-	}
+	"2848294566": { "name": "650k Loop", "desc": "MIGHT BE UNSAFE. Toggles the 650k dollars loop." },
+	"4272571414": { "name": "650k Loop", "desc": "Changes the delay between transactions." }
 }
