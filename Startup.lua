@@ -1,3 +1,186 @@
+--#region Silent Night Loader
+
+local SAFE_STARTUP = true
+
+_G.__SILENT_NIGHT_STATE = _G.__SILENT_NIGHT_STATE or {
+    loaded = false,
+    features = {},
+    callbacks = {},
+    modules = {},
+    originals = {},
+    feature_hashes = {},
+    feature_hash_list = {},
+    version = "dev"
+}
+
+local SN_STATE = _G.__SILENT_NIGHT_STATE
+SN_STATE.features = SN_STATE.features or {}
+SN_STATE.callbacks = SN_STATE.callbacks or {}
+SN_STATE.modules = SN_STATE.modules or {}
+SN_STATE.originals = SN_STATE.originals or {}
+SN_STATE.feature_hashes = SN_STATE.feature_hashes or {}
+SN_STATE.feature_hash_list = SN_STATE.feature_hash_list or {}
+SN_STATE.version = SN_STATE.version or "dev"
+
+local function sn_loader_print(message)
+    local line = "[SN Loader] " .. tostring(message)
+
+    if Logger and Logger.LogInfo then
+        local ok = pcall(Logger.LogInfo, line)
+        if ok then return end
+    end
+
+    if print then
+        print(line)
+    end
+end
+
+if SN_STATE.loaded then
+    sn_loader_print("Already loaded; skipping duplicate load.")
+    return
+end
+
+SN_STATE.loaded = true
+SN_STATE.loading = true
+
+SNLoader = SNLoader or {}
+SNLoader.PREFIX = "[SN Loader]"
+SNLoader.State = SN_STATE
+
+function SNLoader.Log(message)
+    sn_loader_print(message)
+end
+
+function SNLoader.LogError(message)
+    sn_loader_print("ERROR: " .. tostring(message))
+end
+
+function SNLoader.SaveOriginal(key, value)
+    if SN_STATE.originals[key] == nil then
+        SN_STATE.originals[key] = value
+    end
+
+    return SN_STATE.originals[key]
+end
+
+function SNLoader.Noop()
+end
+
+function SNLoader.Traceback(err)
+    if debug and debug.traceback then
+        return debug.traceback(tostring(err), 2)
+    end
+
+    return tostring(err)
+end
+
+function SNLoader.SafeRequire(name)
+    SNLoader.Log("Loading module: " .. tostring(name))
+
+    local ok, result = xpcall(function()
+        return require(name)
+    end, SNLoader.Traceback)
+
+    if not ok then
+        SN_STATE.modules[name] = { loaded = false, error = tostring(result) }
+        SNLoader.LogError("Failed to load module " .. tostring(name) .. ": " .. tostring(result))
+        return nil
+    end
+
+    SN_STATE.modules[name] = { loaded = true }
+    SNLoader.Log("Loaded module: " .. tostring(name))
+    return result
+end
+
+function SNLoader.RestoreOriginals()
+    local originals = SN_STATE.originals or {}
+
+    if Logger then
+        if originals["Logger.Log"] ~= nil then Logger.Log = originals["Logger.Log"] end
+        if originals["Logger.LogError"] ~= nil then Logger.LogError = originals["Logger.LogError"] end
+        if originals["Logger.LogInfo"] ~= nil then Logger.LogInfo = originals["Logger.LogInfo"] end
+    end
+
+    if GUI and originals["GUI.AddToast"] ~= nil then
+        GUI.AddToast = originals["GUI.AddToast"]
+    end
+
+    if ClickGUI and originals["ClickGUI.RenderFeature"] ~= nil then
+        ClickGUI.RenderFeature = originals["ClickGUI.RenderFeature"]
+    end
+
+    if Tab and originals["Tab.AddFeature"] ~= nil then
+        Tab.AddFeature = originals["Tab.AddFeature"]
+    end
+
+    if FeatureMgr then
+        if originals["FeatureMgr.GetFeature"] ~= nil then FeatureMgr.GetFeature = originals["FeatureMgr.GetFeature"] end
+        if originals["FeatureMgr.GetFeatureListIndex"] ~= nil then FeatureMgr.GetFeatureListIndex = originals["FeatureMgr.GetFeatureListIndex"] end
+        if originals["FeatureMgr.GetFeatureInt"] ~= nil then FeatureMgr.GetFeatureInt = originals["FeatureMgr.GetFeatureInt"] end
+        if originals["FeatureMgr.AddFeature"] ~= nil then FeatureMgr.AddFeature = originals["FeatureMgr.AddFeature"] end
+    end
+
+    if GTA and originals["GTA.ForceScriptHost"] ~= nil then
+        GTA.ForceScriptHost = originals["GTA.ForceScriptHost"]
+    end
+end
+
+function _G.__SILENT_NIGHT_UNLOAD()
+    local state = _G.__SILENT_NIGHT_STATE
+    if not state then return end
+
+    SNLoader.Log("Cleanup start.")
+    state.loaded = false
+    state.loading = false
+
+    for key, entry in pairs(state.features or {}) do
+        pcall(function()
+            local feature = entry
+            if type(entry) == "table" and entry.handle then
+                feature = entry.handle
+            end
+
+            if feature then
+                if type(feature.Delete) == "function" then
+                    feature:Delete()
+                elseif type(feature.Remove) == "function" then
+                    feature:Remove()
+                elseif type(feature.delete) == "function" then
+                    feature:delete()
+                elseif type(feature.remove) == "function" then
+                    feature:remove()
+                elseif FeatureMgr and type(FeatureMgr.RemoveFeature) == "function" then
+                    FeatureMgr.RemoveFeature((type(entry) == "table" and entry.hash) or key)
+                elseif FeatureMgr and type(FeatureMgr.DeleteFeature) == "function" then
+                    FeatureMgr.DeleteFeature((type(entry) == "table" and entry.hash) or key)
+                end
+            end
+        end)
+    end
+
+    pcall(function()
+        if SetShouldUnload then
+            SetShouldUnload()
+        end
+    end)
+
+    SNLoader.RestoreOriginals()
+
+    state.features = {}
+    state.callbacks = {}
+    state.modules = {}
+    state.feature_hashes = {}
+    state.feature_hash_list = {}
+    state.loaded = false
+    state.loading = false
+
+    SNLoader.Log("Unloaded safely.")
+end
+
+SNLoader.Log("Script entry.")
+
+--#endregion
+
 --#region Shortcuts
 
 J = Utils.Joaat
@@ -13,6 +196,7 @@ N = tonumber
 
 SCRIPT_NAME = "Silent Night"
 SCRIPT_VER  = "1.0.0"
+SN_STATE.version = SCRIPT_VER
 DISCORD     = "https://discord.gg/AYpT8cBaVb"
 INT32_MAX   = 2147483647
 PLAYER_ID   = GTA.GetLocalPlayerId()
@@ -34,25 +218,39 @@ TEMP_PSTAT  = "TEMP"
 
 --#region Logger
 
-_Log = Logger.Log
+_Log = SNLoader.SaveOriginal("Logger.Log", Logger.Log)
+SNLoader.SaveOriginal("Logger.LogError", Logger.LogError)
+SNLoader.SaveOriginal("Logger.LogInfo", Logger.LogInfo)
 
 function Logger.Log(color, str)
-    _Log(color, SCRIPT_NAME, str)
+    if type(_Log) == "function" then
+        _Log(color, SCRIPT_NAME, str)
+    else
+        print(tostring(str))
+    end
 end
 
 function Logger.LogError(str)
-    _Log(eLogColor.LIGHTRED, SCRIPT_NAME, str)
+    if type(_Log) == "function" then
+        _Log(eLogColor.LIGHTRED, SCRIPT_NAME, str)
+    else
+        print("[SN Loader] ERROR: " .. tostring(str))
+    end
 end
 
 function Logger.LogInfo(str)
-    _Log(eLogColor.LIGHTGREEN, SCRIPT_NAME, str)
+    if type(_Log) == "function" then
+        _Log(eLogColor.LIGHTGREEN, SCRIPT_NAME, str)
+    else
+        print(tostring(str))
+    end
 end
 
 --#endregion
 
 --#region GUI
 
-_AddToast = GUI.AddToast
+_AddToast = SNLoader.SaveOriginal("GUI.AddToast", GUI.AddToast)
 
 function GUI.AddToast(text)
     _AddToast(SCRIPT_NAME, CleanToast(text), 5000, eToastPos.TOP_RIGHT)
@@ -5124,6 +5322,11 @@ eFeature = {
 
                         if FileMgr.DoesFileExist(path) then
                             local preps = Json.DecodeFromFile(path)
+                            if type(preps) ~= "table" then
+                                SNLoader.LogError(F("[Load (Cayo Perico)] Invalid preset file skipped: %s", path))
+                                return
+                            end
+
                             Helper.ApplyCayoPreset(preps)
                             SilentLogger.LogInfo(F("[Load (Cayo Perico)] Preset «%s» should've been loaded ツ", file))
                             return
@@ -5731,6 +5934,11 @@ eFeature = {
 
                         if FileMgr.DoesFileExist(path) then
                             local preps = Json.DecodeFromFile(path)
+                            if type(preps) ~= "table" then
+                                SNLoader.LogError(F("[Load (Diamond Casino)] Invalid preset file skipped: %s", path))
+                                return
+                            end
+
                             Helper.ApplyDiamondPreset(preps)
                             SilentLogger.LogInfo(F("[Load (Diamond Casino)] Preset «%s» should've been loaded ツ", file))
                             return
@@ -7950,14 +8158,13 @@ eFeature = {
                     desc = "MIGHT BE UNSAFE. Toggles the 680k dollars loop.",
                     func = function(ftr, delay)
                         if ftr:IsToggled() then
-                            ScriptGlobal.SetInt(4537212 + 1, 1)
                             ScriptGlobal.SetInt(4537212 + 2, 680000)
-                            ScriptGlobal.SetInt(4537212 + 3, 0x32353E5C)
+                            ScriptGlobal.SetInt(4537212 + 3, 0x615762F1)
                             Script.Yield(10)
-                            GTA.TriggerTransaction(0x32353E5C)
+                            GTA.TriggerTransaction(0x615762F1)
 
                             if not logged680kLoop then
-                                SilentLogger.LogInfo("[680k Loop] Parameters injected & Transaction triggered ツ")
+                                SilentLogger.LogInfo("[680k Loop] Using 180k Path with 680k Value ツ")
                                 logged680kLoop = true
                             end
 
@@ -8501,6 +8708,10 @@ eFeature = {
 
                         if FileMgr.DoesFileExist(path) then
                             local json = Json.DecodeFromFile(path)
+                            if type(json) ~= "table" or type(json.stats) ~= "table" then
+                                SNLoader.LogError(F("[Write All (Dev Tool)] Invalid stats file skipped: %s", path))
+                                return
+                            end
 
                             for stat, value in pairs(json.stats) do
                                 if stat:sub(1, 3) == "MPX" then
@@ -9418,20 +9629,46 @@ loggedDummyPrevention   = true
 
 --#region ClickGUI
 
-_RenderFeature = ClickGUI.RenderFeature
+_RenderFeature = SNLoader.SaveOriginal("ClickGUI.RenderFeature", ClickGUI.RenderFeature)
 
 function ClickGUI.RenderFeature(feature)
-    _RenderFeature(feature.hash)
+    if type(feature) ~= "table" or feature.hash == nil then
+        SNLoader.LogError("Invalid feature render skipped: " .. tostring(feature))
+        return
+    end
+
+    if type(_RenderFeature) ~= "function" then
+        SNLoader.LogError("ClickGUI.RenderFeature original API is unavailable.")
+        return
+    end
+
+    local ok, err = pcall(_RenderFeature, feature.hash)
+    if not ok then
+        SNLoader.LogError("Feature render failed for " .. tostring(feature.name) .. ": " .. tostring(err))
+    end
 end
 
 --#endregion
 
 --#region Tab
 
-_addFeature = Tab.AddFeature
+_addFeature = SNLoader.SaveOriginal("Tab.AddFeature", Tab.AddFeature)
 
 function Tab:AddFeature(feature)
-    _addFeature(self, feature.hash)
+    if type(feature) ~= "table" or feature.hash == nil then
+        SNLoader.LogError("Invalid list feature skipped: " .. tostring(feature))
+        return nil
+    end
+
+    if type(_addFeature) ~= "function" then
+        SNLoader.LogError("Tab.AddFeature original API is unavailable.")
+        return nil
+    end
+
+    local ok, err = pcall(_addFeature, self, feature.hash)
+    if not ok then
+        SNLoader.LogError("List feature add failed for " .. tostring(feature.name) .. ": " .. tostring(err))
+    end
 end
 
 --#endregion
@@ -9469,69 +9706,353 @@ EventMgr.OnUnload()
 
 --#region FeatureMgr
 
-_GetFeature          = FeatureMgr.GetFeature
-_GetFeatureListIndex = FeatureMgr.GetFeatureListIndex
-_GetFeatureInt       = FeatureMgr.GetFeatureInt
-_AddFeature          = FeatureMgr.AddFeature
+_GetFeature          = SNLoader.SaveOriginal("FeatureMgr.GetFeature", FeatureMgr.GetFeature)
+_GetFeatureListIndex = SNLoader.SaveOriginal("FeatureMgr.GetFeatureListIndex", FeatureMgr.GetFeatureListIndex)
+_GetFeatureInt       = SNLoader.SaveOriginal("FeatureMgr.GetFeatureInt", FeatureMgr.GetFeatureInt)
+_AddFeature          = SNLoader.SaveOriginal("FeatureMgr.AddFeature", FeatureMgr.AddFeature)
+
+SNLoader.NullFeature = SNLoader.NullFeature or {}
+
+local nullFeature = SNLoader.NullFeature
+
+function nullFeature:SetList() return self end
+function nullFeature:SetDefaultValue() return self end
+function nullFeature:SetLimitValues() return self end
+function nullFeature:SetStepSize() return self end
+function nullFeature:Reset() return self end
+function nullFeature:SetVisible() return self end
+function nullFeature:Toggle() return self end
+function nullFeature:SetListIndex() return self end
+function nullFeature:SetIntValue() return self end
+function nullFeature:SetFloatValue() return self end
+function nullFeature:SetStringValue() return self end
+function nullFeature:SetName() return self end
+function nullFeature:SetDesc() return self end
+function nullFeature:OnClick() return self end
+function nullFeature:RegisterCallbackTrigger() return self end
+function nullFeature:IsToggled() return false end
+function nullFeature:GetListIndex() return 0 end
+function nullFeature:GetIntValue() return 0 end
+function nullFeature:GetFloatValue() return 0 end
+function nullFeature:GetStringValue() return "" end
+function nullFeature:GetHash() return 0 end
+function nullFeature:GetName() return "" end
+function nullFeature:GetDesc() return "" end
+function nullFeature:GetType() return nil end
+function nullFeature:GetList() return {} end
+
+local function safe_get_feature(hash)
+    if hash == nil or type(_GetFeature) ~= "function" then
+        return nil
+    end
+
+    local ok, feature = pcall(_GetFeature, hash)
+    if ok then
+        return feature
+    end
+
+    SNLoader.LogError("Feature lookup failed for hash " .. tostring(hash) .. ": " .. tostring(feature))
+    return nil
+end
 
 function FeatureMgr.GetFeature(feature)
-    return _GetFeature(feature.hash)
+    if type(feature) == "table" then
+        return safe_get_feature(feature.hash) or nullFeature
+    end
+
+    return safe_get_feature(feature) or nullFeature
 end
 
 function FeatureMgr.GetFeatureByHash(hash)
-    return _GetFeature(hash)
+    return safe_get_feature(hash)
 end
 
 function FeatureMgr.GetFeatureListIndex(feature)
-    return _GetFeatureListIndex(feature.hash)
+    local hash = (type(feature) == "table") and feature.hash or feature
+
+    if type(_GetFeatureListIndex) == "function" then
+        local ok, index = pcall(_GetFeatureListIndex, hash)
+        if ok and type(index) == "number" then
+            return index
+        end
+    end
+
+    local handle = safe_get_feature(hash)
+    if handle and type(handle.GetListIndex) == "function" then
+        local ok, index = pcall(function()
+            return handle:GetListIndex()
+        end)
+
+        if ok and type(index) == "number" then
+            return index
+        end
+    end
+
+    return 0
 end
 
 function FeatureMgr.GetFeatureInt(feature)
-    return _GetFeatureInt(feature.hash)
+    local hash = (type(feature) == "table") and feature.hash or feature
+
+    if type(_GetFeatureInt) == "function" then
+        local ok, value = pcall(_GetFeatureInt, hash)
+        if ok and type(value) == "number" then
+            return value
+        end
+    end
+
+    local handle = safe_get_feature(hash)
+    if handle and type(handle.GetIntValue) == "function" then
+        local ok, value = pcall(function()
+            return handle:GetIntValue()
+        end)
+
+        if ok and type(value) == "number" then
+            return value
+        end
+    end
+
+    return 0
 end
 
 function FeatureMgr.GetFeatureBool(feature)
-    return _GetFeature(feature.hash):IsToggled()
-end
+    local handle = FeatureMgr.GetFeature(feature)
+    if handle and type(handle.IsToggled) == "function" then
+        local ok, value = pcall(function()
+            return handle:IsToggled()
+        end)
 
-featureHashes = {}
-
-function FeatureMgr.AddFeature(feature, callback)
-    _AddFeature(feature.hash, feature.name, feature.type, feature.desc, function(f)
-        if callback then
-            callback(f)
-        elseif feature.func then
-            feature.func(f)
+        if ok then
+            return value and true or false
         end
-    end)
-
-    if feature.list then
-        FeatureMgr.GetFeature(feature):SetList(feature.list:GetNames())
     end
 
-    if feature.defv then
-        FeatureMgr.GetFeature(feature):SetDefaultValue(feature.defv)
+    return false
+end
+
+featureHashes = SN_STATE.feature_hash_list
+
+SNLoader.RiskyFeatureHashes = SNLoader.RiskyFeatureHashes or {}
+
+local function mark_feature_tree(node)
+    if type(node) ~= "table" then
+        return
+    end
+
+    if node.hash ~= nil then
+        SNLoader.RiskyFeatureHashes[tostring(node.hash)] = true
+        return
+    end
+
+    for _, value in pairs(node) do
+        mark_feature_tree(value)
+    end
+end
+
+local function mark_risky_sections(node)
+    if type(node) ~= "table" then
+        return
+    end
+
+    for key, value in pairs(node) do
+        if key == "Money" or key == "Casino" or key == "EasyMoney" or key == "Payout" then
+            mark_feature_tree(value)
+        else
+            mark_risky_sections(value)
+        end
+    end
+end
+
+function SNLoader.IsRiskyFeature(feature)
+    return type(feature) == "table" and feature.hash ~= nil and SNLoader.RiskyFeatureHashes[tostring(feature.hash)] == true
+end
+
+mark_risky_sections(eFeature)
+
+local function make_feature_key(feature)
+    if type(feature) ~= "table" then
+        return "invalid::" .. tostring(feature)
+    end
+
+    return tostring(feature.hash) .. "::" .. tostring(feature.name)
+end
+
+function SNLoader.ValidateFeatureDef(feature)
+    if type(feature) ~= "table" then
+        return false, "definition is not a table"
+    end
+
+    if feature.hash == nil then
+        return false, "missing hash"
+    end
+
+    if type(feature.name) ~= "string" then
+        return false, "missing name"
+    end
+
+    if feature.func ~= nil and type(feature.func) ~= "function" then
+        return false, "callback must be function or nil"
+    end
+
+    return true
+end
+
+function SNLoader.SafeCallback(cb, featureName)
+    if cb == nil then
+        return SNLoader.Noop
+    end
+
+    if type(cb) == "function" then
+        return cb
+    end
+
+    SNLoader.LogError("Invalid callback replaced with no-op for feature: " .. tostring(featureName))
+    return SNLoader.Noop
+end
+
+local function apply_feature_settings(feature, handle)
+    if not handle then
+        return
+    end
+
+    if feature.list then
+        local ok, err = pcall(function()
+            handle:SetList(feature.list:GetNames())
+        end)
+        if not ok then SNLoader.LogError("Failed to set list for " .. tostring(feature.name) .. ": " .. tostring(err)) end
+    end
+
+    if feature.defv ~= nil then
+        local ok, err = pcall(function()
+            handle:SetDefaultValue(feature.defv)
+        end)
+        if not ok then SNLoader.LogError("Failed to set default for " .. tostring(feature.name) .. ": " .. tostring(err)) end
     end
 
     if feature.lims then
-        FeatureMgr.GetFeature(feature):SetLimitValues(U(feature.lims))
+        local ok, err = pcall(function()
+            handle:SetLimitValues(U(feature.lims))
+        end)
+        if not ok then SNLoader.LogError("Failed to set limits for " .. tostring(feature.name) .. ": " .. tostring(err)) end
     end
 
-    if feature.step then
-        FeatureMgr.GetFeature(feature):SetStepSize(feature.step)
+    if feature.step ~= nil then
+        local ok, err = pcall(function()
+            handle:SetStepSize(feature.step)
+        end)
+        if not ok then SNLoader.LogError("Failed to set step for " .. tostring(feature.name) .. ": " .. tostring(err)) end
     end
 
-    if feature.defv or feature.lims or feature.step then
-        FeatureMgr.GetFeature(feature):Reset()
+    if feature.defv ~= nil or feature.lims or feature.step ~= nil then
+        local ok, err = pcall(function()
+            handle:Reset()
+        end)
+        if not ok then SNLoader.LogError("Failed to reset " .. tostring(feature.name) .. ": " .. tostring(err)) end
+    end
+end
+
+local function remember_feature(key, feature, handle)
+    SN_STATE.features[key] = {
+        handle = handle,
+        hash = feature.hash,
+        name = feature.name,
+        risky = SNLoader.IsRiskyFeature(feature)
+    }
+
+    if not SN_STATE.feature_hashes[tostring(feature.hash)] then
+        SN_STATE.feature_hashes[tostring(feature.hash)] = key
+        I(featureHashes, feature.hash)
+    end
+end
+
+function FeatureMgr.AddFeature(feature, callback)
+    local valid, reason = SNLoader.ValidateFeatureDef(feature)
+    if not valid then
+        SNLoader.LogError("Invalid feature skipped: " .. tostring(reason))
+        return nullFeature
     end
 
-    I(featureHashes, feature.hash)
+    local key = make_feature_key(feature)
+    local tracked = SN_STATE.features[key]
 
-    return FeatureMgr.GetFeature(feature)
+    if tracked then
+        SNLoader.Log("Duplicate feature skipped: " .. tostring(feature.name))
+        return tracked.handle or safe_get_feature(feature.hash) or nullFeature
+    end
+
+    local existing = safe_get_feature(feature.hash)
+    if existing then
+        SNLoader.Log("Feature already exists; reusing handle: " .. tostring(feature.name))
+        remember_feature(key, feature, existing)
+        return existing
+    end
+
+    local isRisky = SNLoader.IsRiskyFeature(feature)
+    local cb = callback or feature.func
+
+    if isRisky then
+        SNLoader.Log("Risky feature registered as inert placeholder: " .. tostring(feature.name))
+        cb = function(f)
+            if f and type(f.IsToggled) == "function" and type(f.Toggle) == "function" and f:IsToggled() then
+                f:Toggle(false)
+            end
+
+            SNLoader.Log("Risky feature is disabled/inert: " .. tostring(feature.name))
+        end
+    end
+
+    cb = SNLoader.SafeCallback(cb, feature.name)
+
+    local wrapped = function(f)
+        if not SN_STATE.loaded then
+            return
+        end
+
+        local ok, err = xpcall(function()
+            cb(f)
+        end, SNLoader.Traceback)
+
+        if not ok then
+            SNLoader.LogError("Callback failed for feature " .. tostring(feature.name) .. ": " .. tostring(err))
+        end
+    end
+
+    SN_STATE.callbacks[key] = wrapped
+
+    local handle
+    local ok, err = xpcall(function()
+        handle = _AddFeature(feature.hash, feature.name, feature.type, feature.desc, wrapped)
+    end, SNLoader.Traceback)
+
+    if not ok then
+        existing = safe_get_feature(feature.hash)
+        if existing then
+            SNLoader.Log("Duplicate registration recovered by reusing existing feature: " .. tostring(feature.name))
+            remember_feature(key, feature, existing)
+            return existing
+        end
+
+        SNLoader.LogError("Feature registration failed for " .. tostring(feature.name) .. ": " .. tostring(err))
+        return nullFeature
+    end
+
+    handle = handle or safe_get_feature(feature.hash)
+    if not handle then
+        SNLoader.LogError("Feature registration returned no handle: " .. tostring(feature.name))
+        return nullFeature
+    end
+
+    apply_feature_settings(feature, handle)
+    remember_feature(key, feature, handle)
+    SNLoader.Log("Feature registered: " .. tostring(feature.name))
+
+    return handle
 end
 
 function FeatureMgr.AddLoop(feature, onEnable, onDisable)
     local state = false
+    local enable = SNLoader.SafeCallback(onEnable or feature.func, (feature and feature.name or "loop") .. " loop")
+    local disable = (onDisable ~= nil) and SNLoader.SafeCallback(onDisable, (feature and feature.name or "loop") .. " disable") or nil
 
     FeatureMgr.AddFeature(feature, function(f)
         if f:IsToggled() then
@@ -9544,17 +10065,37 @@ function FeatureMgr.AddLoop(feature, onEnable, onDisable)
                     end
 
                     if onEnable then
-                        onEnable(f)
+                        local ok, err = xpcall(function()
+                            enable(f)
+                        end, SNLoader.Traceback)
+
+                        if not ok then
+                            SNLoader.LogError("Loop callback failed for " .. tostring(feature.name) .. ": " .. tostring(err))
+                        end
+
                         Script.Yield()
-                    elseif feature.func then
-                        feature.func(f)
+                    else
+                        local ok, err = xpcall(function()
+                            enable(f)
+                        end, SNLoader.Traceback)
+
+                        if not ok then
+                            SNLoader.LogError("Loop callback failed for " .. tostring(feature.name) .. ": " .. tostring(err))
+                        end
                     end
 
                     Script.Yield()
                 end)
             end
-        elseif onDisable and state then
-            onDisable(f)
+        elseif disable and state then
+            local ok, err = xpcall(function()
+                disable(f)
+            end, SNLoader.Traceback)
+
+            if not ok then
+                SNLoader.LogError("Loop disable callback failed for " .. tostring(feature.name) .. ": " .. tostring(err))
+            end
+
             state = false
         end
     end)
@@ -9563,6 +10104,55 @@ function FeatureMgr.AddLoop(feature, onEnable, onDisable)
 end
 
 --#endregion
+
+if SAFE_STARTUP then
+    SNLoader.Log("Safe startup enabled; loading core menu only.")
+
+    local statusFeature = {
+        hash = J("SN_Loader_SafeStatus"),
+        name = "Loader Status",
+        type = eFeatureType.Button,
+        desc = "Safe startup is active. Risky modules and money features are not loaded.",
+        func = function()
+            SNLoader.Log("Safe startup status check passed.")
+        end
+    }
+
+    local unloadFeature = {
+        hash = J("SN_Loader_SafeUnload"),
+        name = "Unload Silent Night",
+        type = eFeatureType.Button,
+        desc = "Safely unloads tracked Silent Night features and callbacks.",
+        func = function()
+            _G.__SILENT_NIGHT_UNLOAD()
+        end
+    }
+
+    FeatureMgr.AddFeature(statusFeature)
+    FeatureMgr.AddFeature(unloadFeature)
+
+    ClickGUI.AddTab(F("%s v%s %s", SCRIPT_NAME, SCRIPT_VER, GTA_EDITION), function()
+        if ClickGUI.BeginCustomChildWindow("Loader") then
+            ClickGUI.RenderFeature(statusFeature)
+            ClickGUI.RenderFeature(unloadFeature)
+            ClickGUI.EndCustomChildWindow()
+        end
+    end)
+
+    local root = ListGUI.GetRootTab()
+    if root then
+        local tab = root:AddSubTab(F("%s v%s %s", SCRIPT_NAME, SCRIPT_VER, GTA_EDITION), SCRIPT_NAME)
+        if tab then
+            tab:AddFeature(statusFeature)
+            tab:AddFeature(unloadFeature)
+        end
+    end
+
+    SN_STATE.modules["safe_startup"] = { loaded = true }
+    SN_STATE.loading = false
+    SNLoader.Log("Safe startup loaded.")
+    return
+end
 
 --#region Json
 
@@ -9742,7 +10332,9 @@ local function DecodeError(str, idx, msg)
             colCount = 1
         end
     end
-    SilentLogger.LogError(F("%s at line %d col %d", msg, lineCount, colCount))
+    local err = F("%s at line %d col %d", msg, lineCount, colCount)
+    SilentLogger.LogError(err)
+    error(err, 0)
 end
 
 local function CodepointToUtf8(n)
@@ -9921,12 +10513,23 @@ end
 function Json.Decode(str)
     if type(str) ~= "string" or str == "" then
         SilentLogger.LogError("expected non-empty string, got " .. S(str))
+        return nil
     end
-    local res, idx = Parse(str, NextChar(str, 1, spaceChars, true))
-    idx = NextChar(str, idx, spaceChars, true)
-    if idx <= #str then
-        DecodeError(str, idx, "trailing garbage")
+
+    local ok, res = xpcall(function()
+        local parsed, idx = Parse(str, NextChar(str, 1, spaceChars, true))
+        idx = NextChar(str, idx, spaceChars, true)
+        if idx <= #str then
+            DecodeError(str, idx, "trailing garbage")
+        end
+        return parsed
+    end, SNLoader.Traceback)
+
+    if not ok then
+        SNLoader.LogError("JSON parse failed: " .. tostring(res))
+        return nil
     end
+
     return res
 end
 
@@ -9941,9 +10544,21 @@ end
 function Json.DecodeFromFile(path)
     if not FileMgr.DoesFileExist(path) then
        SilentLogger.LogError(F("File not found: %s", path))
+       return nil
     end
 
-    return Json.Decode(FileMgr.ReadFileContent(path))
+    local ok, content = pcall(FileMgr.ReadFileContent, path)
+    if not ok then
+        SNLoader.LogError(F("Failed to read JSON file %s: %s", path, content))
+        return nil
+    end
+
+    local decoded = Json.Decode(content)
+    if decoded == nil then
+        SNLoader.LogError("Config parse error in file: " .. tostring(path))
+    end
+
+    return decoded
 end
 
 --#endregion
@@ -10013,7 +10628,7 @@ function FileMgr.ResetConfig()
 end
 
 function FileMgr.EnsureConfigKeys()
-    if not CONFIG then
+    if type(CONFIG) ~= "table" then
         FileMgr.ResetConfig()
         CONFIG = Json.DecodeFromFile(CONFIG_PATH)
         SilentLogger.LogError("Config is missing something. Config reset ツ")
@@ -10048,7 +10663,7 @@ function FileMgr.EnsureConfigKeys()
         missing = true
     end
 
-    if not HasKeys(CONFIG.collab.jinxscript, required_jinx) then
+    if type(CONFIG.collab) ~= "table" or not HasKeys(CONFIG.collab.jinxscript, required_jinx) then
         missing = true
     end
 
@@ -10064,7 +10679,7 @@ function FileMgr.EnsureConfigKeys()
         missing = true
     end
 
-    if not HasKeys(CONFIG.easy_money.delay, required_delay) then
+    if type(CONFIG.easy_money) ~= "table" or not HasKeys(CONFIG.easy_money.delay, required_delay) then
         missing = true
     end
 
@@ -10160,7 +10775,7 @@ FileMgr.EnsureConfigKeys()
 
 --#region GTA
 
-_ForceScriptHost = GTA.ForceScriptHost
+_ForceScriptHost = SNLoader.SaveOriginal("GTA.ForceScriptHost", GTA.ForceScriptHost)
 
 function GTA.TeleportXYZ(x, y, z)
     local playerPed     = GTA.GetLocalPed()
@@ -12333,22 +12948,35 @@ end
 function Script.Translate(path)
     local translations = Json.DecodeFromFile(path)
 
+    if type(translations) ~= "table" then
+        SNLoader.LogError("Translation load skipped; invalid translation file: " .. tostring(path))
+        return
+    end
+
     for hashStr, data in pairs(translations) do
         local hash    = N(hashStr)
         local feature = FeatureMgr.GetFeatureByHash(hash)
 
         if feature then
-            if data.name then
-                feature:SetName(data.name)
-            end
+            if type(data) ~= "table" then
+                SNLoader.LogError("Translation entry skipped; entry is not a table for hash: " .. tostring(hashStr))
+            elseif data.name ~= nil and type(data.name) ~= "string" then
+                SNLoader.LogError("Translation name skipped; expected string for hash: " .. tostring(hashStr))
+            elseif data.desc ~= nil and type(data.desc) ~= "string" then
+                SNLoader.LogError("Translation desc skipped; expected string for hash: " .. tostring(hashStr))
+            else
+                if data.name then
+                    feature:SetName(data.name)
+                end
 
-            if data.desc then
-                feature:SetDesc(data.desc)
-            end
+                if data.desc then
+                    feature:SetDesc(data.desc)
+                end
 
-            if data.list and type(data.list) == "table" and feature.SetList then
-                if feature:GetHash() ~= eTable.SilentNight.Features.Language then
-                    feature:SetList(data.list)
+                if data.list and type(data.list) == "table" and feature.SetList then
+                    if feature:GetHash() ~= eTable.SilentNight.Features.Language then
+                        feature:SetList(data.list)
+                    end
                 end
             end
         end
@@ -14069,5 +14697,9 @@ function Renderer.RenderListGUI()
 end
 
 Renderer.RenderListGUI()
+
+SN_STATE.modules["monolith"] = { loaded = true }
+SN_STATE.loading = false
+SNLoader.Log("Startup complete.")
 
 --#endregion

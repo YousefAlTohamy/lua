@@ -1,0 +1,500 @@
+[2026-1-29 01:21:15.181] [INFO] Loading Cherax v5.38.2 LE b8010 [Jan 27 2026]--[18:19:41]
+[2026-1-29 01:21:25.314] [INFO] Finished pattern scanning.
+[2026-1-29 01:21:41.586] [INFO] Loading 'Startup.lua'
+
+************ EXCEPTION BEGIN ************[2026-1-29 01:21:41.613] [FATAL] Menu version: v5.38.2 LE b8010
+[2026-1-29 01:21:41.614] [FATAL] Module: Cherax [0x7FF9A3500000]
+[2026-1-29 01:21:41.614] [FATAL] Exception: EXCEPTION_ACCESS_VIOLATION [0x7FF9A39245B1|0x1804245B1]
+[2026-1-29 01:21:41.614] [FATAL] Attempted to read from: 0x40898
+[2026-1-29 01:21:41.614] [FATAL] Threads:
+[2026-1-29 01:21:41.614] [FATAL] Exception Thread Id: 11492
+[2026-1-29 01:21:41.614] [FATAL] Main Thread Id: 0
+[2026-1-29 01:21:41.614] [FATAL] Render Thread Id: 12252
+[2026-1-29 01:21:41.614] [FATAL] Extra Data:
+[2026-1-29 01:21:41.614] [FATAL] Last game update call: 0
+[2026-1-29 01:21:41.614] [FATAL] Last sync nodes updated: None
+[2026-1-29 01:21:41.614] [FATAL] Last vehicle task IDs synced: None
+[2026-1-29 01:21:41.614] [FATAL] Last created models synced: None
+[2026-1-29 01:21:41.614] [FATAL] Last received script event: None
+[2026-1-29 01:21:41.614] [FATAL] Last received netMessage: 
+[2026-1-29 01:21:41.614] [FATAL] Manifold Pool: 2480 Available
+[2026-1-29 01:21:41.614] [FATAL] Contact Pool: 4960 Available
+[2026-1-29 01:21:41.614] [FATAL] Composite Pool: 1240 Available
+[2026-1-29 01:21:41.614] [FATAL] Pair Cache Pool: 0 Available
+[2026-1-29 01:21:41.614] [FATAL] Menu open: false
+[2026-1-29 01:21:41.615] [FATAL] Registers:
+[2026-1-29 01:21:41.615] [FATAL] [RAX 0x0000000000000000()] | [RCX 0x0000000000008113()]
+[2026-1-29 01:21:41.615] [FATAL] [RDX 0x0000000000000001()] | [RBX 0x00007FF9A3924590()]
+[2026-1-29 01:21:41.616] [FATAL] [RSP 0x0000007CD3AFF048()] | [RBP 0x00007FF9A38C1AE0()]
+[2026-1-29 01:21:41.616] [FATAL] [RSI 0x000001828FBC4D20()] | [RDI 0x000001824D8925E8()]
+[2026-1-29 01:21:41.616] [FATAL] [R8  0x0000000000000002()] | [R9  0x0000000000000002()]
+[2026-1-29 01:21:41.616] [FATAL] [R10 0x00000182C03C0E30()] | [R11 0x00000181CFCC4380()]
+[2026-1-29 01:21:41.616] [FATAL] [R12 0x000001824D8925E8()] | [R13 0x000001828FBC4D10()]
+[2026-1-29 01:21:41.616] [FATAL] [R14 0x0000000000000000()] | [R15 0x000001828FFC4250()]
+[2026-1-29 01:21:41.616] [STACK] Cherax+0x4245B1 [0x7FF9A39245B1|0x1804245B1]
+[2026-1-29 01:21:41.617] [STACK] Cherax+0x3C3168 [0x7FF9A38C3168|0x1803C3168]
+[2026-1-29 01:21:41.617] [STACK] Cherax+0x19CB9B [0x7FF9A369CB9B|0x18019CB9B]
+[2026-1-29 01:21:41.618] [STACK] Cherax+0x74D2E [0x7FF9A3574D2E|0x180074D2E]
+[2026-1-29 01:21:41.618] [STACK] Cherax+0x9A9C7 [0x7FF9A359A9C7|0x18009A9C7]
+[2026-1-29 01:21:41.619] [STACK] Cherax+0x75296 [0x7FF9A3575296|0x180075296]
+[2026-1-29 01:21:41.620] [STACK] Cherax+0x74113 [0x7FF9A3574113|0x180074113]
+[2026-1-29 01:21:41.620] [STACK] Cherax+0x674D8 [0x7FF9A35674D8|0x1800674D8]
+[2026-1-29 01:21:41.621] [STACK] Cherax+0x591315 [0x7FF9A3A91315|0x180591315]
+[2026-1-29 01:21:41.621] [STACK] Cherax+0x591526 [0x7FF9A3A91526|0x180591526]
+[2026-1-29 01:21:41.621] [STACK] Cherax+0x591719 [0x7FF9A3A91719|0x180591719]
+[2026-1-29 01:21:41.622] [STACK] Cherax+0x58EAF7 [0x7FF9A3A8EAF7|0x18058EAF7]
+[2026-1-29 01:21:41.622] [STACK] Cherax+0x58E18C [0x7FF9A3A8E18C|0x18058E18C]
+[2026-1-29 01:21:41.623] [STACK] Cherax+0x7176FC [0x7FF9A3C176FC|0x1807176FC]
+[2026-1-29 01:21:41.623] [STACK] Cherax+0x8A1887 [0x7FF9A3DA1887|0x1808A1887]
+[2026-1-29 01:21:41.623] [STACK] C:\WINDOWS\System32\KERNEL32.DLL+0x2E8D7 [0x7FFA49E5E8D7|0x18002E8D7]
+[2026-1-29 01:21:41.623] [STACK] C:\WINDOWS\SYSTEM32\ntdll.dll+0x8C53C [0x7FFA4B24C53C|0x18008C53C]
+
+************ EXCEPTION END ************
+************ EXCEPTION BEGIN ************[2026-1-29 01:21:41.624] [FATAL] Menu version: v5.38.2 LE b8010
+[2026-1-29 01:21:41.624] [FATAL] Module: Cherax [0x7FF9A3500000]
+[2026-1-29 01:21:41.624] [FATAL] Exception: EXCEPTION_ACCESS_VIOLATION [0x7FF9A3924581|0x180424581]
+[2026-1-29 01:21:41.624] [FATAL] Attempted to read from: 0x40860
+[2026-1-29 01:21:41.624] [FATAL] Threads:
+[2026-1-29 01:21:41.624] [FATAL] Exception Thread Id: 11492
+[2026-1-29 01:21:41.625] [FATAL] Main Thread Id: 0
+[2026-1-29 01:21:41.625] [FATAL] Render Thread Id: 12252
+[2026-1-29 01:21:41.625] [FATAL] Extra Data:
+[2026-1-29 01:21:41.625] [FATAL] Last game update call: 0
+[2026-1-29 01:21:41.625] [FATAL] Last sync nodes updated: None
+[2026-1-29 01:21:41.625] [FATAL] Last vehicle task IDs synced: None
+[2026-1-29 01:21:41.625] [FATAL] Last created models synced: None
+[2026-1-29 01:21:41.625] [FATAL] Last received script event: None
+[2026-1-29 01:21:41.625] [FATAL] Last received netMessage: 
+[2026-1-29 01:21:41.625] [FATAL] Manifold Pool: 2480 Available
+[2026-1-29 01:21:41.625] [FATAL] Contact Pool: 4960 Available
+[2026-1-29 01:21:41.626] [FATAL] Composite Pool: 1240 Available
+[2026-1-29 01:21:41.626] [FATAL] Pair Cache Pool: 0 Available
+[2026-1-29 01:21:41.626] [FATAL] Menu open: false
+[2026-1-29 01:21:41.626] [FATAL] Registers:
+[2026-1-29 01:21:41.626] [FATAL] [RAX 0x0000000000000000()] | [RCX 0x000000000000810C()]
+[2026-1-29 01:21:41.626] [FATAL] [RDX 0x0000000000000001()] | [RBX 0x00007FF9A3924560()]
+[2026-1-29 01:21:41.626] [FATAL] [RSP 0x0000007CD3AFF058()] | [RBP 0x00007FF9A38C1B20()]
+[2026-1-29 01:21:41.626] [FATAL] [RSI 0x000001828FBC4D20()] | [RDI 0x000001824D8925E8()]
+[2026-1-29 01:21:41.626] [FATAL] [R8  0x0000000000000002()] | [R9  0x0000000000000002()]
+[2026-1-29 01:21:41.626] [FATAL] [R10 0x00000182C03C0E30()] | [R11 0x00000181CFCC4380()]
+[2026-1-29 01:21:41.626] [FATAL] [R12 0x000001824D8925E8()] | [R13 0x000001828FBC4D10()]
+[2026-1-29 01:21:41.626] [FATAL] [R14 0x0000000000000000()] | [R15 0x000001828FFC422C()]
+[2026-1-29 01:21:41.627] [STACK] Cherax+0x424581 [0x7FF9A3924581|0x180424581]
+[2026-1-29 01:21:41.627] [STACK] Cherax+0x3C2CC3 [0x7FF9A38C2CC3|0x1803C2CC3]
+[2026-1-29 01:21:41.628] [STACK] Cherax+0x19CB9B [0x7FF9A369CB9B|0x18019CB9B]
+[2026-1-29 01:21:41.628] [STACK] Cherax+0x74D2E [0x7FF9A3574D2E|0x180074D2E]
+[2026-1-29 01:21:41.629] [STACK] Cherax+0x9A9C7 [0x7FF9A359A9C7|0x18009A9C7]
+[2026-1-29 01:21:41.629] [STACK] Cherax+0x75296 [0x7FF9A3575296|0x180075296]
+[2026-1-29 01:21:41.630] [STACK] Cherax+0x74113 [0x7FF9A3574113|0x180074113]
+[2026-1-29 01:21:41.630] [STACK] Cherax+0x674D8 [0x7FF9A35674D8|0x1800674D8]
+[2026-1-29 01:21:41.631] [STACK] Cherax+0x591315 [0x7FF9A3A91315|0x180591315]
+[2026-1-29 01:21:41.632] [STACK] Cherax+0x591526 [0x7FF9A3A91526|0x180591526]
+[2026-1-29 01:21:41.632] [STACK] Cherax+0x591719 [0x7FF9A3A91719|0x180591719]
+[2026-1-29 01:21:41.632] [STACK] Cherax+0x58EAF7 [0x7FF9A3A8EAF7|0x18058EAF7]
+[2026-1-29 01:21:41.633] [STACK] Cherax+0x58E18C [0x7FF9A3A8E18C|0x18058E18C]
+[2026-1-29 01:21:41.633] [STACK] Cherax+0x7176FC [0x7FF9A3C176FC|0x1807176FC]
+[2026-1-29 01:21:41.633] [STACK] Cherax+0x8A1887 [0x7FF9A3DA1887|0x1808A1887]
+[2026-1-29 01:21:41.633] [STACK] C:\WINDOWS\System32\KERNEL32.DLL+0x2E8D7 [0x7FFA49E5E8D7|0x18002E8D7]
+[2026-1-29 01:21:41.634] [STACK] C:\WINDOWS\SYSTEM32\ntdll.dll+0x8C53C [0x7FFA4B24C53C|0x18008C53C]
+
+************ EXCEPTION END ************[2026-1-29 01:21:41.634] [FATAL] Exception repeated 1
+[2026-1-29 01:21:41.635] [FATAL] Exception repeated 2
+[2026-1-29 01:21:41.654] [INFO] Successfully loaded 'Startup.lua'
+[2026-1-29 01:22:02.000] [Silent Night] Silent Night has started ツ
+[2026-1-29 01:22:34.811] [Player Joined] MALEK777zzzz | 199854587 | 41.34.14.174 (Direct)
+[2026-1-29 01:22:34.811] [Session] 'MALEK777zzzz' is now Session Host.
+[2026-1-29 01:22:35.153] [Session] 'MALEK777zzzz' is now Script Host.
+[2026-1-29 01:22:52.843] [INFO] Loading 'Silent Night'
+[2026-1-29 01:22:52.909] [ERROR] A feature named 'Skip Cutscene' does already exist with the hash 94295613. Remove it before you can add the feature 'Skip Cutscene'.
+[2026-1-29 01:22:52.909] [ERROR] A feature named 'Skip Checkpoint' does already exist with the hash 493BC321. Remove it before you can add the feature 'Skip Checkpoint'.
+[2026-1-29 01:22:52.910] [ERROR] A feature named 'Self' does already exist with the hash D0FF9441. Remove it before you can add the feature 'Self'.
+[2026-1-29 01:22:52.910] [ERROR] A feature named 'Apply Cut' does already exist with the hash 758B132D. Remove it before you can add the feature 'Apply Cut'.
+[2026-1-29 01:22:52.910] [ERROR] A feature named 'Contract' does already exist with the hash 2D523725. Remove it before you can add the feature 'Contract'.
+[2026-1-29 01:22:52.910] [ERROR] A feature named 'Apply & Complete Preps' does already exist with the hash A593EB5D. Remove it before you can add the feature 'Apply & Complete Preps'.
+[2026-1-29 01:22:52.910] [ERROR] A feature named 'Instant Finish' does already exist with the hash 17772616. Remove it before you can add the feature 'Instant Finish'.
+[2026-1-29 01:22:52.910] [ERROR] A feature named 'Kill Cooldowns' does already exist with the hash 42665CAA. Remove it before you can add the feature 'Kill Cooldowns'.
+[2026-1-29 01:22:52.910] [ERROR] A feature named 'Payout' does already exist with the hash 5D07B4A7. Remove it before you can add the feature 'Payout'.
+[2026-1-29 01:22:52.910] [ERROR] A feature named 'Max' does already exist with the hash 766D423A. Remove it before you can add the feature 'Max'.
+[2026-1-29 01:22:52.910] [ERROR] A feature named 'Apply Payout' does already exist with the hash C32A812E. Remove it before you can add the feature 'Apply Payout'.
+[2026-1-29 01:22:52.910] [ERROR] A feature named 'Complete Preps' does already exist with the hash FB947BC9. Remove it before you can add the feature 'Complete Preps'.
+[2026-1-29 01:22:52.911] [ERROR] A feature named 'Redraw Board' does already exist with the hash EBF5F201. Remove it before you can add the feature 'Redraw Board'.
+[2026-1-29 01:22:52.911] [ERROR] A feature named 'Change Session' does already exist with the hash 72D70642. Remove it before you can add the feature 'Change Session'.
+[2026-1-29 01:22:52.911] [ERROR] A feature named 'Force Ready' does already exist with the hash F5C94DB7. Remove it before you can add the feature 'Force Ready'.
+[2026-1-29 01:22:52.911] [ERROR] A feature named 'Instant Finish' does already exist with the hash F15F36D3. Remove it before you can add the feature 'Instant Finish'.
+[2026-1-29 01:22:52.911] [ERROR] A feature named 'Bypass Fleeca Hack' does already exist with the hash 8B22F853. Remove it before you can add the feature 'Bypass Fleeca Hack'.
+[2026-1-29 01:22:52.911] [ERROR] A feature named 'Bypass Fleeca Drill' does already exist with the hash 804385D5. Remove it before you can add the feature 'Bypass Fleeca Drill'.
+[2026-1-29 01:22:52.911] [ERROR] A feature named 'Bypass Pacific Hack' does already exist with the hash 5568146B. Remove it before you can add the feature 'Bypass Pacific Hack'.
+[2026-1-29 01:22:52.911] [ERROR] A feature named 'Kill Cooldown' does already exist with the hash 273D2088. Remove it before you can add the feature 'Kill Cooldown'.
+[2026-1-29 01:22:52.911] [ERROR] A feature named 'Play Unavailable Jobs' does already exist with the hash C7803D62. Remove it before you can add the feature 'Play Unavailable Jobs'.
+[2026-1-29 01:22:52.911] [ERROR] A feature named 'Unlock All Jobs' does already exist with the hash BB23D90D. Remove it before you can add the feature 'Unlock All Jobs'.
+[2026-1-29 01:22:52.911] [ERROR] A feature named '12mil Bonus' does already exist with the hash 94451E72. Remove it before you can add the feature '12mil Bonus'.
+[2026-1-29 01:22:52.911] [ERROR] A feature named 'Double Rewards Week' does already exist with the hash 5EC6E362. Remove it before you can add the feature 'Double Rewards Week'.
+[2026-1-29 01:22:52.911] [ERROR] A feature named 'Presets' does already exist with the hash 9C1900F3. Remove it before you can add the feature 'Presets'.
+[2026-1-29 01:22:52.912] [ERROR] A feature named 'Player 1' does already exist with the hash 96500681. Remove it before you can add the feature 'Player 1'.
+[2026-1-29 01:22:52.912] [ERROR] A feature named 'Player 2' does already exist with the hash C1995D13. Remove it before you can add the feature 'Player 2'.
+[2026-1-29 01:22:52.912] [ERROR] A feature named 'Player 3' does already exist with the hash AB7830D5. Remove it before you can add the feature 'Player 3'.
+[2026-1-29 01:22:52.912] [ERROR] A feature named 'Player 4' does already exist with the hash BABF4F63. Remove it before you can add the feature 'Player 4'.
+[2026-1-29 01:22:52.912] [ERROR] A feature named 'Apply Cuts' does already exist with the hash D03DE5FD. Remove it before you can add the feature 'Apply Cuts'.
+[2026-1-29 01:22:52.912] [ERROR] A feature named 'Contract' does already exist with the hash 35515FE6. Remove it before you can add the feature 'Contract'.
+[2026-1-29 01:22:52.912] [ERROR] A feature named 'Apply & Complete Preps' does already exist with the hash E117FD68. Remove it before you can add the feature 'Apply & Complete Preps'.
+[2026-1-29 01:22:52.912] [ERROR] A feature named 'Redraw Board' does already exist with the hash 87BE0468. Remove it before you can add the feature 'Redraw Board'.
+[2026-1-29 01:22:52.912] [ERROR] A feature named 'Instant Finish' does already exist with the hash 35138BC4. Remove it before you can add the feature 'Instant Finish'.
+[2026-1-29 01:22:52.912] [ERROR] A feature named 'Kill Cooldown' does already exist with the hash E5772C4. Remove it before you can add the feature 'Kill Cooldown'.
+[2026-1-29 01:22:52.912] [ERROR] A feature named 'Payout' does already exist with the hash DD58E583. Remove it before you can add the feature 'Payout'.
+[2026-1-29 01:22:52.913] [ERROR] A feature named 'Max' does already exist with the hash ED6997D0. Remove it before you can add the feature 'Max'.
+[2026-1-29 01:22:52.913] [ERROR] A feature named 'Apply Payout' does already exist with the hash 3197C3ED. Remove it before you can add the feature 'Apply Payout'.
+[2026-1-29 01:22:52.913] [ERROR] A feature named 'Difficulty' does already exist with the hash F0B9B41C. Remove it before you can add the feature 'Difficulty'.
+[2026-1-29 01:22:52.913] [ERROR] A feature named 'Approach' does already exist with the hash F3FA200E. Remove it before you can add the feature 'Approach'.
+[2026-1-29 01:22:52.913] [ERROR] A feature named 'Loadout' does already exist with the hash 9FF0200B. Remove it before you can add the feature 'Loadout'.
+[2026-1-29 01:22:52.913] [ERROR] A feature named 'Target' does already exist with the hash 788D4EFA. Remove it before you can add the feature 'Target'.
+[2026-1-29 01:22:52.913] [ERROR] A feature named 'Com. Target' does already exist with the hash 96036979. Remove it before you can add the feature 'Com. Target'.
+[2026-1-29 01:22:52.913] [ERROR] A feature named 'Com. Amount' does already exist with the hash FFC7B98F. Remove it before you can add the feature 'Com. Amount'.
+[2026-1-29 01:22:52.913] [ERROR] A feature named 'Arts Amount' does already exist with the hash 3C4AFE7C. Remove it before you can add the feature 'Arts Amount'.
+[2026-1-29 01:22:52.913] [ERROR] A feature named 'Isl. Target' does already exist with the hash 944F94DD. Remove it before you can add the feature 'Isl. Target'.
+[2026-1-29 01:22:52.913] [ERROR] A feature named 'Isl. Amount' does already exist with the hash 752C9173. Remove it before you can add the feature 'Isl. Amount'.
+[2026-1-29 01:22:52.914] [ERROR] A feature named 'Advanced' does already exist with the hash 8363118E. Remove it before you can add the feature 'Advanced'.
+[2026-1-29 01:22:52.914] [ERROR] A feature named 'Default' does already exist with the hash 98F1C761. Remove it before you can add the feature 'Default'.
+[2026-1-29 01:22:52.914] [ERROR] A feature named 'Cash Value' does already exist with the hash DCCCC24. Remove it before you can add the feature 'Cash Value'.
+[2026-1-29 01:22:52.914] [ERROR] A feature named 'Weed Value' does already exist with the hash 2C993F54. Remove it before you can add the feature 'Weed Value'.
+[2026-1-29 01:22:52.914] [ERROR] A feature named 'Coke Value' does already exist with the hash 61A7711D. Remove it before you can add the feature 'Coke Value'.
+[2026-1-29 01:22:52.914] [ERROR] A feature named 'Gold Value' does already exist with the hash 90271D87. Remove it before you can add the feature 'Gold Value'.
+[2026-1-29 01:22:52.914] [ERROR] A feature named 'Arts Value' does already exist with the hash 7B8A712A. Remove it before you can add the feature 'Arts Value'.
+[2026-1-29 01:22:52.914] [ERROR] A feature named 'Apply & Complete Preps' does already exist with the hash F18A155C. Remove it before you can add the feature 'Apply & Complete Preps'.
+[2026-1-29 01:22:52.914] [ERROR] A feature named 'Reset Preps' does already exist with the hash EA3B57CB. Remove it before you can add the feature 'Reset Preps'.
+[2026-1-29 01:22:52.914] [ERROR] A feature named 'Reload Screen' does already exist with the hash D9BC614A. Remove it before you can add the feature 'Reload Screen'.
+[2026-1-29 01:22:52.914] [ERROR] A feature named 'Force Ready' does already exist with the hash 97B7908C. Remove it before you can add the feature 'Force Ready'.
+[2026-1-29 01:22:52.914] [ERROR] A feature named 'Instant Finish' does already exist with the hash 57CDE9E6. Remove it before you can add the feature 'Instant Finish'.
+[2026-1-29 01:22:52.915] [ERROR] A feature named 'Bypass Fingerprint Hack' does already exist with the hash 4A1413D5. Remove it before you can add the feature 'Bypass Fingerprint Hack'.
+[2026-1-29 01:22:52.915] [ERROR] A feature named 'Bypass Plasma Cutter Cut' does already exist with the hash F0843787. Remove it before you can add the feature 'Bypass Plasma Cutter Cut'.
+[2026-1-29 01:22:52.915] [ERROR] A feature named 'Bypass Drainage Pipe Cut' does already exist with the hash 7092A888. Remove it before you can add the feature 'Bypass Drainage Pipe Cut'.
+[2026-1-29 01:22:52.915] [ERROR] A feature named 'Woman's Bag' does already exist with the hash A6172D92. Remove it before you can add the feature 'Woman's Bag'.
+[2026-1-29 01:22:52.915] [ERROR] A feature named 'Kill Cooldown (after solo)' does already exist with the hash 65FD73DC. Remove it before you can add the feature 'Kill Cooldown (after solo)'.
+[2026-1-29 01:22:52.915] [ERROR] A feature named 'Kill Cooldown (after team)' does already exist with the hash F4E436CD. Remove it before you can add the feature 'Kill Cooldown (after team)'.
+[2026-1-29 01:22:52.915] [ERROR] A feature named 'Go Offline' does already exist with the hash 73E08257. Remove it before you can add the feature 'Go Offline'.
+[2026-1-29 01:22:52.915] [ERROR] A feature named 'Go Online' does already exist with the hash C1CC563E. Remove it before you can add the feature 'Go Online'.
+[2026-1-29 01:22:52.915] [ERROR] A feature named 'Remove Crew Cuts' does already exist with the hash 3EDC73F9. Remove it before you can add the feature 'Remove Crew Cuts'.
+[2026-1-29 01:22:52.915] [ERROR] A feature named 'Presets' does already exist with the hash ED8C6FB3. Remove it before you can add the feature 'Presets'.
+[2026-1-29 01:22:52.915] [ERROR] A feature named 'Apply Cuts' does already exist with the hash 2B082122. Remove it before you can add the feature 'Apply Cuts'.
+[2026-1-29 01:22:52.916] [ERROR] A feature named 'File' does already exist with the hash 4E95774F. Remove it before you can add the feature 'File'.
+[2026-1-29 01:22:52.916] [ERROR] A feature named 'Load' does already exist with the hash F4879EC3. Remove it before you can add the feature 'Load'.
+[2026-1-29 01:22:52.916] [ERROR] A feature named 'Remove' does already exist with the hash 9F81867C. Remove it before you can add the feature 'Remove'.
+[2026-1-29 01:22:52.916] [ERROR] A feature named 'Refresh' does already exist with the hash EF29E7B3. Remove it before you can add the feature 'Refresh'.
+[2026-1-29 01:22:52.916] [ERROR] A feature named 'QuickPreset' does already exist with the hash 7619834E. Remove it before you can add the feature 'QuickPreset'.
+[2026-1-29 01:22:52.916] [ERROR] A feature named 'Save' does already exist with the hash F541FCF5. Remove it before you can add the feature 'Save'.
+[2026-1-29 01:22:52.916] [ERROR] A feature named 'Copy Folder Path' does already exist with the hash A1633A78. Remove it before you can add the feature 'Copy Folder Path'.
+[2026-1-29 01:22:52.916] [ERROR] A feature named 'Difficulty' does already exist with the hash 2F1378CE. Remove it before you can add the feature 'Difficulty'.
+[2026-1-29 01:22:52.916] [ERROR] A feature named 'Approach' does already exist with the hash 2B35382F. Remove it before you can add the feature 'Approach'.
+[2026-1-29 01:22:52.916] [ERROR] A feature named 'Gunman' does already exist with the hash CEED8105. Remove it before you can add the feature 'Gunman'.
+[2026-1-29 01:22:52.916] [ERROR] A feature named 'Loadout' does already exist with the hash 3E0ABB33. Remove it before you can add the feature 'Loadout'.
+[2026-1-29 01:22:52.917] [ERROR] A feature named 'Driver' does already exist with the hash FCB3B7C4. Remove it before you can add the feature 'Driver'.
+[2026-1-29 01:22:52.917] [ERROR] A feature named 'Vehicles' does already exist with the hash 36969CFA. Remove it before you can add the feature 'Vehicles'.
+[2026-1-29 01:22:52.917] [ERROR] A feature named 'Hacker' does already exist with the hash 44EBA210. Remove it before you can add the feature 'Hacker'.
+[2026-1-29 01:22:52.917] [ERROR] A feature named 'Masks' does already exist with the hash C1EE24E7. Remove it before you can add the feature 'Masks'.
+[2026-1-29 01:22:52.917] [ERROR] A feature named 'Keycards' does already exist with the hash 161B6F32. Remove it before you can add the feature 'Keycards'.
+[2026-1-29 01:22:52.917] [ERROR] A feature named 'Guards' does already exist with the hash 81439DB9. Remove it before you can add the feature 'Guards'.
+[2026-1-29 01:22:52.917] [ERROR] A feature named 'Target' does already exist with the hash 18E96153. Remove it before you can add the feature 'Target'.
+[2026-1-29 01:22:52.917] [ERROR] A feature named 'Apply & Complete Preps' does already exist with the hash 347E42D4. Remove it before you can add the feature 'Apply & Complete Preps'.
+[2026-1-29 01:22:52.917] [ERROR] A feature named 'Reset Preps' does already exist with the hash 3B9FFDAA. Remove it before you can add the feature 'Reset Preps'.
+[2026-1-29 01:22:52.917] [ERROR] A feature named 'Redraw Board' does already exist with the hash 28F07533. Remove it before you can add the feature 'Redraw Boards'.
+[2026-1-29 01:22:52.918] [ERROR] A feature named 'Skip Setup' does already exist with the hash 995041EF. Remove it before you can add the feature 'Skip Setup'.
+[2026-1-29 01:22:52.918] [ERROR] A feature named 'Force Ready' does already exist with the hash E57A6141. Remove it before you can add the feature 'Force Ready'.
+[2026-1-29 01:22:52.918] [ERROR] A feature named 'Instant Finish' does already exist with the hash 282D2D2. Remove it before you can add the feature 'Instant Finish'.
+[2026-1-29 01:22:52.918] [ERROR] A feature named 'Bypass Fingerprint Hack' does already exist with the hash F3725F79. Remove it before you can add the feature 'Bypass Fingerprint Hack'.
+[2026-1-29 01:22:52.918] [ERROR] A feature named 'Bypass Keypad Hack' does already exist with the hash E2E3057B. Remove it before you can add the feature 'Bypass Keypad Hack'.
+[2026-1-29 01:22:52.918] [ERROR] A feature named 'Bypass Vault Door Drill' does already exist with the hash CB0BAD5E. Remove it before you can add the feature 'Bypass Vault Door Drill'.
+[2026-1-29 01:22:52.918] [ERROR] A feature named 'Autograbber' does already exist with the hash 2F6CBE65. Remove it before you can add the feature 'Autograbber'.
+[2026-1-29 01:22:52.918] [ERROR] A feature named 'Kill Cooldown' does already exist with the hash FFFA0B65. Remove it before you can add the feature 'Kill Cooldown'.
+[2026-1-29 01:22:52.918] [ERROR] A feature named 'Remove Crew Cuts' does already exist with the hash 589D5BCB. Remove it before you can add the feature 'Remove Crew Cuts'.
+[2026-1-29 01:22:52.918] [ERROR] A feature named 'Presets' does already exist with the hash 9700E0B3. Remove it before you can add the feature 'Presets'.
+[2026-1-29 01:22:52.919] [ERROR] A feature named 'Apply Cuts' does already exist with the hash A399C6E2. Remove it before you can add the feature 'Apply Cuts'.
+[2026-1-29 01:22:52.919] [ERROR] A feature named 'File' does already exist with the hash B8268387. Remove it before you can add the feature 'File'.
+[2026-1-29 01:22:52.919] [ERROR] A feature named 'Load' does already exist with the hash 3F3436D5. Remove it before you can add the feature 'Load'.
+[2026-1-29 01:22:52.919] [ERROR] A feature named 'Remove' does already exist with the hash 521FD581. Remove it before you can add the feature 'Remove'.
+[2026-1-29 01:22:52.919] [ERROR] A feature named 'Refresh' does already exist with the hash E5526B5. Remove it before you can add the feature 'Refresh'.
+[2026-1-29 01:22:52.919] [ERROR] A feature named 'QuickPreset' does already exist with the hash 92DEADB0. Remove it before you can add the feature 'QuickPreset'.
+[2026-1-29 01:22:52.919] [ERROR] A feature named 'Save' does already exist with the hash C58401E0. Remove it before you can add the feature 'Save'.
+[2026-1-29 01:22:52.919] [ERROR] A feature named 'Copy Folder Path' does already exist with the hash C10FE8E1. Remove it before you can add the feature 'Copy Folder Path'.
+[2026-1-29 01:22:52.919] [ERROR] A feature named 'Act' does already exist with the hash 609402D. Remove it before you can add the feature 'Act'.
+[2026-1-29 01:22:52.919] [ERROR] A feature named 'Apply & Complete Preps' does already exist with the hash 1FA896CE. Remove it before you can add the feature 'Apply & Complete Preps'.
+[2026-1-29 01:22:52.919] [ERROR] A feature named 'Reset Preps' does already exist with the hash B829E200. Remove it before you can add the feature 'Reset Preps'.
+[2026-1-29 01:22:52.919] [ERROR] A feature named 'Reload Screen' does already exist with the hash 81E0E311. Remove it before you can add the feature 'Reload Screen'.
+[2026-1-29 01:22:52.920] [ERROR] A feature named 'Force Ready' does already exist with the hash C17484AF. Remove it before you can add the feature 'Force Ready'.
+[2026-1-29 01:22:52.920] [ERROR] A feature named 'Instant Finish' does already exist with the hash ACA1EEBD. Remove it before you can add the feature 'Instant Finish'.
+[2026-1-29 01:22:52.920] [ERROR] A feature named 'Bypass Data Breaches Hack' does already exist with the hash 7056B944. Remove it before you can add the feature 'Bypass Data Breaches Hack'.
+[2026-1-29 01:22:52.920] [ERROR] A feature named 'Bypass Dooms. Scen. Hack' does already exist with the hash 14F14FA4. Remove it before you can add the feature 'Bypass Dooms. Scen. Hack'.
+[2026-1-29 01:22:52.920] [ERROR] A feature named 'Presets' does already exist with the hash E61A7A23. Remove it before you can add the feature 'Presets'.
+[2026-1-29 01:22:52.920] [ERROR] A feature named 'Player 1' does already exist with the hash 406E0543. Remove it before you can add the feature 'Player 1'.
+[2026-1-29 01:22:52.920] [ERROR] A feature named 'Player 2' does already exist with the hash 6D0E5E83. Remove it before you can add the feature 'Player 2'.
+[2026-1-29 01:22:52.920] [ERROR] A feature named 'Player 3' does already exist with the hash 16DFB227. Remove it before you can add the feature 'Player 3'.
+[2026-1-29 01:22:52.920] [ERROR] A feature named 'Player 4' does already exist with the hash B22CE8C3. Remove it before you can add the feature 'Player 4'.
+[2026-1-29 01:22:52.920] [ERROR] A feature named 'Apply Cuts' does already exist with the hash 80EEA2F7. Remove it before you can add the feature 'Apply Cuts'.
+[2026-1-29 01:22:52.920] [ERROR] A feature named 'Make Slot 1 Available' does already exist with the hash A192BA98. Remove it before you can add the feature 'Make Available'.
+[2026-1-29 01:22:52.921] [ERROR] A feature named 'Robbery' does already exist with the hash 60DF86C. Remove it before you can add the feature 'Robbery'.
+[2026-1-29 01:22:52.921] [ERROR] A feature named 'Vehicle' does already exist with the hash B7D6FAAA. Remove it before you can add the feature 'Vehicle'.
+[2026-1-29 01:22:52.921] [ERROR] A feature named 'Modification' does already exist with the hash E70A7973. Remove it before you can add the feature 'Modification'.
+[2026-1-29 01:22:52.921] [ERROR] A feature named 'Status' does already exist with the hash A9309E9A. Remove it before you can add the feature 'Status'.
+[2026-1-29 01:22:52.921] [ERROR] A feature named 'Apply Changes' does already exist with the hash 5DF26873. Remove it before you can add the feature 'Apply Changes'.
+[2026-1-29 01:22:52.921] [ERROR] A feature named 'Make Slot 2 Available' does already exist with the hash 1540A1F2. Remove it before you can add the feature 'Make Available'.
+[2026-1-29 01:22:52.921] [ERROR] A feature named 'Robbery' does already exist with the hash 14C515DE. Remove it before you can add the feature 'Robbery'.
+[2026-1-29 01:22:52.921] [ERROR] A feature named 'Vehicle' does already exist with the hash 89011CFF. Remove it before you can add the feature 'Vehicle'.
+[2026-1-29 01:22:52.921] [ERROR] A feature named 'Modification' does already exist with the hash 5C2B63AF. Remove it before you can add the feature 'Modification'.
+[2026-1-29 01:22:52.921] [ERROR] A feature named 'Status' does already exist with the hash 7AE74208. Remove it before you can add the feature 'Status'.
+[2026-1-29 01:22:52.921] [ERROR] A feature named 'Apply Changes' does already exist with the hash 30CA8E24. Remove it before you can add the feature 'Apply Changes'.
+[2026-1-29 01:22:52.922] [ERROR] A feature named 'Make Slot 3 Available' does already exist with the hash 98D8A8C. Remove it before you can add the feature 'Make Available'.
+[2026-1-29 01:22:52.922] [ERROR] A feature named 'Robbery' does already exist with the hash 2267B123. Remove it before you can add the feature 'Robbery'.
+[2026-1-29 01:22:52.922] [ERROR] A feature named 'Vehicle' does already exist with the hash 8C5D23B7. Remove it before you can add the feature 'Vehicle'.
+[2026-1-29 01:22:52.922] [ERROR] A feature named 'Modification' does already exist with the hash 51B54EC3. Remove it before you can add the feature 'Modification'.
+[2026-1-29 01:22:52.922] [ERROR] A feature named 'Status' does already exist with the hash 5524F670. Remove it before you can add the feature 'Status'.
+[2026-1-29 01:22:52.922] [ERROR] A feature named 'Apply Changes' does already exist with the hash 3A5CA148. Remove it before you can add the feature 'Apply Changes'.
+[2026-1-29 01:22:52.922] [ERROR] A feature named 'Apply All Changes' does already exist with the hash 7EDABAEF. Remove it before you can add the feature 'Apply All Changes'.
+[2026-1-29 01:22:52.922] [ERROR] A feature named 'Complete Preps' does already exist with the hash D1D64C8C. Remove it before you can add the feature 'Complete Preps'.
+[2026-1-29 01:22:52.922] [ERROR] A feature named 'Reset Preps' does already exist with the hash FF0E6B3C. Remove it before you can add the feature 'Reset Preps'.
+[2026-1-29 01:22:52.922] [ERROR] A feature named 'Reload Screen' does already exist with the hash 61B5A7A0. Remove it before you can add the feature 'Reload Screen'.
+[2026-1-29 01:22:52.922] [ERROR] A feature named 'Free Setup' does already exist with the hash 83A2831C. Remove it before you can add the feature 'Free Setup'.
+[2026-1-29 01:22:52.922] [ERROR] A feature named 'Free Claim' does already exist with the hash B747436C. Remove it before you can add the feature 'Free Claim'.
+[2026-1-29 01:22:52.923] [ERROR] A feature named 'Kill Cooldowns' does already exist with the hash EADD2038. Remove it before you can add the feature 'Skip Weekly Cooldown'.
+[2026-1-29 01:22:52.923] [ERROR] A feature named 'Salvage Value Multiplier' does already exist with the hash 997BABD9. Remove it before you can add the feature 'Salvage Value Multiplier'.
+[2026-1-29 01:22:52.923] [ERROR] A feature named 'Sell Value Slot 1' does already exist with the hash 8AC7A32D. Remove it before you can add the feature 'Sell Value Slot 1'.
+[2026-1-29 01:22:52.923] [ERROR] A feature named 'Sell Value Slot 2' does already exist with the hash A1E55168. Remove it before you can add the feature 'Sell Value Slot 2'.
+[2026-1-29 01:22:52.923] [ERROR] A feature named 'Sell Value Slot 3' does already exist with the hash B41BF5D5. Remove it before you can add the feature 'Sell Value Slot 3'.
+[2026-1-29 01:22:52.923] [ERROR] A feature named 'Apply Sell Values' does already exist with the hash CBEF9F7C. Remove it before you can add the feature 'Apply Sell Values'.
+[2026-1-29 01:22:52.923] [ERROR] A feature named 'Maximize Price' does already exist with the hash 46E01A59. Remove it before you can add the feature 'Maximize Price'.
+[2026-1-29 01:22:52.923] [ERROR] A feature named 'No XP Gain' does already exist with the hash B8DF53B7. Remove it before you can add the feature 'No XP Gain'.
+[2026-1-29 01:22:52.923] [ERROR] A feature named 'Instant Sell' does already exist with the hash 9DAEFFE9. Remove it before you can add the feature 'Instant Sell'.
+[2026-1-29 01:22:52.923] [ERROR] A feature named 'Open Laptop' does already exist with the hash 588EC266. Remove it before you can add the feature 'Open Laptop'.
+[2026-1-29 01:22:52.923] [ERROR] A feature named 'Get Supplies' does already exist with the hash E90CC76A. Remove it before you can add the feature 'Get Supplies'.
+[2026-1-29 01:22:52.924] [ERROR] A feature named 'Trigger Production' does already exist with the hash 6D4B402. Remove it before you can add the feature 'Trigger Production'.
+[2026-1-29 01:22:52.924] [ERROR] A feature named 'Turkish Supplier' does already exist with the hash CD8353C1. Remove it before you can add the feature 'Turkish Supplier'.
+[2026-1-29 01:22:52.924] [ERROR] A feature named 'Sell Made' does already exist with the hash 90D12294. Remove it before you can add the feature 'Sell Made'.
+[2026-1-29 01:22:52.924] [ERROR] A feature named 'Sell Undertaken' does already exist with the hash 79DE6218. Remove it before you can add the feature 'Sell Undertaken'.
+[2026-1-29 01:22:52.924] [ERROR] A feature named 'Earnings' does already exist with the hash DA56A282. Remove it before you can add the feature 'Earnings'.
+[2026-1-29 01:22:52.924] [ERROR] A feature named 'Don't Apply Sell' does already exist with the hash 6C88E93B. Remove it before you can add the feature 'Don't Apply Sell'.
+[2026-1-29 01:22:52.924] [ERROR] A feature named 'Don't Apply Earnings' does already exist with the hash 728DED18. Remove it before you can add the feature 'Don't Apply Earnings'.
+[2026-1-29 01:22:52.924] [ERROR] A feature named 'Apply All Changes' does already exist with the hash 32A3F990. Remove it before you can add the feature 'Apply All Changes'.
+[2026-1-29 01:22:52.924] [ERROR] A feature named 'Maximize Price' does already exist with the hash 183F3B45. Remove it before you can add the feature 'Maximize Price'.
+[2026-1-29 01:22:52.924] [ERROR] A feature named 'No XP Gain' does already exist with the hash 5E69EDCD. Remove it before you can add the feature 'No XP Gain'.
+[2026-1-29 01:22:52.924] [ERROR] A feature named 'Instant Air Cargo Sell' does already exist with the hash 54197239. Remove it before you can add the feature 'Instant Air Cargo Sell'.
+[2026-1-29 01:22:52.924] [ERROR] A feature named 'Open Laptop' does already exist with the hash 18CE8BA2. Remove it before you can add the feature 'Open Laptop'.
+[2026-1-29 01:22:52.925] [ERROR] A feature named 'Get Cargo' does already exist with the hash CB159B41. Remove it before you can add the feature 'Get Cargo'.
+[2026-1-29 01:22:52.925] [ERROR] A feature named 'Turkish Supplier' does already exist with the hash A0DFC82. Remove it before you can add the feature 'Turkish Supplier'.
+[2026-1-29 01:22:52.925] [ERROR] A feature named 'Kill Cooldowns' does already exist with the hash 77B14A69. Remove it before you can add the feature 'Kill Cooldowns'.
+[2026-1-29 01:22:52.925] [ERROR] A feature named 'Buy Made' does already exist with the hash 580488F9. Remove it before you can add the feature 'Buy Made'.
+[2026-1-29 01:22:52.925] [ERROR] A feature named 'Buy Undertaken' does already exist with the hash 6DAB1974. Remove it before you can add the feature 'Buy Undertaken'.
+[2026-1-29 01:22:52.925] [ERROR] A feature named 'Sell Made' does already exist with the hash E0AD917. Remove it before you can add the feature 'Sell Made'.
+[2026-1-29 01:22:52.925] [ERROR] A feature named 'Sell Undertaken' does already exist with the hash 82508159. Remove it before you can add the feature 'Sell Undertaken'.
+[2026-1-29 01:22:52.925] [ERROR] A feature named 'Earnings' does already exist with the hash DC7CD510. Remove it before you can add the feature 'Earnings'.
+[2026-1-29 01:22:52.925] [ERROR] A feature named 'Don't Apply Buy' does already exist with the hash 15645051. Remove it before you can add the feature 'Don't Apply Buy'.
+[2026-1-29 01:22:52.925] [ERROR] A feature named 'Don't Apply Sell' does already exist with the hash 5A064DA5. Remove it before you can add the feature 'Don't Apply Sell'.
+[2026-1-29 01:22:52.925] [ERROR] A feature named 'Don't Apply Earnings' does already exist with the hash 18EF5E23. Remove it before you can add the feature 'Don't Apply Earnings'.
+[2026-1-29 01:22:52.925] [ERROR] A feature named 'Apply All Changes' does already exist with the hash 217649EF. Remove it before you can add the feature 'Apply All Changes'.
+[2026-1-29 01:22:52.926] [ERROR] A feature named 'Maximize Price' does already exist with the hash 8469186B. Remove it before you can add the feature 'Maximize Price'.
+[2026-1-29 01:22:52.926] [ERROR] A feature named 'Skip Setup' does already exist with the hash E9759D93. Remove it before you can add the feature 'Skip Setups'.
+[2026-1-29 01:22:52.926] [ERROR] A feature named 'Open Computer' does already exist with the hash DBD9F5E6. Remove it before you can add the feature 'Open Computer'.
+[2026-1-29 01:22:52.926] [ERROR] A feature named 'Kill Cooldowns' does already exist with the hash A2E1B047. Remove it before you can add the feature 'Kill Cooldowns'.
+[2026-1-29 01:22:52.926] [ERROR] A feature named 'Sell Made' does already exist with the hash 51BDE300. Remove it before you can add the feature 'Sell Made'.
+[2026-1-29 01:22:52.926] [ERROR] A feature named 'Earnings' does already exist with the hash FB970404. Remove it before you can add the feature 'Earnings'.
+[2026-1-29 01:22:52.926] [ERROR] A feature named 'Don't Apply Sell' does already exist with the hash DB451F4B. Remove it before you can add the feature 'Don't Apply Sell'.
+[2026-1-29 01:22:52.926] [ERROR] A feature named 'Don't Apply Earnings' does already exist with the hash 257825CA. Remove it before you can add the feature 'Don't Apply Earnings'.
+[2026-1-29 01:22:52.927] [ERROR] A feature named 'Apply All Changes' does already exist with the hash D139345C. Remove it before you can add the feature 'Apply All Changes'.
+[2026-1-29 01:22:52.927] [ERROR] A feature named 'Fill' does already exist with the hash 95585662. Remove it before you can add the feature 'Fill'.
+[2026-1-29 01:22:52.927] [ERROR] A feature named 'Collect' does already exist with the hash 74C821B9. Remove it before you can add the feature 'Collect'.
+[2026-1-29 01:22:52.927] [ERROR] A feature named 'Unbrick' does already exist with the hash 4956146C. Remove it before you can add the feature 'Unbrick'.
+[2026-1-29 01:22:52.927] [ERROR] A feature named 'Lock' does already exist with the hash A1BB22E9. Remove it before you can add the feature 'Lock'.
+[2026-1-29 01:22:52.927] [ERROR] A feature named 'Max' does already exist with the hash B99E5FF0. Remove it before you can add the feature 'Max'.
+[2026-1-29 01:22:52.927] [ERROR] A feature named 'Min' does already exist with the hash DCF2AFA4. Remove it before you can add the feature 'Min'.
+[2026-1-29 01:22:52.927] [ERROR] A feature named 'Maximize Price' does already exist with the hash 40A9E106. Remove it before you can add the feature 'Maximize Price'.
+[2026-1-29 01:22:52.927] [ERROR] A feature named 'No XP Gain' does already exist with the hash F998E5A7. Remove it before you can add the feature 'No XP Gain'.
+[2026-1-29 01:22:52.927] [ERROR] A feature named 'No CrateBack' does already exist with the hash BC1E6B54. Remove it before you can add the feature 'No CrateBack'.
+[2026-1-29 01:22:52.927] [ERROR] A feature named 'Instant Sell' does already exist with the hash BCF94F08. Remove it before you can add the feature 'Instant Sell'.
+[2026-1-29 01:22:52.927] [ERROR] A feature named 'Get Crates' does already exist with the hash 4B752820. Remove it before you can add the feature 'Get Crates'.
+[2026-1-29 01:22:52.928] [ERROR] A feature named 'Turkish Supplier' does already exist with the hash F0B8F3EB. Remove it before you can add the feature 'Turkish Supplier'.
+[2026-1-29 01:22:52.928] [ERROR] A feature named 'Crates Amount' does already exist with the hash 79243EE6. Remove it before you can add the feature 'Crates Amount'.
+[2026-1-29 01:22:52.928] [ERROR] A feature named 'Max' does already exist with the hash 4155533E. Remove it before you can add the feature 'Max'.
+[2026-1-29 01:22:52.928] [ERROR] A feature named 'Instant Buy' does already exist with the hash 85B1F218. Remove it before you can add the feature 'Instant Buy'.
+[2026-1-29 01:22:52.928] [ERROR] A feature named 'Kill Cooldowns' does already exist with the hash 9C0BD525. Remove it before you can add the feature 'Kill Cooldowns'.
+[2026-1-29 01:22:52.928] [ERROR] A feature named 'Buy Made' does already exist with the hash 2E4536CD. Remove it before you can add the feature 'Buy Made'.
+[2026-1-29 01:22:52.928] [ERROR] A feature named 'Buy Undertaken' does already exist with the hash 5D931A6A. Remove it before you can add the feature 'Buy Undertaken'.
+[2026-1-29 01:22:52.928] [ERROR] A feature named 'Sell Made' does already exist with the hash B0773602. Remove it before you can add the feature 'Sell Made'.
+[2026-1-29 01:22:52.928] [ERROR] A feature named 'Sell Undertaken' does already exist with the hash FC0712D1. Remove it before you can add the feature 'Sell Undertaken'.
+[2026-1-29 01:22:52.928] [ERROR] A feature named 'Earnings' does already exist with the hash 4C51A388. Remove it before you can add the feature 'Earnings'.
+[2026-1-29 01:22:52.928] [ERROR] A feature named 'Don't Apply Buy' does already exist with the hash E8E0C286. Remove it before you can add the feature 'Don't Apply Buy'.
+[2026-1-29 01:22:52.928] [ERROR] A feature named 'Don't Apply Sell' does already exist with the hash 635F9626. Remove it before you can add the feature 'Don't Apply Sell'.
+[2026-1-29 01:22:52.929] [ERROR] A feature named 'Don't Apply Earnings' does already exist with the hash 34DF2B37. Remove it before you can add the feature 'Don't Apply Earnings'.
+[2026-1-29 01:22:52.929] [ERROR] A feature named 'Apply All Changes' does already exist with the hash 7BD1F0E2. Remove it before you can add the feature 'Apply All Changes'.
+[2026-1-29 01:22:52.929] [ERROR] A feature named 'Business' does already exist with the hash BF52B001. Remove it before you can add the feature 'Business'.
+[2026-1-29 01:22:52.929] [ERROR] A feature named 'Resupply' does already exist with the hash ECD2243D. Remove it before you can add the feature 'Resupply'.
+[2026-1-29 01:22:52.929] [ERROR] A feature named 'Prize' does already exist with the hash A3872AC4. Remove it before you can add the feature 'Prize'.
+[2026-1-29 01:22:52.929] [ERROR] A feature named 'Give Prize' does already exist with the hash AF5B0183. Remove it before you can add the feature 'Give Prize'.
+[2026-1-29 01:22:52.929] [ERROR] A feature named 'Rig Slots' does already exist with the hash C4AA108D. Remove it before you can add the feature 'Rig Slots'.
+[2026-1-29 01:22:52.929] [ERROR] A feature named 'Lose Slots' does already exist with the hash 7AD074B6. Remove it before you can add the feature 'Lose Slots'.
+[2026-1-29 01:22:52.929] [ERROR] A feature named 'Land On Black 13' does already exist with the hash 67853DA8. Remove it before you can add the feature 'Land On Black 13'.
+[2026-1-29 01:22:52.929] [ERROR] A feature named 'Land On Red 16' does already exist with the hash 89D28242. Remove it before you can add the feature 'Land On Red 16'.
+[2026-1-29 01:22:52.930] [ERROR] A feature named 'Bypass Casino Limits' does already exist with the hash 8B075B4A. Remove it before you can add the feature 'Bypass Casino Limits'.
+[2026-1-29 01:22:52.930] [ERROR] A feature named 'Chips Limit' does already exist with the hash 235A8969. Remove it before you can add the feature 'Chips Limit'.
+[2026-1-29 01:22:52.930] [ERROR] A feature named 'Apply Acquire Limit' does already exist with the hash AFF31A6A. Remove it before you can add the feature 'Apply Acquire Limit'.
+[2026-1-29 01:22:52.930] [ERROR] A feature named '5k Loop' does already exist with the hash FE77AF6E. Remove it before you can add the feature '5k Loop'.
+[2026-1-29 01:22:52.930] [ERROR] A feature named '50k Loop' does already exist with the hash B5C62BAE. Remove it before you can add the feature '50k Loop'.
+[2026-1-29 01:22:52.930] [ERROR] A feature named '100k Loop' does already exist with the hash FC3CBA5F. Remove it before you can add the feature '100k Loop'.
+[2026-1-29 01:22:52.930] [ERROR] A feature named '180k Loop' does already exist with the hash 528DBEBB. Remove it before you can add the feature '180k Loop'.
+[2026-1-29 01:22:52.930] [ERROR] A feature named '300k Loop' does already exist with the hash 1F408277. Remove it before you can add the feature '300k Loop'.
+[2026-1-29 01:22:52.930] [ERROR] A feature named 'Money Amount' does already exist with the hash 3F8EA3AF. Remove it before you can add the feature 'Money Amount'.
+[2026-1-29 01:22:52.930] [ERROR] A feature named 'Deposit' does already exist with the hash 711917FD. Remove it before you can add the feature 'Deposit'.
+[2026-1-29 01:22:52.931] [ERROR] A feature named 'Withdraw' does already exist with the hash 5DA099FF. Remove it before you can add the feature 'Withdraw'.
+[2026-1-29 01:22:52.931] [ERROR] A feature named 'Remove' does already exist with the hash EB825F7E. Remove it before you can add the feature 'Remove'.
+[2026-1-29 01:22:52.931] [ERROR] A feature named 'Deposit All' does already exist with the hash 156EEE6E. Remove it before you can add the feature 'Deposit All'.
+[2026-1-29 01:22:52.931] [ERROR] A feature named 'Withdraw All' does already exist with the hash 55AF669E. Remove it before you can add the feature 'Withdraw All'.
+[2026-1-29 01:22:52.931] [ERROR] A feature named 'Money Amount' does already exist with the hash C3655ACF. Remove it before you can add the feature 'Money Amount'.
+[2026-1-29 01:22:52.931] [ERROR] A feature named 'Character' does already exist with the hash F780950. Remove it before you can add the feature 'Character'.
+[2026-1-29 01:22:52.931] [ERROR] A feature named 'Apply Money Amount' does already exist with the hash CDC76B23. Remove it before you can add the feature 'Apply Money Amount'.
+[2026-1-29 01:22:52.931] [ERROR] A feature named 'Money Amount' does already exist with the hash 4B925214. Remove it before you can add the feature 'Money Amount'.
+[2026-1-29 01:22:52.931] [ERROR] A feature named 'Earned' does already exist with the hash 54FF6CE2. Remove it before you can add the feature 'Earned'.
+[2026-1-29 01:22:52.931] [ERROR] A feature named 'Spent' does already exist with the hash E3EB843A. Remove it before you can add the feature 'Spent'.
+[2026-1-29 01:22:52.931] [ERROR] A feature named 'Apply Money Amount' does already exist with the hash 22583F60. Remove it before you can add the feature 'Apply Money Amount'.
+[2026-1-29 01:22:52.931] [ERROR] A feature named 'Type' does already exist with the hash C9A3279B. Remove it before you can add the feature 'Type'.
+[2026-1-29 01:22:52.931] [ERROR] A feature named '262145 + 9415' does already exist with the hash E50A58C. Remove it before you can add the feature '262145 + 9415'.
+[2026-1-29 01:22:52.932] [ERROR] A feature named '100' does already exist with the hash E5AB1AA8. Remove it before you can add the feature '100'.
+[2026-1-29 01:22:52.932] [ERROR] A feature named 'Read' does already exist with the hash 7C039E2B. Remove it before you can add the feature 'Read'.
+[2026-1-29 01:22:52.932] [ERROR] A feature named 'Write' does already exist with the hash E9D3EE84. Remove it before you can add the feature 'Write'.
+[2026-1-29 01:22:52.932] [ERROR] A feature named 'Revert' does already exist with the hash 512D483D. Remove it before you can add the feature 'Revert'.
+[2026-1-29 01:22:52.932] [ERROR] A feature named 'Type' does already exist with the hash E20A811A. Remove it before you can add the feature 'Type'.
+[2026-1-29 01:22:52.932] [ERROR] A feature named 'fm_mission_controller' does already exist with the hash 61C2A79D. Remove it before you can add the feature 'fm_mission_controller'.
+[2026-1-29 01:22:52.932] [ERROR] A feature named '10291' does already exist with the hash 1AE655CE. Remove it before you can add the feature '10291'.
+[2026-1-29 01:22:52.932] [ERROR] A feature named '4' does already exist with the hash 996D267B. Remove it before you can add the feature '4'.
+[2026-1-29 01:22:52.932] [ERROR] A feature named 'Read' does already exist with the hash 8364BBB8. Remove it before you can add the feature 'Read'.
+[2026-1-29 01:22:52.932] [ERROR] A feature named 'Write' does already exist with the hash BDB7121. Remove it before you can add the feature 'Write'.
+[2026-1-29 01:22:52.932] [ERROR] A feature named 'Revert' does already exist with the hash A8693E4F. Remove it before you can add the feature 'Revert'.
+[2026-1-29 01:22:52.932] [ERROR] A feature named 'From File' does already exist with the hash 17D15908. Remove it before you can add the feature 'From File'.
+[2026-1-29 01:22:52.933] [ERROR] A feature named 'Type' does already exist with the hash 26B10ECB. Remove it before you can add the feature 'Type'.
+[2026-1-29 01:22:52.933] [ERROR] A feature named 'MPX_KILLS' does already exist with the hash 7C204DDE. Remove it before you can add the feature 'MPX_KILLS'.
+[2026-1-29 01:22:52.933] [ERROR] A feature named '7777' does already exist with the hash 6F2645A5. Remove it before you can add the feature '7777'.
+[2026-1-29 01:22:52.933] [ERROR] A feature named 'Read' does already exist with the hash 7988038. Remove it before you can add the feature 'Read'.
+[2026-1-29 01:22:52.933] [ERROR] A feature named 'Write' does already exist with the hash 8EB52D. Remove it before you can add the feature 'Write'.
+[2026-1-29 01:22:52.933] [ERROR] A feature named 'Revert' does already exist with the hash D05B0DAA. Remove it before you can add the feature 'Revert'.
+[2026-1-29 01:22:52.933] [ERROR] A feature named 'File' does already exist with the hash DB5DB0A7. Remove it before you can add the feature 'File'.
+[2026-1-29 01:22:52.933] [ERROR] A feature named 'Write' does already exist with the hash FAD3B804. Remove it before you can add the feature 'Write'.
+[2026-1-29 01:22:52.933] [ERROR] A feature named 'Remove' does already exist with the hash 9F05947F. Remove it before you can add the feature 'Remove'.
+[2026-1-29 01:22:52.933] [ERROR] A feature named 'Refresh' does already exist with the hash 59C950A6. Remove it before you can add the feature 'Refresh'.
+[2026-1-29 01:22:52.933] [ERROR] A feature named 'Copy Folder Path' does already exist with the hash DA336389. Remove it before you can add the feature 'Copy Folder Path'.
+[2026-1-29 01:22:52.933] [ERROR] A feature named 'Generate Example File' does already exist with the hash 98C574EA. Remove it before you can add the feature 'Generate Example File'.
+[2026-1-29 01:22:52.934] [ERROR] A feature named 'Range' does already exist with the hash 331278E0. Remove it before you can add the feature 'Range'.
+[2026-1-29 01:22:52.934] [ERROR] A feature named 'Type' does already exist with the hash DAD01057. Remove it before you can add the feature 'Type'.
+[2026-1-29 01:22:52.934] [ERROR] A feature named '22050' does already exist with the hash 7994259. Remove it before you can add the feature '22050'.
+[2026-1-29 01:22:52.934] [ERROR] A feature named '5' does already exist with the hash 28291AF8. Remove it before you can add the feature '5'.
+[2026-1-29 01:22:52.934] [ERROR] A feature named 'Read' does already exist with the hash 945190D5. Remove it before you can add the feature 'Read'.
+[2026-1-29 01:22:52.934] [ERROR] A feature named 'Write' does already exist with the hash 4ECEDD88. Remove it before you can add the feature 'Write'.
+[2026-1-29 01:22:52.934] [ERROR] A feature named 'Revert' does already exist with the hash 1D2E1665. Remove it before you can add the feature 'Revert'.
+[2026-1-29 01:22:52.934] [ERROR] A feature named 'Auto-Open Lua Tab' does already exist with the hash EF4CF507. Remove it before you can add the feature 'Auto-Open Lua Tab'.
+[2026-1-29 01:22:52.934] [ERROR] A feature named 'Logging' does already exist with the hash DCEBF35C. Remove it before you can add the feature 'Logging'.
+[2026-1-29 01:22:52.934] [ERROR] A feature named 'Reset' does already exist with the hash C29D96AF. Remove it before you can add the feature 'Reset'.
+[2026-1-29 01:22:52.935] [ERROR] A feature named 'Copy Folder Path' does already exist with the hash 523C0ED3. Remove it before you can add the feature 'Copy Folder Path'.
+[2026-1-29 01:22:52.935] [ERROR] A feature named 'Copy Discord Invite Link' does already exist with the hash E7C9C196. Remove it before you can add the feature 'Copy Discord Invite Link'.
+[2026-1-29 01:22:52.935] [ERROR] A feature named 'Language' does already exist with the hash 7646B1EF. Remove it before you can add the feature 'Language'.
+[2026-1-29 01:22:52.935] [ERROR] A feature named 'Load' does already exist with the hash 93164FA4. Remove it before you can add the feature 'Load'.
+[2026-1-29 01:22:52.935] [ERROR] A feature named 'Remove' does already exist with the hash E0D4D8E3. Remove it before you can add the feature 'Remove'.
+[2026-1-29 01:22:52.935] [ERROR] A feature named 'Refresh' does already exist with the hash FC9E5733. Remove it before you can add the feature 'Refresh'.
+[2026-1-29 01:22:52.935] [ERROR] A feature named 'Export' does already exist with the hash 8C22A39D. Remove it before you can add the feature 'Export'.
+[2026-1-29 01:22:52.935] [ERROR] A feature named 'Copy Folder Path' does already exist with the hash 4F4C1647. Remove it before you can add the feature 'Copy Folder Path'.
+[2026-1-29 01:22:52.935] [ERROR] A feature named 'JinxScript' does already exist with the hash 47234406. Remove it before you can add the feature 'JinxScript'.
+[2026-1-29 01:22:52.935] [ERROR] A feature named 'Discord' does already exist with the hash 6DC946A1. Remove it before you can add the feature 'Discord'.
+[2026-1-29 01:22:52.935] [ERROR] A feature named 'Auto-Stop JinxScript' does already exist with the hash B5FD934D. Remove it before you can add the feature 'Auto-Stop JinxScript'.
+[2026-1-29 01:22:52.935] [ERROR] A feature named 'Agency' does already exist with the hash E68FED92. Remove it before you can add the feature 'Agency'.
+[2026-1-29 01:22:52.936] [ERROR] A feature named 'Apartment' does already exist with the hash 962DBCF. Remove it before you can add the feature 'Apartment'.
+[2026-1-29 01:22:52.936] [ERROR] A feature named 'Auto Shop' does already exist with the hash 2B385879. Remove it before you can add the feature 'Auto Shop'.
+[2026-1-29 01:22:52.936] [ERROR] A feature named 'Cayo Perico' does already exist with the hash C5E9C17E. Remove it before you can add the feature 'Cayo Perico'.
+[2026-1-29 01:22:52.936] [ERROR] A feature named 'Diam. Casino' does already exist with the hash D754A539. Remove it before you can add the feature 'Diam. Casino'.
+[2026-1-29 01:22:52.936] [ERROR] A feature named 'Doomsday' does already exist with the hash 9676591E. Remove it before you can add the feature 'Doomsday'.
+[2026-1-29 01:22:52.936] [ERROR] A feature named 'Cayo Perico' does already exist with the hash E1F9DDB9. Remove it before you can add the feature 'Cayo Perico'.
+[2026-1-29 01:22:52.936] [ERROR] A feature named 'Diamond Casino' does already exist with the hash CC009A53. Remove it before you can add the feature 'Diamond Casino'.
+[2026-1-29 01:22:52.936] [ERROR] A feature named 'Dummy Prevention' does already exist with the hash 23FDF545. Remove it before you can add the feature 'Dummy Prevention'.
+[2026-1-29 01:22:52.936] [ERROR] A feature named '5k Loop' does already exist with the hash 2B03EEB6. Remove it before you can add the feature '5k Loop'.
+[2026-1-29 01:22:52.936] [ERROR] A feature named '50k Loop' does already exist with the hash 32ED52BD. Remove it before you can add the feature '50k Loop'.
+[2026-1-29 01:22:52.936] [ERROR] A feature named '100k Loop' does already exist with the hash F37F181A. Remove it before you can add the feature '100k Loop'.
+[2026-1-29 01:22:52.936] [ERROR] A feature named '180k Loop' does already exist with the hash 8470A11D. Remove it before you can add the feature '180k Loop'.
+[2026-1-29 01:22:52.937] [ERROR] A feature named '300k Loop' does already exist with the hash 1031ED35. Remove it before you can add the feature '300k Loop'.
+
+************ EXCEPTION BEGIN ************[2026-1-29 01:22:52.952] [FATAL] Menu version: v5.38.2 LE b8010
+[2026-1-29 01:22:52.952] [FATAL] Module: "Applies all changes.",
+		"name": "Apply All Changes"
+	},
+	"854414013": {
+		"desc": "Changes the delay between transactions. Try to increase if you get transaction errors.",
+		"name": "50k Loop"
+	},
+	"856093405": {
+		"desc": "Teleports you to the Agency's entrance�Az�v? [0x0]
+[2026-1-29 01:22:52.953] [FATAL] Exception: EXCEPTION_ACCESS_VIOLATION [0x183AAADCE40|0x1852AADCE40]
+[2026-1-29 01:22:52.953] [FATAL] Data Execution Prevention (DEP) at: 0x183AAADCE40
+[2026-1-29 01:22:52.953] [FATAL] Threads:
+[2026-1-29 01:22:52.953] [FATAL] Exception Thread Id: 7548
+[2026-1-29 01:22:52.953] [FATAL] Main Thread Id: 0
+[2026-1-29 01:22:52.953] [FATAL] Render Thread Id: 12252
+[2026-1-29 01:22:52.953] [FATAL] Extra Data:
+[2026-1-29 01:22:52.953] [FATAL] Last game update call: 0
+[2026-1-29 01:22:52.954] [FATAL] Last sync nodes updated: None
+[2026-1-29 01:22:52.954] [FATAL] Last vehicle task IDs synced: None
+[2026-1-29 01:22:52.954] [FATAL] Last created models synced: None
+[2026-1-29 01:22:52.954] [FATAL] Last received script event: None
+[2026-1-29 01:22:52.954] [FATAL] Last received netMessage: 
+[2026-1-29 01:22:52.954] [FATAL] Manifold Pool: 2426 Available
+[2026-1-29 01:22:52.954] [FATAL] Contact Pool: 4906 Available
+[2026-1-29 01:22:52.954] [FATAL] Composite Pool: 1240 Available
+[2026-1-29 01:22:52.954] [FATAL] Pair Cache Pool: 3952 Available
+[2026-1-29 01:22:52.954] [FATAL] Menu open: true
+[2026-1-29 01:22:52.954] [FATAL] Registers:
+[2026-1-29 01:22:52.954] [FATAL] [RAX 0x00000183AA4A94B0()] | [RCX 0x00000183AA8B3A70()]
+[2026-1-29 01:22:52.954] [FATAL] [RDX 0x000000007C039E2B()] | [RBX 0x000001837D4736D8()]
+[2026-1-29 01:22:52.954] [FATAL] [RSP 0x0000007CDFE1F3D8()] | [RBP 0x00007FF9A3A821F0()]
+[2026-1-29 01:22:52.954] [FATAL] [RSI 0x000000007C039E2B()] | [RDI 0x000001837D4736D8()]
+[2026-1-29 01:22:52.955] [FATAL] [R8  0x000001837D4736D8()] | [R9  0x00000183AAADCE40()]
+[2026-1-29 01:22:52.955] [FATAL] [R10 0x0000000000000000()] | [R11 0x0000018249A666B0()]
+[2026-1-29 01:22:52.955] [FATAL] [R12 0x000001837D4736D8()] | [R13 0x000001837D1BD430()]
+[2026-1-29 01:22:52.955] [FATAL] [R14 0x0000000000000000()] | [R15 0x00000183AA8DDA80()]
+[2026-1-29 01:22:52.955] [STACK] +0x183AAADCE40 [0x183AAADCE40|0x1852AADCE40]
+[2026-1-29 01:22:52.955] [STACK] Cherax+0x585F68 [0x7FF9A3A85F68|0x180585F68]
+[2026-1-29 01:22:52.955] [STACK] Cherax+0x583536 [0x7FF9A3A83536|0x180583536]
+[2026-1-29 01:22:52.956] [STACK] Cherax+0x582C64 [0x7FF9A3A82C64|0x180582C64]
+[2026-1-29 01:22:52.956] [STACK] Cherax+0x19CB9B [0x7FF9A369CB9B|0x18019CB9B]
+[2026-1-29 01:22:52.957] [STACK] Cherax+0x74D2E [0x7FF9A3574D2E|0x180074D2E]
+[2026-1-29 01:22:52.957] [STACK] Cherax+0x750CE [0x7FF9A35750CE|0x1800750CE]
+[2026-1-29 01:22:52.958] [STACK] Cherax+0x9A370 [0x7FF9A359A370|0x18009A370]
+[2026-1-29 01:22:52.958] [STACK] Cherax+0x75296 [0x7FF9A3575296|0x180075296]
+[2026-1-29 01:22:52.959] [STACK] Cherax+0x74113 [0x7FF9A3574113|0x180074113]
+[2026-1-29 01:22:52.959] [STACK] Cherax+0x674D8 [0x7FF9A35674D8|0x1800674D8]
+[2026-1-29 01:22:52.960] [STACK] Cherax+0x591315 [0x7FF9A3A91315|0x180591315]
+[2026-1-29 01:22:52.960] [STACK] Cherax+0x591526 [0x7FF9A3A91526|0x180591526]
+[2026-1-29 01:22:52.960] [STACK] Cherax+0x591719 [0x7FF9A3A91719|0x180591719]
+[2026-1-29 01:22:52.961] [STACK] Cherax+0x58EAF7 [0x7FF9A3A8EAF7|0x18058EAF7]
+[2026-1-29 01:22:52.961] [STACK] Cherax+0x58E18C [0x7FF9A3A8E18C|0x18058E18C]
+[2026-1-29 01:22:52.961] [STACK] Cherax+0x7176FC [0x7FF9A3C176FC|0x1807176FC]
+[2026-1-29 01:22:52.962] [STACK] Cherax+0x8A1887 [0x7FF9A3DA1887|0x1808A1887]
+[2026-1-29 01:22:52.962] [STACK] C:\WINDOWS\System32\KERNEL32.DLL+0x2E8D7 [0x7FFA49E5E8D7|0x18002E8D7]
+[2026-1-29 01:22:52.962] [STACK] C:\WINDOWS\SYSTEM32\ntdll.dll+0x8C53C [0x7FFA4B24C53C|0x18008C53C]
+
+************ EXCEPTION END ************[2026-1-29 01:22:52.962] [FATAL] Exception repeated 1
+[2026-1-29 01:22:52.963] [FATAL] Exception repeated 2
+[2026-1-29 01:22:52.963] [FATAL] Exception repeated 3
+[2026-1-29 01:22:52.964] [FATAL] Exception repeated 4
+[2026-1-29 01:22:52.964] [FATAL] Exception repeated 5
+[2026-1-29 01:22:52.964] [FATAL] Exception repeated 6
+[2026-1-29 01:22:52.965] [FATAL] Exception repeated 7
+[2026-1-29 01:22:52.965] [FATAL] Exception repeated 8
+[2026-1-29 01:22:52.965] [FATAL] Exception repeated 9
+[2026-1-29 01:22:52.966] [FATAL] Exception repeated 10
+[2026-1-29 01:22:52.969] [FATAL] Exception repeated 20
+[2026-1-29 01:22:52.973] [FATAL] Exception repeated 30
+[2026-1-29 01:22:52.976] [FATAL] Exception repeated 40
+[2026-1-29 01:22:52.980] [FATAL] Exception repeated 50
+[2026-1-29 01:22:52.983] [FATAL] Exception repeated 60
+[2026-1-29 01:22:52.986] [FATAL] Exception repeated 70
+[2026-1-29 01:22:52.990] [FATAL] Exception repeated 80
+[2026-1-29 01:22:52.992] [INFO] Successfully loaded 'Silent Night'
+[2026-1-29 01:22:53.002] [Silent Night] Silent Night has started ツ
+[2026-1-29 01:22:57.512] [Silent Night] [680k Loop (Easy Money)] 680k dollars loop should've been enabled ツ
+[2026-1-29 01:23:19.591] [Silent Night] [180k Loop (Easy Money)] 180k dollars loop should've been enabled ツ
+[2026-1-29 01:23:19.591] [Silent Night] [680k Loop (Easy Money)] 680k dollars loop should've been disabled ツ
+[2026-1-29 01:24:15.115] [Silent Night] [180k Loop (Easy Money)] 180k dollars loop should've been disabled ツ
+[2026-1-29 01:24:17.262] [Silent Night] [180k Loop (Easy Money)] 180k dollars loop should've been enabled ツ
+[2026-1-29 01:24:28.705] [Silent Night] [180k Loop (Easy Money)] 180k dollars loop should've been disabled ツ
+[2026-1-29 01:28:09.648] [Network Bail] BAIL_EXIT_GAME, EXIT_GAME_FROM_FLOW, Context: -1 / -1 / -1
+[2026-1-29 01:28:09.712] [Player Left] MALEK777zzzz | 199854587 | 0.0.0.0 (Invalid)
+[2026-1-29 01:28:10.753] [Network Bail] BAIL_EXIT_GAME, EXIT_GAME_FROM_APP, Context: -1 / -1 / -1
