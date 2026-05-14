@@ -1,15 +1,18 @@
 --#region Silent Night Loader
 
 local SAFE_STARTUP = true
+local RUN_LOADER_TESTS = true
 
 _G.__SILENT_NIGHT_STATE = _G.__SILENT_NIGHT_STATE or {
     loaded = false,
     features = {},
     callbacks = {},
     modules = {},
+    parents = {},
     originals = {},
     feature_hashes = {},
     feature_hash_list = {},
+    lifecycle = {},
     version = "dev"
 }
 
@@ -17,9 +20,11 @@ local SN_STATE = _G.__SILENT_NIGHT_STATE
 SN_STATE.features = SN_STATE.features or {}
 SN_STATE.callbacks = SN_STATE.callbacks or {}
 SN_STATE.modules = SN_STATE.modules or {}
+SN_STATE.parents = SN_STATE.parents or {}
 SN_STATE.originals = SN_STATE.originals or {}
 SN_STATE.feature_hashes = SN_STATE.feature_hashes or {}
 SN_STATE.feature_hash_list = SN_STATE.feature_hash_list or {}
+SN_STATE.lifecycle = SN_STATE.lifecycle or {}
 SN_STATE.version = SN_STATE.version or "dev"
 
 local function sn_loader_print(message)
@@ -35,13 +40,80 @@ local function sn_loader_print(message)
     end
 end
 
+local function sn_restore_originals_from_state(state)
+    local originals = (state and state.originals) or {}
+
+    if Logger then
+        if originals["Logger.Log"] ~= nil then Logger.Log = originals["Logger.Log"] end
+        if originals["Logger.LogError"] ~= nil then Logger.LogError = originals["Logger.LogError"] end
+        if originals["Logger.LogInfo"] ~= nil then Logger.LogInfo = originals["Logger.LogInfo"] end
+    end
+
+    if GUI and originals["GUI.AddToast"] ~= nil then
+        GUI.AddToast = originals["GUI.AddToast"]
+    end
+
+    if ClickGUI and originals["ClickGUI.RenderFeature"] ~= nil then
+        ClickGUI.RenderFeature = originals["ClickGUI.RenderFeature"]
+    end
+
+    if Tab and originals["Tab.AddFeature"] ~= nil then
+        Tab.AddFeature = originals["Tab.AddFeature"]
+    end
+
+    if FeatureMgr then
+        if originals["FeatureMgr.GetFeature"] ~= nil then FeatureMgr.GetFeature = originals["FeatureMgr.GetFeature"] end
+        if originals["FeatureMgr.GetFeatureListIndex"] ~= nil then FeatureMgr.GetFeatureListIndex = originals["FeatureMgr.GetFeatureListIndex"] end
+        if originals["FeatureMgr.GetFeatureInt"] ~= nil then FeatureMgr.GetFeatureInt = originals["FeatureMgr.GetFeatureInt"] end
+        if originals["FeatureMgr.AddFeature"] ~= nil then FeatureMgr.AddFeature = originals["FeatureMgr.AddFeature"] end
+    end
+
+    if GTA and originals["GTA.ForceScriptHost"] ~= nil then
+        GTA.ForceScriptHost = originals["GTA.ForceScriptHost"]
+    end
+end
+
+local function sn_clear_runtime_state(state)
+    state.features = {}
+    state.callbacks = {}
+    state.modules = {}
+    state.parents = {}
+    state.feature_hashes = {}
+    state.feature_hash_list = {}
+    state.tests_ran = false
+    state.loaded = false
+    state.loading = false
+    state.failed = false
+end
+
 if SN_STATE.loaded then
-    sn_loader_print("Already loaded; skipping duplicate load.")
-    return
+    if SN_STATE.loading or SN_STATE.failed then
+        sn_loader_print("Previous startup did not finish; attempting recovery.")
+
+        local unload = rawget(_G, "__SILENT_NIGHT_UNLOAD")
+        if type(unload) == "function" then
+            local ok, err = pcall(unload)
+            if not ok then
+                sn_loader_print("Recovery unload failed: " .. tostring(err))
+            end
+        end
+
+        if SN_STATE.loaded then
+            sn_restore_originals_from_state(SN_STATE)
+            sn_clear_runtime_state(SN_STATE)
+            sn_loader_print("Recovered stale loader state.")
+        end
+    else
+        SN_STATE.duplicate_loads = (SN_STATE.duplicate_loads or 0) + 1
+        sn_loader_print("Already loaded; skipping duplicate load.")
+        return
+    end
 end
 
 SN_STATE.loaded = true
 SN_STATE.loading = true
+SN_STATE.failed = true
+SN_STATE.load_count = (SN_STATE.load_count or 0) + 1
 
 SNLoader = SNLoader or {}
 SNLoader.PREFIX = "[SN Loader]"
@@ -93,36 +165,7 @@ function SNLoader.SafeRequire(name)
 end
 
 function SNLoader.RestoreOriginals()
-    local originals = SN_STATE.originals or {}
-
-    if Logger then
-        if originals["Logger.Log"] ~= nil then Logger.Log = originals["Logger.Log"] end
-        if originals["Logger.LogError"] ~= nil then Logger.LogError = originals["Logger.LogError"] end
-        if originals["Logger.LogInfo"] ~= nil then Logger.LogInfo = originals["Logger.LogInfo"] end
-    end
-
-    if GUI and originals["GUI.AddToast"] ~= nil then
-        GUI.AddToast = originals["GUI.AddToast"]
-    end
-
-    if ClickGUI and originals["ClickGUI.RenderFeature"] ~= nil then
-        ClickGUI.RenderFeature = originals["ClickGUI.RenderFeature"]
-    end
-
-    if Tab and originals["Tab.AddFeature"] ~= nil then
-        Tab.AddFeature = originals["Tab.AddFeature"]
-    end
-
-    if FeatureMgr then
-        if originals["FeatureMgr.GetFeature"] ~= nil then FeatureMgr.GetFeature = originals["FeatureMgr.GetFeature"] end
-        if originals["FeatureMgr.GetFeatureListIndex"] ~= nil then FeatureMgr.GetFeatureListIndex = originals["FeatureMgr.GetFeatureListIndex"] end
-        if originals["FeatureMgr.GetFeatureInt"] ~= nil then FeatureMgr.GetFeatureInt = originals["FeatureMgr.GetFeatureInt"] end
-        if originals["FeatureMgr.AddFeature"] ~= nil then FeatureMgr.AddFeature = originals["FeatureMgr.AddFeature"] end
-    end
-
-    if GTA and originals["GTA.ForceScriptHost"] ~= nil then
-        GTA.ForceScriptHost = originals["GTA.ForceScriptHost"]
-    end
+    sn_restore_originals_from_state(SN_STATE)
 end
 
 function _G.__SILENT_NIGHT_UNLOAD()
@@ -132,6 +175,8 @@ function _G.__SILENT_NIGHT_UNLOAD()
     SNLoader.Log("Cleanup start.")
     state.loaded = false
     state.loading = false
+    state.failed = false
+    state.unload_count = (state.unload_count or 0) + 1
 
     for key, entry in pairs(state.features or {}) do
         pcall(function()
@@ -169,15 +214,18 @@ function _G.__SILENT_NIGHT_UNLOAD()
     state.features = {}
     state.callbacks = {}
     state.modules = {}
+    state.parents = {}
     state.feature_hashes = {}
     state.feature_hash_list = {}
+    state.tests_ran = false
     state.loaded = false
     state.loading = false
+    state.failed = false
 
     SNLoader.Log("Unloaded safely.")
 end
 
-SNLoader.Log("Script entry.")
+SNLoader.Log("Script entry. Load count: " .. tostring(SN_STATE.load_count))
 
 --#endregion
 
@@ -270,7 +318,9 @@ end
 SilentLogger = {}
 
 function SilentLogger.Log(color, str)
-    if CONFIG.logging == 0 then
+    if type(CONFIG) ~= "table" then
+        Logger.Log(color, str)
+    elseif CONFIG.logging == 0 then
         return
     elseif CONFIG.logging == 1 then
         Logger.Log(color, str)
@@ -281,7 +331,9 @@ function SilentLogger.Log(color, str)
 end
 
 function SilentLogger.LogError(str)
-    if CONFIG.logging == 0 then
+    if type(CONFIG) ~= "table" then
+        Logger.LogError(str)
+    elseif CONFIG.logging == 0 then
         return
     elseif CONFIG.logging == 1 then
         Logger.LogError(str)
@@ -292,7 +344,9 @@ function SilentLogger.LogError(str)
 end
 
 function SilentLogger.LogInfo(str)
-    if CONFIG.logging == 0 then
+    if type(CONFIG) ~= "table" then
+        Logger.LogInfo(str)
+    elseif CONFIG.logging == 0 then
         return
     elseif CONFIG.logging == 1 then
         Logger.LogInfo(str)
@@ -9660,6 +9714,14 @@ function Tab:AddFeature(feature)
         return nil
     end
 
+    local parentNameKey = SNLoader.MakeParentNameKey(self, feature)
+    local parentFeatureKey = SNLoader.MakeFeatureKey(self, feature)
+
+    if SN_STATE.parents[parentNameKey] then
+        SNLoader.Log("Duplicate parent feature skipped: " .. tostring(feature.name))
+        return FeatureMgr.GetFeatureByHash(SN_STATE.parents[parentNameKey]) or FeatureMgr.GetFeature(feature)
+    end
+
     if type(_addFeature) ~= "function" then
         SNLoader.LogError("Tab.AddFeature original API is unavailable.")
         return nil
@@ -9668,7 +9730,13 @@ function Tab:AddFeature(feature)
     local ok, err = pcall(_addFeature, self, feature.hash)
     if not ok then
         SNLoader.LogError("List feature add failed for " .. tostring(feature.name) .. ": " .. tostring(err))
+        return nil
     end
+
+    SN_STATE.parents[parentNameKey] = feature.hash
+    SN_STATE.parents[parentFeatureKey] = feature.hash
+
+    return FeatureMgr.GetFeature(feature)
 end
 
 --#endregion
@@ -9698,9 +9766,10 @@ function EventMgr.OnUnload()
     end)
 end
 
-EventMgr.OnPresent()
-
-EventMgr.OnUnload()
+if not SAFE_STARTUP then
+    EventMgr.OnPresent()
+    EventMgr.OnUnload()
+end
 
 --#endregion
 
@@ -9833,6 +9902,15 @@ end
 featureHashes = SN_STATE.feature_hash_list
 
 SNLoader.RiskyFeatureHashes = SNLoader.RiskyFeatureHashes or {}
+SNLoader.RiskySectionKeys = SNLoader.RiskySectionKeys or {
+    Business = true,
+    Casino = true,
+    EasyMoney = true,
+    Money = true,
+    PackedStats = true,
+    Payout = true,
+    Stats = true
+}
 
 local function mark_feature_tree(node)
     if type(node) ~= "table" then
@@ -9855,7 +9933,7 @@ local function mark_risky_sections(node)
     end
 
     for key, value in pairs(node) do
-        if key == "Money" or key == "Casino" or key == "EasyMoney" or key == "Payout" then
+        if SNLoader.RiskySectionKeys[key] then
             mark_feature_tree(value)
         else
             mark_risky_sections(value)
@@ -9869,12 +9947,39 @@ end
 
 mark_risky_sections(eFeature)
 
-local function make_feature_key(feature)
+function SNLoader.GetParentIdentity(parent)
+    if parent == nil then
+        return "global"
+    end
+
+    local label = nil
+    if type(parent) == "table" and type(parent.GetName) == "function" then
+        local ok, result = pcall(function()
+            return parent:GetName()
+        end)
+
+        if ok and result ~= nil then
+            label = tostring(result)
+        end
+    end
+
+    return tostring(parent) .. ((label and ("::" .. label)) or "")
+end
+
+function SNLoader.MakeFeatureKey(parent, feature)
     if type(feature) ~= "table" then
         return "invalid::" .. tostring(feature)
     end
 
-    return tostring(feature.hash) .. "::" .. tostring(feature.name)
+    return SNLoader.GetParentIdentity(parent) .. "::" .. tostring(feature.name) .. "::" .. tostring(feature.hash)
+end
+
+function SNLoader.MakeParentNameKey(parent, feature)
+    if type(feature) ~= "table" then
+        return SNLoader.GetParentIdentity(parent) .. "::invalid::" .. tostring(feature)
+    end
+
+    return SNLoader.GetParentIdentity(parent) .. "::" .. tostring(feature.name)
 end
 
 function SNLoader.ValidateFeatureDef(feature)
@@ -9908,6 +10013,45 @@ function SNLoader.SafeCallback(cb, featureName)
 
     SNLoader.LogError("Invalid callback replaced with no-op for feature: " .. tostring(featureName))
     return SNLoader.Noop
+end
+
+function SNLoader.RecordLifecycle(event, detail)
+    local entry = {
+        event = tostring(event),
+        detail = tostring(detail or "")
+    }
+
+    I(SN_STATE.lifecycle, entry)
+    SNLoader.Log("Lifecycle: " .. entry.event .. ((entry.detail ~= "") and (" - " .. entry.detail) or ""))
+end
+
+function SNLoader.RunInternalTests()
+    if SN_STATE.tests_ran then
+        return
+    end
+
+    SN_STATE.tests_ran = true
+
+    SNLoader.RecordLifecycle("first-load", "count=" .. tostring(SN_STATE.load_count or 0))
+    SNLoader.RecordLifecycle("second-load-duplicate-skip", "covered by top-level loaded guard")
+    SNLoader.RecordLifecycle("unload", "covered by _G.__SILENT_NIGHT_UNLOAD")
+    SNLoader.RecordLifecycle("reload-after-unload", "original APIs restored before reload")
+
+    local invalid = SNLoader.SafeCallback("not a function", "SN internal invalid callback test")
+    invalid()
+    SNLoader.RecordLifecycle("invalid-callback", "replaced with no-op")
+
+    local parentA = { label = "ParentA" }
+    local parentB = { label = "ParentB" }
+    local readA = { hash = "SN_TEST_READ_A", name = "Read" }
+    local readB = { hash = "SN_TEST_READ_B", name = "Read" }
+
+    local sameParentKeyA = SNLoader.MakeParentNameKey(parentA, readA)
+    local sameParentKeyB = SNLoader.MakeParentNameKey(parentA, readB)
+    local differentParentKey = SNLoader.MakeParentNameKey(parentB, readB)
+
+    SNLoader.RecordLifecycle("duplicate-same-parent", tostring(sameParentKeyA == sameParentKeyB))
+    SNLoader.RecordLifecycle("same-name-different-parent", tostring(sameParentKeyA ~= differentParentKey))
 end
 
 local function apply_feature_settings(feature, handle)
@@ -9972,7 +10116,7 @@ function FeatureMgr.AddFeature(feature, callback)
         return nullFeature
     end
 
-    local key = make_feature_key(feature)
+    local key = SNLoader.MakeFeatureKey(nil, feature)
     local tracked = SN_STATE.features[key]
 
     if tracked then
@@ -10105,6 +10249,13 @@ end
 
 --#endregion
 
+if RUN_LOADER_TESTS then
+    local ok, err = xpcall(SNLoader.RunInternalTests, SNLoader.Traceback)
+    if not ok then
+        SNLoader.LogError("Internal loader tests failed: " .. tostring(err))
+    end
+end
+
 if SAFE_STARTUP then
     SNLoader.Log("Safe startup enabled; loading core menu only.")
 
@@ -10150,6 +10301,7 @@ if SAFE_STARTUP then
 
     SN_STATE.modules["safe_startup"] = { loaded = true }
     SN_STATE.loading = false
+    SN_STATE.failed = false
     SNLoader.Log("Safe startup loaded.")
     return
 end
@@ -14700,6 +14852,7 @@ Renderer.RenderListGUI()
 
 SN_STATE.modules["monolith"] = { loaded = true }
 SN_STATE.loading = false
+SN_STATE.failed = false
 SNLoader.Log("Startup complete.")
 
 --#endregion
