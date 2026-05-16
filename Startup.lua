@@ -1,7 +1,7 @@
 --#region Silent Night Loader
 
-local SAFE_STARTUP = true
-local RUN_LOADER_TESTS = true
+local SAFE_STARTUP = false
+local RUN_LOADER_TESTS = false
 
 _G.__SILENT_NIGHT_STATE = _G.__SILENT_NIGHT_STATE or {
     loaded = false,
